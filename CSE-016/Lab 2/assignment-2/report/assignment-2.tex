@@ -8,23 +8,25 @@
 \usepackage{xcolor}
 \usepackage[export]{adjustbox}
 \usepackage{titlesec}
+\usepackage{sectsty}
+\allsectionsfont{\sffamily}
 
-\renewcommand\familydefault{\sfdefault}
 \usepackage{tgheros}
-\usepackage{droidsansmono}
+\usepackage[defaultmono]{droidmono}
+\usepackage{mathptmx}
 
 \usepackage{amsmath,amssymb,amsthm,textcomp}
 \usepackage{enumerate}
 \usepackage{multicol}
 \usepackage{tikz}
 \usepackage{tabto}
-
+\usepackage{pxfonts}
 \usepackage{geometry}
 \geometry{left=25mm,right=25mm,%
 bindingoffset=0mm, top=20mm,bottom=20mm}
 
 
-\linespread{1.3}
+\linespread{1.2}
 
 \newcommand{\linia}{\rule{\linewidth}{0.5pt}}
 
@@ -35,18 +37,23 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
 
 \theoremstyle{mytheor}
 \newtheorem{defi}{Definition}
+\newtheoremstyle{mytheor}
+    {1ex}{1ex}{\normalfont}{0pt}{\scshape}{.}{1ex}
+    {{\thmname{#1 }}{}{\thmnote{ (#3)}}}
 
+\theoremstyle{mytheor}
+\newtheorem{nb}{Please Note}
 % my own titles
 \makeatletter
 \renewcommand{\maketitle}{
 \begin{center}
 \vspace{2ex}
-{\huge \textsc{\@title}}
+{\huge \textsf{\textbf{\@title}}}
 \vspace{1ex}
 \\
 \linia\\
-\@date \hfill
-\@author
+\textsf{\@date \hfill
+\@author}
 \vspace{4ex}
 \end{center}
 }
@@ -72,7 +79,7 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{inlinecode}{rgb}{0.3,0.3,0.3}
+\definecolor{inlinecode}{rgb}{0.1,0.1,0.1}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 \lstset{
@@ -91,8 +98,8 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
     showspaces=false,
     showstringspaces=false,
     commentstyle=\color{codegray},
-    keywordstyle=\color{magenta},
-    stringstyle=\color{codegreen},
+    keywordstyle=\bfseries,
+%    stringstyle=\color{codegreen},
     numbers=left,
     numberstyle=\color{codegray}\footnotesize\noncopynumber,
     stepnumber=1,
@@ -118,7 +125,7 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
 \author{Youssef Ahmed Samy Kassem\\ \hfill ID 9545 -- Group 3 -- Lab 1\\ \hfill SSP -- Faculty of Engineering, Alexandria University\\}
 
 \maketitle
-\textit{Document structure is detailed in the second page.\\\textbf{Solutions begin from the third page.}}
+\textsf{\textsl{Document structure is detailed in the second page.\\\textbf{Solutions begin from the third page.}}}
 \section{Problems}
 \subsection{Problem (1)}
 John is responsible for planting the street with trees; he can give you the length of the street in
@@ -141,7 +148,7 @@ Number & Square & Cube & Root & Exponent \\
 \section{Solutions}
 \subsection{Solution to Problem (1)}
 \subsubsection{Source Code}
-\begin{lstlisting}[label={list:first},title=Program's \texttt{\color{inlinecode}{main.c}} File -- console input/output-oriented application to solve the problem]
+\begin{lstlisting}[escapechar=\^,label={list:first},title=Program's \texttt{\color{inlinecode}{main.c}} File -- console input/output-oriented application to solve the problem]
 #include <math.h>
 #include <stdio.h>
 
@@ -200,7 +207,9 @@ You will have to plant 11 tree(s)
 The total price you'll pay will be $132.00
 %
 \end{lstlisting}
-\textit{\\\\\\\\\\\\Turn over the page for the solution to problem (2)}
+\begin{center}
+\textit{\\\ \\\ \\\ \\\ \\\ \\\ \\\ \\Turn over the page for the solution to problem (2)}
+\end{center}
 \newpage
 \subsection{Solution to Problem (2)}
 \subsubsection{Source Code}
@@ -219,7 +228,7 @@ int main() {
   return 0;
 }
 \end{lstlisting}
-\textit{Please note that the line numbers are purely for readability purposes and are not part of the code.\\Please also note that on lines where there is no new line number, there is \textbf{NO} actual line break in the code and that this is meant to be read as one single line.}
+\textsl{Please note that the line numbers are purely for readability purposes and are not part of the code.\\Please also note that on lines where there is no new line number, there is \textbf{NO} actual line break in the code and that this is meant to be read as one single line.}
 \subsubsection{Outcome}
 \paragraph{Console Output}
 \begin{lstlisting}[escapechar=\%,language=tex,numbers=none,label={list:fourth},title=Program's output to console in plaintext]
@@ -266,7 +275,7 @@ Number	Square	Cube	Root	Exponent
 \end{itemize}
 \section{Licenses \& Warranty}
 The software \& source code included are licensed under the BSD 3-Clause Open Source License: https://opensource.org/license/bsd-3-clause.\\\\
-COPYRIGHT 2024 Youssef Ahmed Samy\\
+COPYRIGHT \copyright \ 2024, Youssef Ahmed Samy\\
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\\
