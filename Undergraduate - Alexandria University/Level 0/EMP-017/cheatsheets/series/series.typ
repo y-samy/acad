@@ -133,7 +133,7 @@ $"I.C" : abs(x) < 1$
 #let negfn = (stroke: black, fill: rgb(200, 0, 0, 75))
 #let dotted = (stroke : (dash: "loosely-dash-dotted", paint: rgb(0, 0, 0)))
 === Extra Notes
-- A function can be shifted horizontally to be able to see its periodic nature, but it can't be shifted vertically.
+- You can shift a function horizontally to be able to see its periodic nature, but it can't be shifted vertically.
 - If $x$ is not defined at the boundaries, for example:
 $-3<x<0 "and" 0<x<3$\ if $f(x_0)$ is needed (here $x_0$ can be $-3,0,3$)
 $ f(x_0) = (f(x_0^+) + f(x_0^-))/2 $
@@ -149,7 +149,7 @@ a_n = 2/mu integral_0^mu f(x) dot cos(n omega_0 x) dif x\
 b_n = 2/mu integral_0^mu f(x) dot cos(n omega_0 x) dif x $
 === Special Cases
 Special cases of the fourier series may include one or two specifically oriented repetitions within one period. For example, in a cosines-only function, one half of the period is mirrored in the other half.\ In the following examples and drawings, the center of the period is assumed to be the origin.\
-Whenever that is not the case, you should either shift the origin to be at the center of the period, or replace all the short forms like:
+Whenever that is not the case, you should either shift the origin horizontally to be at the center of the period, or replace all the short forms like:
 $ a_n = 1/(p\/2) integral_0^(p) f(x) dot cos(n omega_0 x) dif x $
 with their original form, as in:
 $ a_n = 1/("half period") limits(integral)_#box(width: 1em, [full~period], inset: (x: -14pt, y: 1pt)) f(x) dot cos(n omega_0 x) dif x $
