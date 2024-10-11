@@ -1,0 +1,192 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage{stackrel}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{wrapfig}
+\usepackage{xcolor}
+\usepackage{multicol} 
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usepackage{physics}
+\usepackage{lipsum}
+\usepackage{siunitx}
+
+% Set up page layout
+\geometry{
+    top=1.5cm,
+    bottom=1.5cm,
+    left=1.5cm,
+    right=1.5cm,
+    headsep=0.5cm,
+    headheight=3cm,
+}
+
+
+
+% Define header and footer
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer
+\fancyfoot[R]{\thepage/\pageref{LastPage}} % Page number at the center of the footer
+\renewcommand{\headrulewidth}{0pt} % Remove header rule
+
+\newcommand{\posaxes}{%
+  \mathrel{\vbox{\offinterlineskip\ialign{%
+    \hfil##\hfil\cr
+    $\big\uparrow^{\text{\tiny+}}$\cr
+    \noalign{\kern-1.7ex}
+    $\hspace{0.38cm}\stackrel{\hspace{0.59cm}\text{\tiny+}}{\longrightarrow}$\cr
+}}}}
+\begin{document}
+
+\begin{center}
+\textbf{Modern Physics - Lecture Exercises Solutions\\}
+\textbf{Lecture 1}
+
+
+\textbf{Student Answers by Youssef Samy}
+\rule{\textwidth}{0.4pt}
+\end{center}
+
+
+\textbf{Ex.~1} Show that although observers in $S$ and $S^{\prime}$ measure different coordinates for the ends of a stick at rest in $S$, they agree on the length of the stick.
+
+\textbf{Sol.~1}
+
+\begin{wrapfigure}[8]{l}{0pt}   
+    \input{tikzpics/ex1.tex}
+\end{wrapfigure}
+
+$\bullet$ Known:
+\begin{align}
+    \text{System $S$ is stationary} \tag{a}\\
+    \text{System $S^\prime$ is moving with velocity $v$ relative to $S$} \tag{b} \\
+    L = x_2 - x_1 \tag{c} \\
+    L^\prime = x_2^\prime - x_1^\prime \tag{d}
+\end{align}
+
+$\bullet$ Showing that $L = L^\prime$ using Galilean Transformation:
+\begin{align}
+    x_1^\prime &= x_1 - vt \\
+    x_2^\prime &= x_2 - vt \\
+    L^\prime &= x_2^\prime - x_1^\prime \tag{d} \\
+    L^\prime &= (x_2 - vt) - (x_1 - vt) \notag \\
+    L^\prime &= x_2 - x_1 \\
+    \therefore L^\prime &= L \tag{from (c), (d), and (3)}
+\end{align}
+\begin{center}
+    \rule{6cm}{0.4pt}    
+\end{center}
+
+\textbf{Ex.~2} \textit{Conservation of Linear Momentum Is Covariant Under the
+Galilean Transformation.}
+
+Assume that two masses $m_1$ and $m_2$ are
+moving in the positive $x$ direction with velocities $v_1$ and $v_2$ as
+measured by an observer in $S$ before a collision. After the collision,
+the two masses stick together and move with a velocity $v$ in $S$.
+Show that if an observer in $S$ finds momentum to be conserved, so
+does an observer in $S^\prime$.
+
+\textbf{Sol.~2}
+
+\begin{wrapfigure}[6]{l}{0pt}   
+    \input{tikzpics/ex2.tex}
+\end{wrapfigure}
+\noindent We perform Galilean transformation.\\
+$\bullet$ Known:
+\begin{align}
+    \text{System $S$ is stationary} \tag{a}\\
+    \text{System $S^\prime$ is moving with velocity $u$ relative to $S$} \tag{b} \\
+    m_1 = m_1^\prime,  \quad m_2 = m_2^\prime \text{~(invariance of mass)} \tag{c} \\
+    \text{Motion of observer in $S^\prime$ is in the positive $x$-direction} \tag{d} \\
+    \text{Direction of positive velocity} \posaxes \tag{e} \\
+    v_{\text{event}}^\prime = v_{\text{event}} - u \text{~for all events (covariance of velocity)} \tag{f} \\
+    m_1 v_1 + m_2 v_2 = (m_1+m_2) v \text{~(conserved momentum)} \tag{g}
+\end{align}
+\ \\
+$\bullet$ Showing that the momentum is conserved under $S^\prime$:
+\begin{align}
+m_1^\prime v_1^\prime + m_2^\prime v_2^\prime &= (m_1^\prime + m_2^\prime) v^\prime \tag{to be proven} \\
+m_1 (v_1 - u) + m_2 (v_2 - u) &= (m_1 + m_2) (v-u) \text{~(Galilean transformation)} \tag{1} \\
+m_1 v_1 - \underline{m_1 u} + m_2 v_2 - \underline{m_2 u} &= m_1 v + m_2 v - \underline{m_1 u} - \underline{m_2 u} \tag{2} \\
+m_1 v_1 + m_2 v_2 &= (m_1 + m_2) v \tag{3} \\
+\therefore \text{Momentum is conserved} \tag{from (g) and (3)}
+\end{align}
+\begin{center}
+    \rule{6cm}{0.4pt}    
+\end{center}
+\newpage
+\textbf{Ex.~3} A 2000-kg car moving with a speed of 20 m/s collides with and sticks to a 1500-kg car at rest at a stop sign. Show that because momentum is conserved in the rest frame, momentum is also conserved in a reference frame moving with a speed of 10 m/s in the direction of the moving car.
+
+\textbf{Sol.~3}
+
+\begin{wrapfigure}[6]{l}{6cm}
+    \input{tikzpics/ex3.tex}
+\end{wrapfigure}
+We perform Galilean transformation.
+
+$\bullet$ Known:
+\begin{align}
+    \text{System $S$ is stationary} \tag{a}\\
+    \text{System $S^\prime$ is moving with velocity $u=10 \si[per-mode=symbol]{\meter \per \second}$ relative to $S$} \tag{b} \\
+    m_1 = m_1^\prime,  \quad m_2 = m_2^\prime \text{~(invariance of mass)} \tag{c} \\
+    \text{Motion of observer in $S^\prime$ is in the positive $x$-direction} \tag{d} \\
+    \text{Direction of positive velocity} \posaxes \tag{e} \\
+    v_{\text{event}}^\prime = v_{\text{event}} - u \text{~for all events (covariance of velocity)} \tag{f} \\
+    m_1 v_1 + m_2 v_2 = (m_1+m_2) v \text{~(conserved momentum)} \tag{g} \\
+    m_1 = 2000 \si{\kilogram}, m_2 = 1500 \si{\kilogram}, v_1 = 20 \si[per-mode=symbol]{\meter \per \second}, v_2 = 0 \si[per-mode=symbol]{\meter \per \second} \tag{h} \\
+    2000 \times 20 + 1500 \times 0 = 3500 \times v \tag{i} \\
+    v \approx 11.43 \text{~up to the nearest $2^{nd}$ decimal point} \tag{j}
+\end{align}
+\ \\
+$\bullet$ Showing that the momentum is conserved under $S^\prime$:
+\begin{align}
+m_1^\prime v_1^\prime + m_2^\prime v_2^\prime &= (m_1^\prime + m_2^\prime) v^\prime \tag{to be proven} \\
+m_1 (v_1 - u) + m_2 (v_2 - u)  &= (m_1 + m_2) (v-u) \text{~(Galilean transformation)} \tag{1} \\
+2000 \times (20 - 10) + 1500 \times (-10) &= 3500 \times (11.43 - 10) \tag{2} \\
+\text{Left hand side} &= 5000 \tag{3} \\
+\text{Right hand side} &= 5005 \tag{4} \\
+\text{Left hand side} &\approx \text{Right hand side} \tag{5} \\
+\therefore \text{Momentum is conserved} \tag{from (5)}
+\end{align}
+\begin{center}
+    \rule{6cm}{0.4pt}    
+\end{center}
+
+\textbf{Ex.~4} A billiard ball of mass 0.3 kg moves with a speed of 5 m/s and collides elastically with a ball of mass 0.2 kg moving in the opposite direction with a speed of 3 m/s. Show that because momentum is conserved in the rest frame, it is also conserved in a frame of reference moving with a speed of 2 m/s in the direction of the second ball.
+
+\textbf{Sol.~4}
+
+\begin{wrapfigure}[5]{l}{6cm}
+    \input{tikzpics/ex4.tex}
+\end{wrapfigure}
+We perform Galilean transformation.
+
+$\bullet$ Known:
+\begin{align}
+    \text{System $S$ is stationary} \tag{a}\\
+    \text{System $S^\prime$ is moving with velocity $u=2 \si[per-mode=symbol]{\meter \per \second}$ relative to $S$} \tag{b} \\
+    m_1 = m_1^\prime,  \quad m_2 = m_2^\prime \text{~(invariance of mass)} \tag{c} \\
+    \text{Motion of observer in $S^\prime$ is in the positive $x$-direction} \tag{d} \\
+    \text{Direction of positive velocity} \posaxes \tag{e} \\
+    v_{\text{event}}^\prime = v_{\text{event}} - u \text{~for all events (covariance of velocity)} \tag{f} \\
+    m_1 v_{1_0} + m_2 v_{2_0} = m_1 v_{1_f} + m_2 v_{2_f} \text{~(conserved momentum)} \tag{g}
+\end{align}
+\begin{center}
+    \textsl{\footnotesize Solution continues in the following page}
+\end{center}
+$\bullet$ Showing that the momentum is conserved under $S^\prime$:
+\begin{align}
+m_1^\prime v_{1_0}^\prime + m_2^\prime v_{2_0}^\prime &= m_1^\prime v_{1_f}^\prime + m_2^\prime v_{2_f}^\prime \tag{to be proven} \\
+m_1 (v_{1_0} - u) + m_2 (v_{2_0} - u)  &= m_1 (v_{1_f} - u) + m_2 (v_{2_f} - u) \text{~(Galilean transformation)} \tag{1} \\
+m_1 v_{1_0} + m_2 v_{2_0} - \underline{u (m_1 + m_2)}  &= m_1 v_{1_f} + m_2 v_{2_f} - \underline{u (m_1 + m_2)}  \tag{2} \\
+m_1 v_{1_0} + m_2 v_{2_0} &= m_1 v_{1_f} + m_2 v_{2_f} \tag{3} \\
+\therefore \text{Momentum is conserved} \tag{from (3) and (g)}
+\end{align}
+\begin{center}
+    \rule{6cm}{0.8pt}\\
+    \rule{4cm}{0.4pt}    
+\end{center}
+\end{document}
