@@ -1,3 +1,0 @@
-Expand on (Example 2) to make a program that counts the number
-of even and odd digits in a given positive integer.
-
