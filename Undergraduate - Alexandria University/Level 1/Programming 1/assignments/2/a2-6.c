@@ -18,6 +18,7 @@ int Leap(int year)
         return 0;
     if (!(year % 4))
         return 1;
+    return 0;
 }
 
 int main()
