@@ -1,0 +1,579 @@
+\documentclass[12pt]{exam}
+\RequirePackage{amssymb, amsfonts, amsmath, latexsym, verbatim, xspace, setspace, mathpazo, multicol, xcolor}
+
+
+% Font
+\usepackage{anyfontsize}
+%\usepackage[default,regular,black]{sourceserifpro}
+%\usepackage{tgpagella,eulervm}
+\usepackage[T1]{fontenc}
+
+\usepackage{tabto}
+
+\usepackage{ifthen}
+
+\makeatletter
+\newenvironment{noparchoices}%
+  {%
+    \setcounter{choice}{0}%
+    \def\choice{%
+      \refstepcounter{choice}%
+      \choicelabel\ 
+      % No need to put the following into a token string; we just put
+      % the choicelabel onto the page, so we're at the spot whose page
+      % number we want to record:
+      \questionobject@pluspagecheck
+    }% choice
+    \def\CorrectChoice{%
+      \refstepcounter{choice}%
+      \ifprintanswers
+        \begingroup 
+        \CorrectChoice@Emphasis
+      \fi
+      \choicelabel
+      \endgroup
+      % No need to put the following into a token string; we just put
+      % the choicelabel onto the page, so we're at the spot whose page
+      % number we want to record:
+      \questionobject@pluspagecheck
+    }% CorrectChoice
+    \let\correctchoice\CorrectChoice
+    % If we're continuing the paragraph containing the question,
+    % then leave a bit of space before the first choice:
+    \ignorespaces
+  }%
+  {}
+\makeatother
+
+
+\usepackage{geometry}
+\geometry{left=0.38in,right=0.38in,%
+bindingoffset=0mm, top=1em,bottom=4em}
+\usepackage[none]{hyphenat}
+
+% Here's where you edit the Class, Exam, Date, etc.
+\newcommand{\model}{VERSION 4 [RECREATED]}
+\newcommand{\examnum}{SSP Linear Algebra Midterm Exam}
+\newcommand{\examdate}{Fall 2024}
+\newcommand{\newquestion}[3]{\fontsize{12}{14}\selectfont\uplevel{#1[Qu.] \fontsize{14}{16}\selectfont\ifthenelse{\equal{#2}{}}{[1 mark(s)]\\}{[#2 x 1 mark(s)]\\}\fontsize{14}{16}\selectfont\\[-1em]#3}\fontsize{14}{16}\selectfont}
+\newcommand{\mat}[1]{\mathrm{#1}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+\begin{document}
+
+
+\footrule
+\firstpagefooter{\examnum~- \examdate}{}{Page \thepage~of \numpages}
+\runningfooter{\model ~~~~~~~~ \examnum~- \examdate}{}{Page \thepage~of \numpages}
+
+\setlength{\columnseprule}{.1pt}
+\def\columnseprulecolor{\color{black}}
+\setlength{\columnsep}{2cm}
+
+\begin{multicols*}{2}
+    \noindent
+    \textbf{Midterm SSP Exam - Linear Algebra - \examdate} \\
+    \textbf{No. of Questions : \numquestions} \\[-4pt]
+    \rule[1ex]{0.45\textwidth}{.1pt}
+    \noindent
+    \\[-2em]
+    \fontsize{14}{16}\selectfont
+    \begin{questions}
+        \newquestion{}{2}{For the following sets\\[+1em]
+            $S_1 = \begin{Bmatrix}
+                    \begin{bmatrix}
+                        2 \\
+                        1 \\
+                        3
+                    \end{bmatrix},
+                    \begin{bmatrix}
+                        0 \\0\\0
+                    \end{bmatrix},
+                    \begin{bmatrix}
+                        -1 \\2\\1
+                    \end{bmatrix}
+                \end{Bmatrix}
+                \\[+1em]
+                S_2 = \begin{Bmatrix}
+                    \begin{bmatrix}
+                        2 \\3\\-1
+                    \end{bmatrix},
+                    \begin{bmatrix}
+                        4 \\-2\\1
+                    \end{bmatrix}
+                \end{Bmatrix}
+                \\[+1em]
+                S_3 = \begin{Bmatrix}
+                    \begin{bmatrix}
+                        1 \\0\\0
+                    \end{bmatrix},
+                    \begin{bmatrix}
+                        1 \\1\\0
+                    \end{bmatrix},
+                    \begin{bmatrix}
+                        1 \\1\\1
+                    \end{bmatrix}
+                \end{Bmatrix}
+                \\[+1em]
+                S_4 = \begin{Bmatrix}
+                    \begin{bmatrix}
+                        1 \\0\\0\\0
+                    \end{bmatrix},
+                    \begin{bmatrix}
+                        0 \\1\\0\\0
+                    \end{bmatrix},
+                    \begin{bmatrix}
+                        0 \\0\\1\\0
+                    \end{bmatrix}
+                \end{Bmatrix}
+                \\[+1em]
+                S_5 = \begin{Bmatrix}
+                    \begin{bmatrix}
+                        2 \\0\\0
+                    \end{bmatrix},
+                    \begin{bmatrix}
+                        4 \\-2\\1
+                    \end{bmatrix},
+                    \begin{bmatrix}
+                        -1 \\3\\0
+                    \end{bmatrix},
+                    \begin{bmatrix}
+                        -1 \\2\\1
+                    \end{bmatrix}
+                \end{Bmatrix}
+            $
+        }
+        \fontsize{14}{16}\selectfont
+        \question Which of the above sets is a basis for $\mathbb{R}^3$?\\
+        \begin{noparchoices}
+            \begin{tabular}{l l}
+                \choice all                          & \choice all except $S_2$    \\
+                \choice only $S_3$ \& $S_5$          & \choice only $S_3$ \& $S_4$ \\
+                \choice only $S_1$ \& $S_3$ \& $S_4$ & \choice only $S_3$
+            \end{tabular}
+        \end{noparchoices}
+        \question Which of the above sets is a \ spanning set for $\mathbb{R}^3$?\\
+        \begin{noparchoices}
+            \begin{tabular}{l l}
+                \choice only $S_3$ \& $S_4$ & \choice only $S_1$ \& $S_3$ \& $S_4$\\
+                \choice all except $S_2$ & \choice all\\
+                \choice only $S_3$ \& $S_5$ & \choice only $S_3$
+            \end{tabular}
+        \end{noparchoices}
+
+    \vfill\mbox{}
+    
+    \columnbreak
+    \uplevel{\leftskip=-0.75cm \noindent\rule{\linewidth}{0.5pt}}
+    \ \\[-2.5em]
+    \leftskip=-0.75cm
+    \newquestion{\leftskip=-0.75cm \noindent}{}{
+        Given the set of 5 vectors \linebreak $S = \begin{Bmatrix}
+            v_1,v_2,v_3,v_4,v_5
+        \end{Bmatrix}$ where:\\
+        $v_1 = \begin{bmatrix}
+            2\\-4\\-4\\6
+        \end{bmatrix},
+        v_2 = \begin{bmatrix}
+            -3\\9\\6\\18
+        \end{bmatrix},
+        v_3 = 2v_1-3v_2,\\
+        v_4 = \begin{bmatrix}
+            0\\0\\0\\0
+        \end{bmatrix},
+        v_5 = \begin{bmatrix}
+            -1\\5\\2\\-3
+        \end{bmatrix}
+        $
+        }
+    \question A basis of $H = \text{span}(S)$ is \dots\\
+    \begin{oneparchoices}
+        \choice $\begin{Bmatrix}
+            v_1,v_2,v_5
+        \end{Bmatrix}$\\
+        \choice $\begin{Bmatrix}
+            v_1,v_2,v_3,v_4
+        \end{Bmatrix}$\\
+        \choice $\begin{Bmatrix}
+            v_1,v_2,v_3,v_5
+        \end{Bmatrix}$\\
+        \choice $\begin{Bmatrix}
+            v_1,v_2,v_3
+        \end{Bmatrix}$\\\choice $\begin{Bmatrix}
+            v_1,v_2,v_3,v_4,v_5
+        \end{Bmatrix}$\\
+        \choice All are bases
+    \end{oneparchoices}
+    \\[-2.4em]
+    \uplevel{\leftskip=-0.75cm \noindent\rule{\linewidth}{0.5pt}}
+    \ \\[-3.3em]
+    \newquestion{\leftskip=-0.75cm \noindent}{}{\\[-2.5em]}
+    \question The set of all $x\in \mathbb{R}$ for which the vectors $\langle1,x,0\rangle$ ,$\langle0,x^2,1\rangle$, and $\langle0,1,x\rangle$ are linearly dependent is\\[+1em]
+    \begin{noparchoices}
+        \begin{tabular}{l l}
+            \choice $\mathbb{R} - \lbrace 0 \rbrace$ & \choice $\lbrace-1\rbrace$\\[+1em]
+            \choice $\lbrace 0 \rbrace$ & \choice $\mathbb{R} - \lbrace -1 \rbrace$\\[+1em]
+            \choice $\mathbb{R} - \lbrace 1 \rbrace$ & \choice $\lbrace 1 \rbrace$
+        \end{tabular}
+    \end{noparchoices}
+    \\[-1.5em]
+    \uplevel{\leftskip=-0.75cm \noindent\rule{\linewidth}{0.5pt}}
+    \ \\[-3.3em]
+    \newquestion{\leftskip=-0.75cm \noindent}{}{\\[-2.5em]}
+    \question Which of the following statements is \textbf{FALSE}?\\[+1em]
+    \begin{oneparchoices}
+        \choice A set containing a single non-zero vector is linearly independent.\\[+1em]
+        \choice Every linearly dependent set contains the zero vector.\\[+1em]
+        \choice The set of vectors $v,kv$ is linearly dependent for every scalar $k$.\\[+1em]
+        \choice Every set containing the zero vector is linearly dependent.
+    \end{oneparchoices}
+    
+    \newpage
+    \uplevel{\noindent\rule{\linewidth}{0.5pt}}
+    \newquestion{\noindent}{}{\\[-2.4em]}
+    \fontsize{14}{16}\selectfont
+    \leftskip=0cm
+    \question Given the linear system of\linebreak equations $AX = B$, where $B \neq 0$ \linebreak and $A$ of size $m \times n$. This system could have a unique solution if
+    \begin{noparchoices}
+        \begin{tabular}{l l l l}
+            \choice & $m \neq n$ only & \choice & $m \geq n$\\
+            \choice & $m \leq n$ & \choice & $m<n$ only\\
+            \choice & $m > n$ only & \choice & $m = n$ only
+        \end{tabular}
+    \end{noparchoices}
+    \\[-3em]
+    \uplevel{\noindent\rule{\linewidth}{0.5pt}}
+    \ \\[-2.7em]
+    \newquestion{\noindent}{}{\\[-2.4em]}
+    \question Let the vector $u = \langle k,3,0 \rangle \in \mathbb{R}^3$ be a linear combination of the vectors $v = \langle 1,0,2\rangle$ and $w = \langle -1,1,2\rangle$ such that $u = \alpha v + \beta w$. The values of $\alpha, \beta, k$ are \dots\\
+    \begin{oneparchoices}
+        \choice $\alpha = 2, \beta = -2, k = 6$\\
+        \choice $\alpha = -3, \beta = 3, k = -6$\\
+        \choice $\alpha = 1, \beta = -1, k = 6$\\
+        \choice $\alpha = 3, \beta = -3, k = -6$
+    \end{oneparchoices}
+    \\[-2.7em]
+    \uplevel{\noindent\rule{\linewidth}{0.5pt}}
+    \ \\[-3em]
+    \newquestion{\noindent}{3}{Given the set $V = 
+    \begin{Bmatrix}
+        \begin{bmatrix}
+            x \\ x^3 \\ 0
+        \end{bmatrix} ; x \in  \mathbb{R}
+    \end{Bmatrix}
+    $ \\}
+    \question The set $V$ is closed under scalar multiplication.\\
+    \begin{noparchoices}
+        \begin{tabular}{l l l l}
+            \choice & False & \choice & True \\
+        \end{tabular}
+    \end{noparchoices}
+    \question The set $V$ is closed under addition.\\
+    \begin{noparchoices}
+        \begin{tabular}{l l l l}
+            \choice & False & \choice & True \\
+        \end{tabular}
+    \end{noparchoices}
+    \question The set $V$ is \dots\\
+    \begin{oneparchoices}
+        \choice a subset of $\mathbb{R}^3$\\
+        \choice a subspace of $\mathbb{R}^2$\\
+        \choice a subspace of $\mathbb{R}^3$\\
+        \choice an independent set\\
+        \choice a subset of $\mathbb{R}^2$
+    \end{oneparchoices}
+    \\[-2.7em]
+    \uplevel{\noindent\rule{\linewidth}{0.5pt}}
+    \ \\[-3em]
+    \newquestion{\noindent}{3}{\makebox[\linewidth]{~~~~~For $W = \lbrace [a - 3b~,~b-a~,~a~,~b]^T : a,b \in \mathbb{R} \rbrace$}\\[-1em]}
+    \question $W$ is a subspace of \dots\\
+    \begin{noparchoices}
+        \begin{tabular}{l l}
+            \choice $\mathbb{R}^3$ & \choice $\mathbb{R}^2$\\
+            \choice $\mathbb{R}^4$ & \choice not a subspace\\
+        \end{tabular}
+    \end{noparchoices}
+    \vfill\mbox{}
+    \columnbreak
+    \leftskip=-0.75cm
+    \question A basis of $W$ is \dots\\[+1em]
+    \begin{oneparchoices}
+        \choice $
+        \begin{Bmatrix}
+            \begin{bmatrix}
+                1\\0
+            \end{bmatrix},
+            \begin{bmatrix}
+                0\\1
+            \end{bmatrix}
+        \end{Bmatrix}
+        $\\[+1em]
+        \choice $
+        \begin{Bmatrix}
+            \begin{bmatrix}
+                1\\-1\\1\\0
+            \end{bmatrix},
+            \begin{bmatrix}
+                -3\\1\\0\\1
+            \end{bmatrix}
+        \end{Bmatrix}
+        $\\[+1em]
+        \choice $
+        \begin{Bmatrix}
+            \begin{bmatrix}
+                1\\-3
+            \end{bmatrix},
+            \begin{bmatrix}
+                1\\-1
+            \end{bmatrix},
+            \begin{bmatrix}
+                1\\0
+            \end{bmatrix},
+            \begin{bmatrix}
+                0\\1
+            \end{bmatrix}
+        \end{Bmatrix}
+        $\\[+1em]
+        \choice $
+        \begin{Bmatrix}
+            \begin{bmatrix}
+                1\\0\\0\\0
+            \end{bmatrix},
+            \begin{bmatrix}
+                0\\1\\0\\0
+            \end{bmatrix}
+        \end{Bmatrix}
+        $\\[+1em]
+        \choice $
+        \begin{Bmatrix}
+            \begin{bmatrix}
+                1\\0\\0\\0
+            \end{bmatrix},
+            \begin{bmatrix}
+                0\\1\\0\\0
+            \end{bmatrix},
+            \begin{bmatrix}
+                0\\0\\1\\0
+            \end{bmatrix},
+            \begin{bmatrix}
+                0\\0\\0\\1
+            \end{bmatrix}
+        \end{Bmatrix}
+        $\\
+    \end{oneparchoices}
+    \question The dimension of $W$ is \dots\\
+    \begin{noparchoices}
+        \choice 1 \quad \choice 4 \quad \choice 3 \quad \choice 2 \quad \choice 0
+    \end{noparchoices}
+    \\[-2.5em]
+    \uplevel{\leftskip=-0.75cm \noindent\rule{\linewidth}{0.5pt}}
+    \ \\[-3em]
+    \newquestion{\leftskip=-0.75cm \noindent}{}{\\[-2em]}
+    \question Let $B$ and $C$ denote subsets of a vector space $V$. Select the \textbf{CORRECT} statement.\\[+1em]
+    \begin{oneparchoices}
+        \choice If $B \subseteq C$ and $C$ is independent, then $B$ is independent.\\[+1em]
+        \choice If $B \subseteq C$ and $C$ spans $V$, \linebreak then $B$ spans $V$.\\[+1em]
+        \choice If $B \subseteq C$, then $\text{span}(C) = \text{span}(B)$.\\[+1em]
+        \choice If $B \subseteq C$ and $C$ is linearly dependent, then $B$ is linearly dependent.\\[+1em]
+    \end{oneparchoices}
+    \newpage
+    \leftskip=0cm
+    \uplevel{\noindent\rule{\linewidth}{0.5pt}}
+    \ \\[-3em]
+    \newquestion{}{}{\\[-2.4em]}
+    \question Let $v_1,v_2,v_3,v_4,v_5,v_6$ be six vectors in $\mathbb{R}^4$. Which one of the following statements is \textbf{FALSE}?\\[+1em]
+    \begin{oneparchoices}
+        \choice These vectors are not linearly independent.\\[+1em]
+        \choice It is not necessary that these vectors span $\mathbb{R}^4$.\\[+1em]
+        \choice If the set $\lbrace v_1,v_3,v_5,v_6 \rbrace$ spans $\mathbb{R}^4$, then it forms a basis for $\mathbb{R}^4$.\\[+1em]
+        \choice Any four of these vectors form a basis for $\mathbb{R}^4$.\\[-1.5em]
+    \end{oneparchoices}
+    \uplevel{\noindent\rule{\linewidth}{0.5pt}}
+    \newquestion{}{}{\\[-2.4em]}
+    \question Let $A$ be an $n \times n$ matrix. Consider the linear system $AX = 4X$, where $X \in \mathbb{R}^n$. This system has a unique solution if and only if \dots\dots~is an invertible matrix.\\[+.5em]
+    \begin{noparchoices}
+        \begin{tabular}{l l l l l l}
+            \choice & $A-4I$ & \choice & $A$ & \choice & $X-4I$\\
+            \choice & $X$ & \choice & $4A$ & \choice & $4X$
+        \end{tabular}
+    \end{noparchoices}
+    \\[-3em]
+    \uplevel{\noindent\rule{\linewidth}{0.5pt}}
+    \ \\[-3em]
+    \newquestion{}{}{\\[-2.4em]}
+    \question For the system $A_{4\times3}X_{3\times1}=B$. If the rank of the matrix $A = 3$, and the augmented matrix of $A$ ($Aug(A)$) is invertible, then the system\\
+    \begin{oneparchoices}
+        \choice has no solution\\
+        \choice has unique solution\\
+        \choice has infinite number of solutions\\
+        \choice not enough information
+    \end{oneparchoices}
+    \vfill\mbox{}
+    \columnbreak
+    \uplevel{\leftskip=-0.75cm \noindent\rule{\linewidth}{0.5pt}}
+    \ \\[-2.5em]
+    \leftskip=-0.75cm
+    \newquestion{\leftskip=-0.75cm \noindent}{2}{
+        Given the system of equations\\[-2em]
+        \begin{flalign*}
+        x + 2y + z &= 3&\\
+        2x - y - 3z &= 5&\\
+        4x + 3y - z &= k &\\[-2em]
+        \end{flalign*}
+        where $k$ is a scalar value.
+    }
+    \question The set of all values of $k$ for which the system of linear equations has a single solution is\\
+    \begin{noparchoices}
+        \begin{tabular}{l l}
+            \choice $\lbrace 4 \rbrace$ & \choice $\lbrace 11 \rbrace$\\
+            \choice $\mathbb{R} - \lbrace 11 \rbrace$ & \choice $\mathbb{R} - \lbrace 4 \rbrace$\\
+            \choice $\mathbb{R} - \lbrace 2 \rbrace$ & \choice $\phi$\\
+        \end{tabular}
+    \end{noparchoices}
+    \question The set of all values of $k$ for which the system of linear equations has no solution is\\
+    \begin{noparchoices}
+        \begin{tabular}{l l}
+            \choice $\lbrace 4 \rbrace$ & \choice $\mathbb{R} - \lbrace 2 \rbrace$ \\
+            \choice $\lbrace 11 \rbrace$ & \choice $\mathbb{R} - \lbrace 4 \rbrace$\\
+            \choice $\phi$ & \choice $\mathbb{R} - \lbrace 11 \rbrace$\\
+        \end{tabular}
+    \end{noparchoices}
+    \uplevel{\leftskip=-0.75cm \noindent\rule{\linewidth}{0.5pt}}
+    \ \\[-2.5em]
+    \newquestion{\leftskip=-0.75cm \noindent}{}{\\[-2em]}
+    \question Let $S = \lbrace A_1, A_2, \dots, A_n \rbrace$ be a linearly independent set of matrices in $\mathbb{M}_{n\times n};n \geq 2$. Which of the following statements is \textbf{TRUE}?\\[+1em]
+    \begin{oneparchoices}
+        \choice The only way to write $0$ as a linear combination of the elements of $S$ is the zero combination.\\[+1em]
+        \choice $S$ spans $\mathbb{M}_{n \times n}$.\\[+1em]
+        \choice $S$ could be a basis of $\mathbb{M}_{n \times n}$.\\[+1em]
+        \choice All are true
+    \end{oneparchoices}
+    \newpage
+    \leftskip=0cm
+    \uplevel{\noindent\rule{\linewidth}{0.5pt}}
+    \ \\[-2.5em]
+    \newquestion{}{2}{
+        Let the set $W$ be the solution set of the system\\[-2em]
+        \begin{flalign*}
+            x + y - z + w &= 0&\\
+            2x -3y -2w &= 0&
+        \end{flalign*}
+    }
+    \ \\[-4em]
+    \question $W$ is \dots\\
+    \begin{oneparchoices}
+        \choice a subspace of $\mathbb{R}^2$\\
+        \choice a subspace of $\mathbb{R}^3$\\
+        \choice a subspace of $\mathbb{R}^4$\\
+        \choice not a subspace\\
+        \choice a subspace of $\mathbb{M}_{2\times4}$\\
+        \choice a subspace of $\mathbb{M}_{4\times2}$
+    \end{oneparchoices}
+    \question $\text{dim}(W) = $ \dots\\
+    \begin{oneparchoices}
+        \begin{tabular}{r l l l l l}
+            \choice & 0 & \choice & 2 & \choice 3 \\
+            \choice & 5 & \choice & 4 & \choice 1
+        \end{tabular}
+    \end{oneparchoices}
+    \\[-2em]
+    \uplevel{\noindent\rule{\linewidth}{0.5pt}}
+    \ \\[-2.5em]
+    \newquestion{}{}{\\[-2em]}
+    \question Which of the following is \textbf{\underline{NOT}} a subspace of $\mathbb{M}_{2\times2}$?\\[+.5em]
+    \begin{oneparchoices}
+        \choice $\begin{Bmatrix}
+            \begin{bmatrix}
+                a & 0\\a & 0
+            \end{bmatrix};~a \in \mathbb{R}
+        \end{Bmatrix}$\\[+1em]
+        \choice $\begin{Bmatrix}
+            \begin{bmatrix}
+                a -b & b-1\\a & b
+            \end{bmatrix};~a,b \in \mathbb{R}
+        \end{Bmatrix}$\\[+1em]
+        \choice $\begin{Bmatrix}
+            \begin{bmatrix}
+                a & -a\\-a & a
+            \end{bmatrix};~a \in \mathbb{R}
+        \end{Bmatrix}$\\[+1em]
+        \choice $\begin{Bmatrix}
+            \begin{bmatrix}
+                a & a\\a & a-b
+            \end{bmatrix};~a,b \in \mathbb{R}
+        \end{Bmatrix}$\\[+1em]
+        \choice $\begin{Bmatrix}
+            \begin{bmatrix}
+                a & b\\0 & c
+            \end{bmatrix};~a,b,c \in \mathbb{R}
+        \end{Bmatrix}$
+    \end{oneparchoices}
+    \\[-2em]
+    \uplevel{\noindent\rule{\linewidth}{0.5pt}}
+    \ \\[-2.5em]
+    \newquestion{}{}{\\[-2em]}
+    \question The maximum possible rank of an $m \times n$ matrix that is not square is\\
+    \begin{noparchoices}
+        \begin{tabular}{l l}
+            \choice $m - n$ & \choice $n$\\
+            \choice $m$ & \choice Max of $m, n$\\
+            \choice $m / n$ & \choice Min of $m, n$\\
+        \end{tabular}
+    \end{noparchoices}
+    \vfill\mbox{}
+    \columnbreak
+    \leftskip=-0.75cm
+    \uplevel{\leftskip=-0.75cm \noindent\rule{\linewidth}{0.5pt}}
+    \ \\[-2.5em]
+    \newquestion{\leftskip=-0.75cm \noindent}{}{\\[-2em]}
+    \question Let $A$ be an $n \times n$ matrix. Suppose that the system $AX = B$ is inconsistent for some $B \in \mathbb{R}^n$, then the system $AX = 0$, has\\
+    \begin{oneparchoices}
+        \choice Unique trivial solution\\
+        \choice Infinite number of solutions\\
+        \choice Unique non-trivial solution\\
+        \choice No solutions
+    \end{oneparchoices}
+    \uplevel{\leftskip=-0.75cm \noindent\rule{\linewidth}{0.5pt}}
+    \ \\[-2.5em]
+    \newquestion{\leftskip=-0.75cm \noindent}{2}{
+        Given the set of polynomials \\$H = \lbrace ax^2 + bx + b, ~a \geq b,~a,b \in \mathbb{R} \rbrace$\\[-2em]
+    }
+    \question The set $H$ is closed under addition.\\
+    \begin{oneparchoices}
+        \begin{tabular}{l l l l}
+            \choice & False & \choice & True
+        \end{tabular}
+    \end{oneparchoices}
+    \question The set $H$ is a vector space.\\
+    \begin{oneparchoices}
+        \begin{tabular}{l l l l}
+            \choice & False & \choice & True
+        \end{tabular}
+    \end{oneparchoices}
+    \\[-2.5em]
+    \uplevel{\leftskip=-0.75cm \noindent\rule{\linewidth}{0.5pt}}
+    \ \\[-3em]
+    \newquestion{\leftskip=-0.75cm \noindent}{}{\\[-2em]}
+    \question If the system $A_{n \times n}x_{n \times 1} = b_{n \times 1}$ has no solution for some $b$, then the columns of $A$ \dots\\
+    \begin{oneparchoices}
+        \choice form a basis for $\mathbb{R}^n$\\
+        \choice are linearly independent.\\
+        \choice are linearly dependent.\\
+        \choice form a spanning set for $\mathbb{R}^n$\\
+    \end{oneparchoices}
+    \\[-2.5em]
+    \uplevel{\leftskip=-0.75cm \noindent\rule{\linewidth}{0.5pt}}
+\end{questions}
+\fontsize{12}{14}
+\selectfont
+\leftskip=-0.75cm
+Examiners' committee:
+\begin{itemize}
+    \leftskip=-0.75cm
+    \item Dr. Islam Abdul Maksoud
+    \item Dr. Sara Hassan
+    \item Dr. Ahmed Tayel
+    \item Dr. Ahmed Yahia
+\end{itemize}
+Total marks $= \numquestions$
+\end{multicols*}
+\end{document}
