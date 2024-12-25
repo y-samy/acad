@@ -1,0 +1,108 @@
+\documentclass[a4paper,12pt]{article}
+
+% Margins
+\usepackage{geometry}
+\geometry{left=10mm,right=10mm,%
+bindingoffset=0mm, top=10mm,bottom=10mm}
+
+% More Math Symbols
+\usepackage{amssymb}
+
+% Margin notes
+\usepackage{marginnote}
+
+% Dashed rules
+\usepackage{dashrule}
+
+% Trademark Symbols
+\usepackage{textcomp}
+
+% Text in math
+\usepackage{amsmath}
+
+% For Diagrams
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+% Footnote URLs
+\usepackage{hyperref}
+
+% Underlines
+\usepackage{soul}
+
+% Font
+\usepackage{anyfontsize}
+%\usepackage[default,regular,black]{sourceserifpro}
+\usepackage{tgpagella,eulervm}
+\usepackage[T1]{fontenc}
+
+% Mutli-column text
+\usepackage{multicol}
+
+% For tables
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{tablefootnote}
+
+% Short negative symbol in math mode (sub-zero mnemonic)
+\newcommand{\sz}{\text{-}}
+
+% Clearer math
+\everymath{\displaystyle}
+
+% Degree
+\usepackage{gensymb}
+
+% Slanted Parallel
+\newcommand{\slparallel}{\mathbin{\!/\mkern-5mu/\!}}
+
+\begin{document}
+
+% No page numbering
+\pagenumbering{gobble}
+
+% Setting the fontsize
+\fontsize{16}{20}\selectfont
+
+
+% Error Formula
+\noindent
+$\%_\text{error} = \frac{\lvert \text{Value}_{\text{literature}} - \text{Value}_{\text{theoretical}} \rvert}{\text{Value}_{\text{literature}}} \times 100$
+
+{\ \\[-.7em] \centering \hdashrule{10cm}{0.4pt}{4pt} \par \ \\[-.7em]}
+
+% Specific Charge of Electron
+\noindent
+$
+\left( \frac{e}{m} \right)_{\text{literature}} = 1.76 \times 10^{11} \, \text{C/kg} \\[+1em]
+B = \frac{\mu_0 n R^2 I}{(R^2 + a^2)^{3/2}} \qquad \frac{e}{m} = \frac{2V}{r^2 B^2} \qquad F = e~v~B \qquad F_r = \frac{mv^2}{r}
+$
+
+{\ \\[-.7em] \centering \hdashrule{10cm}{0.4pt}{4pt} \par \ \\[-.7em]}
+
+% Planck's Constant
+\noindent
+$
+h_{\text{literature}} = 6.62607 \times 10^{-34} \, \text{m}^2 \text{kg/s}\\[+1em]
+KE_{e^-} = hf - W = \frac{1}{2} mv^2 \qquad eV = \frac{1}{2} mv^2_{\text{max}} = KE_{\text{max}} \qquad \frac{h}{e} = \frac{V_1 - V_2}{f_1 - f_2}\\[+1em]
+\frac{IA}{hf} = \frac{i}{e}
+$
+
+{\ \\[-.7em] \centering \hdashrule{10cm}{0.4pt}{4pt} \par \ \\[-.7em]}
+
+% Spectral Lines
+\noindent
+$
+\theta = \tan^{-1}{\frac{a}{D}} \qquad n\lambda = 2d\sin{\theta} \qquad 2sin{\theta} = \frac{R}{L} \qquad n\lambda = \frac{Rd}{L} \\[+1em]
+\frac{1}{\lambda_{\text{shortest}}} = \frac{1}{n_f^2} R_{\infty} \qquad \frac{1}{\lambda_{\text{longest}}} = R_{\infty} \left[\frac{1}{n_f^2} - \frac{1}{(n_f + 1)^2}\right]
+$
+
+{\ \\[-.7em] \centering \hdashrule{10cm}{0.4pt}{4pt} \par \ \\[-.7em]}
+
+% Wave-Particle Duality
+\noindent
+$
+\lambda_{\text{th}} = \frac{h}{mv} = \frac{h}{\sqrt{2m_e e V}} = 12.26 \times 10^{-10} \times \frac{1}{\sqrt{V}} \qquad \lambda_{\text{exp}} = \frac{r_1 d_2 + r_2 d_1}{2L}
+$
+
+\end{document}
