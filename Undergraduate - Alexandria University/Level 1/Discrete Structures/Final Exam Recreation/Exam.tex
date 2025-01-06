@@ -1,0 +1,339 @@
+\documentclass[answers]{exam}
+
+% Margins
+\usepackage{geometry}
+\geometry{left=10mm,right=10mm,%
+top=20mm,bottom=20mm}
+
+% More Math Symbols
+\usepackage{amssymb}
+
+% Margin notes
+\usepackage{marginnote}
+
+% Dashed rules
+\usepackage{dashrule}
+
+% Trademark Symbols
+\usepackage{textcomp}
+
+% Text in math
+\usepackage{amsmath}
+
+% For Diagrams
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+% Footnote URLs
+\usepackage{hyperref}
+
+% Underlines
+\usepackage{soul}
+
+% Tikz
+\usepackage{tikz}
+\usetikzlibrary{fit, 
+                chains,
+                positioning,
+                shapes.geometric}
+
+% Font
+\usepackage{anyfontsize}
+%\usepackage[default,regular,black]{sourceserifpro}
+\usepackage{tgpagella,eulervm}
+\usepackage[T1]{fontenc}
+
+% Mutli-column text
+\usepackage{multicol}
+
+% For tables
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{tablefootnote}
+
+% Short negative symbol in math mode (sub-zero mnemonic)
+\newcommand{\sz}{\text{-}}
+
+% Clearer math
+\everymath{\displaystyle}
+
+% Degree
+\usepackage{gensymb}
+
+% Slanted Parallel
+\newcommand{\slparallel}{\mathbin{\!/\mkern-5mu/\!}}
+
+% I like combinatorics to be in the format nCr
+\usepackage{leftindex}
+\newcommand{\comb}[2]{\leftindex^{#1}{\text{C}}_{#2}}
+\newcommand{\perm}[2]{\leftindex^{#1}{\text{P}}_{#2}}
+
+% Probability Trees
+\usepackage{forest}
+
+% Setting the fontsize
+\newcommand{\normalfontsize}{\fontsize{14pt}{16pt}\selectfont}
+\newcommand{\titlefontsize}{\fontsize{16pt}{20pt}\selectfont}
+
+% Solution box formatting
+\unframedsolutions
+\AtBeginEnvironment{solution}{\color{blue}}
+\renewcommand{\solutiontitle}{}
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{230, 230, 230}
+
+% Document-specific commands
+%% Thanks https://tex.stackexchange.com/a/691776
+\newcommand{\bijections}[1]{\begin{tikzpicture}[
+    node distance = 1mm and 18mm,
+ every fit/.style = {ellipse, draw,
+                     minimum width=2cm, inner sep=0pt,
+                     node contents={}
+                     },
+      start chain = going below,
+                         ]
+ %Draw labels
+ \foreach \i/\j [count=\n] in {1/1, 2/2, 3/3}
+ {
+     \node[on chain]     (a\n) {$\i$};
+     \node[right=of a\n] (b\n) {$\j$};
+ }
+
+ %Draw arrows
+ \foreach \i/\j in {#1}
+     \draw[-stealth, semithick] (\i) -- (\j);
+ \end{tikzpicture}}
+%% Probability Tree: Thanks https://tex.stackexchange.com/a/425271
+\forestset{
+  ptree/.style={
+    for tree={
+      grow'=0,
+      parent anchor=children,
+      child anchor=parent,
+      l=3cm,
+      s sep = 2em
+    },
+    before typesetting nodes={
+      for tree={
+        split option={content}{:}{content, my edge label},
+      },
+    },
+  },
+  my edge label/.style={
+    if={
+      > O_= {n'}{1}
+    }{
+      edge label={node [midway, below] {#1} }
+    }{
+      edge label={node [midway, above] {#1} }
+    },
+  }
+}
+
+\begin{document}
+
+\noindent
+\titlefontsize Discrete Structures for Computing -- SSP -- Final Exam 2024\\
+\normalfontsize Dr. Amin Shoukry, Dr. Yasmine Abouelseoud\\Recreated and solved by a student
+\hrule
+\begin{questions}
+    \question Prove by induction $\sum \limits_{k = 1}^{n} (k \cdot k!) = (n + 1)! - 1$\\ Note: $n \ge 1$
+    \begin{shaded}
+        \begin{solutionorbox}
+            Let $P(n): \sum \limits_{k = 1}^{n} (k \cdot k!) = (n + 1)! - 1$\\[+.7em]
+            Prove $P(n) ~ \forall n \ge 1 $\\
+            1. \textbf{Base Case}, let $n = 1$ and prove that $P(1)$ is true.
+            \begin{align*}
+                \sum \limits_{k = 1}^{1} (k \cdot k!) & = (n + 1)! - 1 \tag{Base Case} \\
+                1 \times 1!                           & = (1+1)! - 1 \tag{Substitute}  \\
+                1                                     & = 2 - 1 = 1 \tag{Proven}
+            \end{align*}
+            2. \textbf{Inductive Step}, prove that $P(x) \rightarrow P(x+1) \quad \forall x \ge 1$\\
+            3. \textbf{Inductive Hypothesis}, $n = x$\\
+            Assume $P(x)$, prove $P(x+1)$
+            \begin{align*}
+                \sum \limits_{k = 1}^{x} (k \cdot k!)            & = (x + 1)! - 1 \tag{Assume $P(x)$}                                               \\
+                P(x+1) = \sum \limits_{k = 1}^{x+1} (k \cdot k!) & = ((x + 1) + 1)! -1 \tag{R.T.P $P(x+1)$}                                         \\
+                \sum \limits_{k = 1}^{x+1} (k \cdot k!)          & = (x + 2)! -1 \tag{Simplify}                                                     \\
+                \text{L.H.S}                                     & = \sum \limits_{k = 1}^{x} (k \cdot k!) + (x+1) \cdot (x+1)! \tag{Expand Series} \\
+                                                                 & = (x + 1)! - 1 + (x+1) \cdot (x+1)! \tag{Sub. from $P(x)$}                       \\
+                                                                 & = (x + 1)! \cdot (1 + (x+1)) - 1 \tag{Simplify}                                  \\
+                                                                 & = (x + 1)! \cdot (x + 2) - 1 \tag{Simplify}                                      \\
+                                                                 & = (x + 2)! - 1 \tag{Factorial Simplification}                                    \\
+                                                                 & = \text{R.H.S} \tag{Proven}
+            \end{align*}
+        \end{solutionorbox}
+    \end{shaded}
+    \question Is the function $f : \mathbb{Z} \longrightarrow \mathbb{Z}, f(x) = 4 - 3x$, onto? prove your answer.
+    \begin{shaded}
+        \begin{solutionorbox}
+            \textbf{NO}\\
+            (Counter-example)\\
+            Find $n \in \mathbb{Z}$ which has no pre-image under $f$ (in range, but not in co-domain).\\
+            Let $n = 0$:
+            \begin{align}
+                0    & = 4 - 3x \notag      \\
+                -4   & = -3x \notag         \\
+                x    & = \frac{4}{3} \notag
+            \end{align}
+            $x = \frac{4}{3} \notin \mathbb{Z}$, hence $f$ is NOT onto.
+        \end{solutionorbox}
+    \end{shaded}
+    \question Prove that the function $f : \mathbb{R} - \{ 2 \} \longrightarrow \mathbb{R} - \{ 5 \}, f(x) = \dfrac{5x + 1}{x - 2}$, is one-to-one.
+    \begin{shaded}
+        \begin{solutionorbox}
+            Definition of a one-to-one function: $f(n) = f(m)$ if, and only if, $n = m$.\\
+            (Direct Proof)\\
+            $n = m \rightarrow f(n) = f(m)$ does not need proving.\\
+            R.T.P: $f(n) = f(m) \rightarrow n = m$
+            \begin{align*}
+                f(n)                                      & = f(m) \notag                                      \\
+                \frac{5n+1}{n-2}                          & = \frac{5m+1}{m-2} \tag{Substitute}                \\
+                (m-2) (5n + 1)                            & = (n-2) (5m+1) \notag                              \\
+                \underline{5mn} + m - 10n - \underline{2} & = \underline{5mn} + n - 10m - \underline{2} \notag \\
+                m - 10n                                   & = n - 10m \notag                                   \\
+                11m                                       & = 11n \notag                                       \\
+                m                                         & = n \tag{Proven}
+            \end{align*}
+        \end{solutionorbox}
+    \end{shaded}
+    \question Draw diagrams of all bijections $f: X \longrightarrow X, X = \{ 1, 2, 3 \}$
+    \begin{shaded}
+        \begin{solutionorbox}
+            \bijections{a1/b1, a2/b2, a3/b3}
+            \bijections{a1/b1, a2/b3, a3/b2}
+            \bijections{a1/b2, a2/b1, a3/b3}
+            \bijections{a1/b2, a2/b3, a3/b1}
+            \bijections{a1/b3, a2/b1, a3/b2}
+            \bijections{a1/b3, a2/b2, a3/b1}
+        \end{solutionorbox}
+    \end{shaded}
+    \question How many ways to arrange the word \textbf{TENNESSEE}?
+    \begin{shaded}
+        \begin{solutionorbox}
+            (9 Letters: 1 T, 2 N, 2 S, 4 E) Number of ways: $\comb{9}{4} \times \comb{5}{2} \times \comb{3}{2} \times \comb{1}{1}$
+        \end{solutionorbox}
+    \end{shaded}
+    \question How many ways to distribute 8 identical balls among 4 people?
+    \begin{shaded}
+        \begin{solutionorbox}
+            $\binom{8 + 4 - 1}{8} = \comb{11}{8}$
+        \end{solutionorbox}
+    \end{shaded}
+    \question There are 9 players, among them are 3 good front row players. How many teams of five players can you form if at least one good front row player must be included?
+    \begin{shaded}
+        \begin{solutionorbox}
+            Let $F = $ good front row players, $N = $ normal (other) players.\\[+1em]
+            \begin{forest}
+                for tree={grow=0,l=1cm,child anchor = west,parent anchor= west,anchor = west,calign=fixed edge angles, s sep+=1em}
+                [\phantom{}
+                [{$3F,2N = \comb{3}{3} \times \comb{6}{2}$}]
+                [{$2F,3N = \comb{3}{2} \times \comb{6}{3}$}]
+                [{$1F,4N = \comb{3}{1} \times \comb{6}{4}$}]
+                ]
+            \end{forest}
+            $\qquad \text{Total} = \comb{3}{3} \times \comb{6}{2} + \comb{3}{2} \times \comb{6}{3} + \comb{3}{1} \times \comb{6}{4} = \comb{9}{5} - \comb{6}{5}$
+        \end{solutionorbox}
+    \end{shaded}
+    \question You are going to use the 7 characters $a, b, c, d, e, f, g$ to make an ordered list of characters.
+    \begin{parts}
+        \part How many lists can you make if no repetition is allowed?
+        \begin{shaded}
+            \begin{solutionorbox}
+                $7!$
+            \end{solutionorbox}
+        \end{shaded}
+        \part How many lists can you make if repetitions are allowed?
+        \begin{shaded}
+            \begin{solutionorbox}
+                $7^7$
+            \end{solutionorbox}
+        \end{shaded}
+        \part How many lists can you make if at least one character should be repeated?
+        \begin{shaded}
+            \begin{solutionorbox}
+                $7^7 - 7!$
+            \end{solutionorbox}
+        \end{shaded}
+    \end{parts}
+    \pagebreak
+    \question You are going to build a binary string of length $8$.
+    \begin{parts}
+        \part How many strings end with a $1$?
+        \begin{shaded}
+            \begin{solutionorbox}
+                $2^7$
+            \end{solutionorbox}
+        \end{shaded}
+        \part How many strings have exactly four ones?
+        \begin{shaded}
+            \begin{solutionorbox}
+                $\comb{8}{4}$
+            \end{solutionorbox}
+        \end{shaded}
+        \part How many strings end with $1$ or have exactly four ones?
+        \begin{shaded}
+            \begin{solutionorbox}
+                $2^7 + \comb{8}{4} - \comb{7}{3}$
+            \end{solutionorbox}
+        \end{shaded}
+    \end{parts}
+    \question If 10 contestants are ranked without ties, how many ways are there for first, second, third places?
+    \begin{shaded}
+        \begin{solutionorbox}
+            $\perm{10}{3}$
+        \end{solutionorbox}
+    \end{shaded}
+    \question Find the coefficient of $x^8 \cdot y^5$ in $(4x^2 - 7y)^9$
+    \begin{shaded}
+        \begin{solutionorbox}
+            \textbf{Binomial theorem}
+            \begin{align*}
+                (4x^2 - 7y)^9 & = \sum_{k = 0}^{9} \comb{9}{k} (4x^2)^k \cdot (\sz7y)^{9-k} \tag{General Term} \\
+                2k = 8 \tag{Power of $x$}                                                                      \\
+                k = 4 \notag                                                                                   \\
+                \comb{9}{4} \cdot (4x^2)^4 \cdot (\sz7y)^{9-4} \tag{Substitute}                                \\
+                \comb{9}{4} \cdot 4^4 x^8 \cdot (\sz7^5) \cdot y^5 \tag{Simplify}                              \\
+                \comb{9}{4} \cdot 4^4 \cdot (\sz7^5) \cdot x^8 \cdot y^5 \tag{Re-order}                        \\
+                \comb{9}{4} \cdot 4^4 \cdot (\sz7^5) \tag{Isolate Coefficient}
+            \end{align*}
+        \end{solutionorbox}
+    \end{shaded}
+    \pagebreak
+    \question In a certain population, insurance policy holders are either accident prone or non-accident prone. The probability for an accident prone to have an accident within this year is $0.4$. The probability for a non-accident prone to have an accident within this year is $0.2$. If $30\%$ of the population is accident prone:
+    \begin{shaded}
+        \begin{solutionorbox}
+            Let $p =$ is accident prone, $p^c =$ is non-accident prone, $a =$ will have an accident this year, $a^c =$ will not have an accident this year.\\
+            \begin{forest}
+                ptree
+                [\phantom{}
+                [{$p$}:0.3
+                [{$a$}:0.4]
+                [{$a^c$}:0.6]
+                ]
+                [{$p^c$:0.7}
+                    [{$a$}:0.2]
+                    [{$a^c$}:0.8]
+                ]
+                ]
+            \end{forest}
+        \end{solutionorbox}
+    \end{shaded}
+    \begin{parts}
+        \part What is the probability of a policy holder to get into an accident within this year?
+        \begin{shaded}
+            \begin{solutionorbox}
+                $\text{P}(a) = 0.3 \times 0.4 + 0.7 \times 0.2
+                    = 0.26$
+            \end{solutionorbox}
+        \end{shaded}
+        \part What is the probability of a policy holder to be accident prone if he had an accident within this year?
+        \begin{shaded}
+            \begin{solutionorbox}
+                $\text{P}(p | a) = \frac{\text{P}(p \cap a)}{\text{P}(a)} = \frac{0.3 \times 0.4}{0.26} = \frac{6}{13} \approx 0.46$
+            \end{solutionorbox}
+        \end{shaded}
+    \end{parts}
+\end{questions}
+
+\end{document}
