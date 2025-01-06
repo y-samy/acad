@@ -63,7 +63,7 @@ bindingoffset=0mm, top=5mm,bottom=5mm}
 \pagenumbering{gobble}
 
 % Setting the fontsize
-\fontsize{13}{16}\selectfont
+\fontsize{13}{14}\selectfont
 
 % Galilean Transformation
 \noindent
@@ -72,52 +72,47 @@ v \ll 0.1c \qquad t^\prime = t \qquad u = v_{S^\prime} - v_S \qquad x^\prime = x
 y^\prime = y \qquad v^\prime_y = v_y \qquad a_y^\prime = a_y \qquad \qquad K.E = \frac{1}{2} mv^2 \qquad \rho = mv \qquad E = F d
 $
 
-{\centering \rule{10cm}{0.4pt} \par}
+{\centering \rule{15cm}{0.4pt} \par}
 
 % Lorentz Transformation
-\ \\
 \noindent
 $
 v \ge 0.1c \qquad \gamma = \frac{1}{\sqrt{1- (u/c)^2}} > 1 \qquad t^\prime = \gamma (t - \frac{ux}{c^2}) \qquad
 x^\prime = \gamma(x - ut)\\ v^\prime_x = \frac{v_x - u}{1 - \displaystyle \frac{v_x u}{c^2} } \qquad \qquad  y^\prime = y \qquad v^\prime_y = \frac{v_y \sqrt{1-(u/c)^2}}{\displaystyle 1- \frac{v_x u}{c^2}} \qquad \theta^\prime = \tan^{\sz 1}{\frac{V_y^\prime}{V_x^\prime}} \\[-3mm]
 $
 
-{\centering \hdashrule{10cm}{0.4pt}{4pt} \par}
+{\centering \hdashrule{15cm}{0.4pt}{4pt} \par}
 
-% Applications on Lorentz Transformation
-\ \\
+% Applications on Lorentz Transformation (Time dilation, length contraction, doppler shift)
 \noindent
-$ t_o = \gamma t_p \quad \text{rate} = \frac{1}{t} \quad L = \frac{L_p}{\gamma} \quad \rotatebox{-90}{\hskip-1cm\hdashrule{2cm}{0.4pt}{4pt}} \quad
+$ t_o = \gamma t_p \quad \text{rate} = \frac{1}{t} \quad L = \frac{L_p}{\gamma} \quad \theta = \tan^{\sz1}{\frac{L_y}{L_x}} \quad \rotatebox{-90}{\hskip-1cm\hdashrule{2cm}{0.4pt}{4pt}} \quad
 \beta = \frac{v}{c} \quad \lambda_o = \lambda_s \displaystyle \sqrt{\frac{1\pm \beta}{1\mp \beta}} \quad f_o = f_s \displaystyle \sqrt{\frac{1\mp \beta}{1\pm \beta}}\\[-1em]
 $
 
-{\centering \hdashrule{10cm}{0.4pt}{4pt} \par}
+{\centering \hdashrule{15cm}{0.4pt}{4pt} \par}
 
-\ \\
+% Special Relativity on Mass and Energy
 \noindent
-$ m = m_0 \gamma \qquad E_t = mc^2 = \gamma m_0c^2 = E_0 + K.E = m_0c^2 + K.E \qquad K.E = (\gamma - 1) m_0c^2 \\[+2mm]$
-$\rho = \gamma m_0v \qquad \rho^2c^2 = E_t^2 - E_0^2 = E_t^2 - m_0^2c^4 \qquad \rho = \frac{1}{c} \sqrt{E_t^2 - E_0^2} \qquad F = \frac{\delta \rho}{\delta t} = \gamma^3 m_0 a\\[+2mm]$
-$v = \frac{p c^2}{E_t} = c \sqrt{1- (1/\gamma^2)} \qquad \gamma = \frac{E_t}{E_o}$
+$ m = m_0 \gamma \qquad E_t = \gamma m_0c^2 = m_0c^2 + K.E = \sqrt{\rho^2 c^2 + E_0^2} \qquad E_0 = m_0 c^2 \qquad K.E = (\gamma - 1) E_0 \\[+2mm]
+\rho = \gamma m_0v = \frac{1}{c} \sqrt{E_t^2 - E_0^2} \qquad \rho^2c^2 = E_t^2 - E_0^2 \qquad F = \gamma^3 m_0 a \qquad v = \frac{p c^2}{E_t} = c \sqrt{1- (1/\gamma^2)} $\\[-1em]
 
-{\centering \rule{10cm}{0.8pt}\\\rule[\dimexpr \ht\strutbox+0.1cm]{7cm}{0.8pt} \par}
+{\centering \rule{15cm}{0.4pt} \par}
 
+% The Photo-electric Effect
+\noindent
+$ c = \lambda f \qquad E = hf = \frac{hc}{\lambda} = W + K.E = W + eV \qquad W = h f_c = \frac{hc}{\lambda_c} \qquad K.E_{\text{max}} = \frac{1}{2} m v^2_{\text{max}} = eV_S \qquad \\[+2mm]$
+$ \frac{n_\text{e}}{t} = \frac{I_\text{p}A}{hf} = \frac{P}{E} \qquad i = \frac{n}{t} \cdot e = \frac{Q}{t} \qquad I = \frac{P}{A} \qquad \rho_{\text{ph}} = \frac{E_\text{ph}}{c} = \frac{h}{\lambda} \qquad E_n = n hf \\[+1mm]$
+$E_i > W, \qquad f_i > f_c, \qquad \lambda_i < \lambda_c$
+
+{\centering \rule{15cm}{0.4pt} \par}
+
+% Blackbody Radiation
 \noindent
 $P = \sigma AT^4 \qquad \sigma = 5.6 \times 10^{\sz8} \qquad \lambda_{\text{max}} T = 2.898 \times 10^{-3} \text{mK} \qquad \degree \text{K} = 273 + \degree \text{C}$
 
-{\centering \rule{10cm}{0.4pt} \par}
+{\centering \rule{15cm}{0.4pt} \par}
 
-\ \\
-\noindent
-$ c = \lambda f \qquad E_{\text{in}} = E_{\text{ph}} = hf = \frac{hc}{\lambda} = W + K.E = W + eV \qquad W = h f_c = \frac{hc}{\lambda_c} \\[+2mm]$
-$ K.E = \frac{1}{2} mv^2 \qquad K.E_{\text{max}} = \frac{1}{2} m v^2_{\text{max}} = eV_S \qquad v_{\text{max}} = \sqrt{\displaystyle \frac{2K.E_{\text{max}}}{m}} = \sqrt{\displaystyle \frac{2eV}{m}}\\[+2mm]$
-$ \frac{n}{t} = \frac{IA}{hf} = \frac{P}{E} \qquad i = \frac{n}{t} \cdot e = \frac{Q}{t} \qquad I = \frac{P}{A} \qquad \rho_{\text{ph}} = \frac{E_\text{ph}}{c} = \frac{h}{\lambda} \qquad E_n = n hf \\$
-\begin{center}
-    $E_i > W, \qquad f_i > f_c, \qquad \lambda_i < \lambda_c$
-\end{center}
-
-{\centering \rule{10cm}{0.4pt} \par}
-
-\ \\
+% Constants and Conversions
 \noindent
 $c = 3 \times 10^8 \text{ m}/\text{s} \qquad 1.6\times 10^{\sz 19}\text{ J} = 1 \ e\text{V} \qquad h = 6.626 \times 10^{\sz34} \text{ J} \cdot \text{s}\\[+2mm]$
 $e = 1.6 \times 10^{\sz 19} \text{ C} \qquad m_{e} = 9.11 \times 10^{\sz31} \text{ kg} \qquad m_{\text{p}} = 1.67 \times 10^{\sz27} \text{ kg}\\[+2mm]$
