@@ -3,7 +3,7 @@
 % Margins
 \usepackage{geometry}
 \geometry{left=10mm,right=10mm,%
-bindingoffset=0mm, top=5mm,bottom=5mm}
+top=5mm,bottom=5mm}
 
 % More Math Symbols
 \usepackage{amssymb}
@@ -56,6 +56,14 @@ bindingoffset=0mm, top=5mm,bottom=5mm}
 % Slanted Parallel
 \newcommand{\slparallel}{\mathbin{\!/\mkern-5mu/\!}}
 
+% Times ten to the power of ...
+\newcommand{\tpowten}[1]{10^{#1}}
+\newcommand{\tnpowten}[1]{10^{\sz#1}}
+\newcommand{\ttpowten}[1]{\times 10^{#1}}
+\newcommand{\ttnpowten}[1]{\times 10^{\sz#1}}
+
+% \hbar with eulervm
+\renewcommand{\hbar}{\mathchar'26\mkern-9mu h}
 
 \begin{document}
 
@@ -63,16 +71,16 @@ bindingoffset=0mm, top=5mm,bottom=5mm}
 \pagenumbering{gobble}
 
 % Setting the fontsize
-\fontsize{13}{14}\selectfont
+\fontsize{12}{12}\selectfont
 
 % Galilean Transformation
 \noindent
 $
-v \ll 0.1c \qquad t^\prime = t \qquad u = v_{S^\prime} - v_S \qquad x^\prime = x - ut \quad v^\prime_x = v_x - u \quad a_x^\prime = a_x \\[+2mm]
+v \ll 0.1c \qquad t^\prime = t \qquad u = v_{S^\prime} - v_S \qquad x^\prime = x - ut \quad v^\prime_x = v_x - u \quad a_x^\prime = a_x \\
 y^\prime = y \qquad v^\prime_y = v_y \qquad a_y^\prime = a_y \qquad \qquad K.E = \frac{1}{2} mv^2 \qquad \rho = mv \qquad E = F d
 $
 
-{\centering \rule{15cm}{0.4pt} \par}
+{\centering \rule{18cm}{0.4pt} \par}
 
 % Lorentz Transformation
 \noindent
@@ -81,54 +89,81 @@ v \ge 0.1c \qquad \gamma = \frac{1}{\sqrt{1- (u/c)^2}} > 1 \qquad t^\prime = \ga
 x^\prime = \gamma(x - ut)\\ v^\prime_x = \frac{v_x - u}{1 - \displaystyle \frac{v_x u}{c^2} } \qquad \qquad  y^\prime = y \qquad v^\prime_y = \frac{v_y \sqrt{1-(u/c)^2}}{\displaystyle 1- \frac{v_x u}{c^2}} \qquad \theta^\prime = \tan^{\sz 1}{\frac{V_y^\prime}{V_x^\prime}} \\[-3mm]
 $
 
-{\centering \hdashrule{15cm}{0.4pt}{4pt} \par}
+{\centering \hdashrule{18cm}{0.4pt}{4pt} \par}
 
 % Applications on Lorentz Transformation (Time dilation, length contraction, doppler shift)
 \noindent
-$ t_o = \gamma t_p \quad \text{rate} = \frac{1}{t} \quad L = \frac{L_p}{\gamma} \quad \theta = \tan^{\sz1}{\frac{L_y}{L_x}} \quad \rotatebox{-90}{\hskip-1cm\hdashrule{2cm}{0.4pt}{4pt}} \quad
-\beta = \frac{v}{c} \quad \lambda_o = \lambda_s \displaystyle \sqrt{\frac{1\pm \beta}{1\mp \beta}} \quad f_o = f_s \displaystyle \sqrt{\frac{1\mp \beta}{1\pm \beta}}\\[-1em]
+$ t_o = \gamma t_p \quad \text{rate} = \frac{1}{t} \quad L = \frac{L_p}{\gamma} \quad \theta = \tan^{\sz1}{\frac{L_y}{L_x}} \quad \rotatebox{-90}{\hskip-1cm\hdashrule{1.8cm}{0.4pt}{4pt}} \quad
+\beta = \frac{v}{c} \quad \lambda_o = \lambda_s \displaystyle \sqrt{\frac{1\pm \beta}{1\mp \beta}} \quad f_o = f_s \displaystyle \sqrt{\frac{1\mp \beta}{1\pm \beta}}\\[-.8cm]
 $
 
-{\centering \hdashrule{15cm}{0.4pt}{4pt} \par}
+{\centering \hdashrule{18cm}{0.4pt}{4pt} \par}
 
 % Special Relativity on Mass and Energy
 \noindent
-$ m = m_0 \gamma \qquad E_t = \gamma m_0c^2 = m_0c^2 + K.E = \sqrt{\rho^2 c^2 + E_0^2} \qquad E_0 = m_0 c^2 \qquad K.E = (\gamma - 1) E_0 \\[+2mm]
+$ m = m_0 \gamma \qquad E_t = \gamma m_0c^2 = m_0c^2 + K.E = \sqrt{\rho^2 c^2 + E_0^2} \qquad E_0 = m_0 c^2 \qquad K.E = (\gamma - 1) E_0 \\
 \rho = \gamma m_0v = \frac{1}{c} \sqrt{E_t^2 - E_0^2} \qquad \rho^2c^2 = E_t^2 - E_0^2 \qquad F = \gamma^3 m_0 a \qquad v = \frac{p c^2}{E_t} = c \sqrt{1- (1/\gamma^2)} $\\[-1em]
 
-{\centering \rule{15cm}{0.4pt} \par}
+{\centering \rule{18cm}{0.4pt} \par}
 
 % The Photo-electric Effect
 \noindent
-$ c = \lambda f \qquad E = hf = \frac{hc}{\lambda} = W + K.E = W + eV \qquad W = h f_c = \frac{hc}{\lambda_c} \qquad K.E_{\text{max}} = \frac{1}{2} m v^2_{\text{max}} = eV_S \qquad \\[+2mm]
-\frac{n_\text{e}}{t} = \frac{I_\text{p}A}{hf} = \frac{P}{E} \qquad i = \frac{n}{t} \cdot e = \frac{Q}{t} \qquad I = \frac{P}{A} \qquad E_n = n hf \\[+1mm]$
-$E_i > W, \qquad f_i > f_c, \qquad \lambda_i < \lambda_c$
+$ c = \lambda f \qquad E = hf = \frac{hc}{\lambda} = W + K.E = W + eV \qquad W = h f_c = \frac{hc}{\lambda_c} \qquad K.E_{\text{max}} = \frac{1}{2} m v^2_{\text{max}} = eV_S \qquad \\
+\frac{n_\text{e}}{t} = \frac{I_\text{p}A}{hf} = \frac{P}{E} \qquad i = \frac{n}{t} \cdot e = \frac{Q}{t} \qquad I = \frac{P}{A} \qquad E_n = n hf \qquad E_i > W \qquad f_i > f_c \qquad \lambda_i < \lambda_c
+$
 
-{\centering \rule{15cm}{0.4pt} \par}
+{\centering \rule{18cm}{0.4pt} \par}
 
 % Blackbody Radiation
 \noindent
 $P = \sigma AT^4 \qquad \sigma = 5.6 \times 10^{\sz8} \qquad \lambda_{\text{max}} T = 2.898 \times 10^{-3} \text{mK} \qquad \degree \text{K} = 273 + \degree \text{C}$
 
-{\centering \rule{15cm}{0.4pt} \par}
+{\centering \rule{18cm}{0.4pt} \par}
 
 % Compton Scattering
 \noindent
 $
-\lambda_{\text{min}} = \frac{hc}{eV} = \frac{1.26\times10^{\sz6}}{V} [\text{V}\cdot\text{m}] \qquad E = \rho c \qquad \lambda^\prime = \lambda + \frac{h}{mc} (1-\cos{\theta}) \qquad \lambda_c = \frac{h}{mc} = 2.426 \times 10^{\sz12}\\[+1mm]
-K.E_e = E_{\text{ph}} - E^\prime_{\text{ph}} \qquad 
+\lambda_{\text{min}} = \frac{hc}{eV} = \frac{1.26\times10^{\sz6}}{V} [\text{V}\cdot\text{m}] \qquad E = \rho c \qquad \lambda^\prime = \lambda + \frac{h}{mc} (1-\cos{\theta}) \qquad \lambda_c = \frac{h}{mc} = 2.426 \times 10^{\sz12}\\
+K.E_e = E_{\text{ph}} - E^\prime_{\text{ph}} \qquad \frac{1}{E_{\text{ph}}^\prime} = \frac{1}{E_{\text{ph}}} + \frac{1-\cos{\theta}}{m_eC^2} \qquad E_{x\text{-ray}} = eV\\
+x: \rho_i = \rho_s \cos{\theta} + \rho_e \cos{\phi} \qquad \tan{\phi} = \frac{\sin{\theta}}{\lambda_f/\lambda_i - \cos{\theta}} = \frac{\rho^\prime \sin{\theta}}{\rho - \rho^\prime \cos{\theta}} \qquad E = 2mc^2 + K_{-} + K_{+}\\
+y: \rho_s \sin{\theta} = \rho_e \sin{\phi} \qquad E_{\text{ph}} + 2m_ec^2 = E^\prime_{\text{ph}} + E_e \qquad \lambda^\prime - \lambda = \frac{h}{mc} (1 - \cos{\phi})
 $
 
-% Rabea goes here
+{\centering \hdashrule{18cm}{0.4pt}{4pt} \par}
 
-{\centering \rule{15cm}{0.4pt} \par}
+% de broccoli and uncertainty
+\noindent
+$
+\lambda_{\text{brog}}=\frac{h}{p}=\frac{h}{mv}=\frac{h}{\sqrt{2mKE}}\quad hf=2\gamma mc^2 \quad \Delta x\Delta P \geq \frac{\hbar}{2} \quad \Delta E\Delta t \geq \frac{\hbar}{2} \quad \Delta P = m\Delta v \quad \Delta E = h\Delta f
+$
+
+{\centering \rule{18cm}{0.4pt} \par}
+
+% de broccoli and uncertainty
+\noindent
+$
+F_c=\frac{mv^2}{r}=F_e=\frac{1}{4\pi\epsilon_0}\frac{e}{r^2}\quad v = \frac{e}{\sqrt{4\pi\epsilon_0mr}}\quad KE = \frac{1}{2}mv^2\quad KE_n = \frac{e^2}{8\pi\epsilon_0r_n}\quad PE = \frac{-e^2}{4\pi\epsilon_0r_n}\\ E = \frac{-e^2}{8\pi\epsilon_0r_n}\quad r_n = a_0n^2=\frac{n^2h^2\epsilon_0}{\pi me^2} \quad L = n\frac{h}{2\pi}\quad P = \frac{L}{r}\quad v = \frac{P}{m}\quad f_n = \frac{v}{2\pi r} = \frac{e}{2\pi\sqrt{4\pi\epsilon_0mr^3}} = \frac{-E_1}{h}(\frac{2}{n^3})\qquad E_n = \frac{-13.6}{n^2}eV\quad E=KE+PE\quad \frac{1}{\lambda} = R_\infty(\frac{1}{n_f^2}-\frac{1}{n_i^2}) E_ph = hf = E_i - E_f \\ N = f\Delta t \quad v = \frac{-E_1}{h}(\frac{1}{n_f^2}-\frac{1}{n_i^2}) \quad v_L = \frac{-E_1}{h}(\frac{2P}{n^3})
+$
+
+{\centering \hdashrule{18cm}{0.4pt}{4pt} \par}
+
+% le quantum
+\noindent
+$
+KE = \frac{p^2}{2m}\quad L = \sqrt{l(l+1)}\hbar \quad \hbar = \frac{h}{2\pi}\quad L_z = m_l\hbar = L\cos{\theta} \quad \mu = -(\frac{e}{2m})L\quad PE_m = (\frac{e}{2m})LB\cos{\theta}\quad \cos{\theta} = \frac{m_l}{\sqrt{l(l+1)}}\quad S = \frac{\sqrt{3}}{2}\hbar S_z = \pm\frac{1}{2}\hbar \quad \frac{-e}{m}S \quad \mu_{sz} = \pm\frac{e\hbar}{2m}S=\pm\mu_B l = n-1\quad -l\leq m_l\leq l \quad m_s = \pm\frac{1}{2} \quad N_{max} = 2n^2\quad L_{max} = 2(2l+1)\quad \Delta l=\pm1\quad \Delta m_l=0,\pm1\quad n = 1,2,3,4\dots\quad \Delta v = \frac{eB}{4\pi m} \quad\Delta\lambda = \frac{eB\lambda^2}{4\pi mc}
+$
+
+{\centering \rule{18cm}{0.4pt} \par}
+
 
 % Constants and Conversions
 \noindent
-$c = 3 \times 10^8 \text{ m}/\text{s} \qquad 1.6\times 10^{\sz 19}\text{ J} = 1 \ e\text{V} \qquad h = 6.626 \times 10^{\sz34} \text{ J} \cdot \text{s}\\[+2mm]$
-$e = 1.6 \times 10^{\sz 19} \text{ C} \qquad m_{e} = 9.11 \times 10^{\sz31} \text{ kg} \qquad m_{\text{p}} = 1.67 \times 10^{\sz27} \text{ kg}\\[+2mm]$
-$\text{M}e\text{V}/c^2 = 1.79 \times 10^{\sz30} \text{ kg} \qquad \text{M}e\text{V}/c = 5.36 \times 10^{\sz22} \text{ kg}\cdot\text{m}/\text{s}\\[+2mm]$
-$m_e c^2 = 0.511 \text{ M}e\text{V} \qquad m_\text{p}c^2 = 938 \text{ M}e\text{V} \qquad m_\text{n}c^2 = 939 \text{ M}e\text{V} \\[+2mm]$
-$ 1 \text{ \AA} = 10^{\sz10} \text{ m} \qquad 1 \text{ L.Y} \approx 9.46 \times 10^{15} \text{ m} \qquad 1 \text{ Ma} = 343 \text{ m}/\text{s}$
-
+$c = 3 \times 10^8 \text{ m}/\text{s} \qquad 1 \text{ Ma} = 343 \text{ m}/\text{s} \qquad 1.6\times 10^{\sz 19}\text{ J} = 1 \ e\text{V} \qquad h = 6.626 \times 10^{\sz34} \text{ J} \cdot \text{s}\\
+e = 1.6 \times 10^{\sz 19} \text{ C} \qquad m_{e} = 9.11 \times 10^{\sz31} \text{ kg} \qquad m_{\text{p}} = 1.67 \times 10^{\sz27} \text{ kg}\\
+\text{M}e\text{V}/c^2 = 1.79 \times 10^{\sz30} \text{ kg} \qquad \text{M}e\text{V}/c = 5.36 \times 10^{\sz22} \text{ kg}\cdot\text{m}/\text{s}\\
+m_e c^2 = 0.511 \text{ M}e\text{V} \qquad m_\text{p}c^2 = 938 \text{ M}e\text{V} \qquad m_\text{n}c^2 = 939 \text{ M}e\text{V} \qquad a_0 = 0.529 \ttnpowten{10} \text{ m} \\
+\mu_B = 9.274 \ttnpowten{24} \text{J}/\text{T} = 5.788 \ttnpowten{5} e\text{V}/ \text{T} \qquad R = 1.097\ttpowten{7} \text{ m}^{\sz1} \qquad \frac{h}{m_e c} = 0.024 \ttnpowten{10} \text{ m}\\[+1mm]
+1 \text{ L.Y} \approx 9.46 \tpowten{15} \text{ m} \quad \mu\text{m}: \tnpowten{6} \quad \text{nm} : \tnpowten{9} \quad \text{pm} : \tnpowten{12} \quad \text{fm} : \tnpowten{15} \quad 1 \text{ \AA} = 10^{\sz10} \text{ m}\\
+1s2~2s2~2p6~3s2~3p6~4s2~3d10~4p6~5s2~4d10~5p6~6s2~4f14~5d10~6p6~7s2
+$
 \end{document}
