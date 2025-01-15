@@ -1,6 +1,5 @@
 cmake-build-debug
 .idea
-.vscode
 *.exe
 *.obj
 *.ilk
@@ -320,3 +319,5 @@ TSWLatexianTemp*
 *.glstex
 
 # End of https://www.toptal.com/developers/gitignore/api/latex
+
+tex-out/

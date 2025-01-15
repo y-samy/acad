@@ -1,0 +1,75 @@
+\usepackage{listofitems}
+
+{
+    \setsepchar{\\/,}
+    \greadlist\mcq{
+        0,1         \\
+        0,0,1,0     \\
+        0,0,1,0     \\
+        0,0,0,0,0,1 \\
+        0,0,0,0,0,1 \\
+        0,0,0,0,0,1 \\
+        0,1,0,0,0,0 \\
+        0,0,0,1,0,0 \\
+        0,1         \\
+        0,1,0       \\
+        0,0,0,1     \\
+        0,0,0,0,1,0 \\
+        0,0,1,1,0,0 \\
+        0,1         \\
+        0,0,0,0,1,0 \\
+        0,0,0,0,1,0 \\
+        0,0,1,0,0,0 \\
+        0,0,0,1,0   \\
+        0,0,0,0,1,0 \\
+        1,0         \\
+        0,1,0,0     \\
+        0,0,0,0,0,1 \\
+        0,0,0,0,0,1 \\
+        1,0,0,0,0,0 \\
+        0,0,0,1,0,0 \\
+        0,0,0,0,1   \\
+        1,0         \\
+        0,0,0,0,0,1 \\
+        0,0,0,0,1,0 \\
+        0,0,1,0     \\
+        1,0         \\
+        0,1,0,0     \\
+        0,1         \\
+        1,0,0       \\
+        1,0,0,0,0,1 \\
+        1,0,0,0,0,0 \\
+        0,1,0,0,0,0 \\
+        0,0,1,0,0,0 \\
+        0,0,0,0,0,2 \\
+        0,0,0,1,0,0 \\
+        1,0,0,0,0,0 \\
+        0,0,2,0     \\
+        0,0,1,0     \\
+        0,1,0,0     \\
+        0,0,0,1     \\
+        1,0         \\
+        0,0,0,0,2,0 \\
+        1,0         \\
+        0,0,1,0,0,0 \\
+        0,0,0,0,1,0 \\
+        0,0,0,0,1,0 \\
+        0,0,0,1,0,0 \\
+    }
+}
+
+\newcommand{\printscheme}{
+    {
+        \fontsize{10}{10}\selectfont
+        \hspace*{-\leftmargin}\makebox[0pt][l]{
+            Answer Points:
+            \foreachitem\currchoice\in\mcq[\thequestion]{(\@alph{\currchoicecnt}) = \currchoice\ifthenelse{\equal{\currchoicecnt}{\listlen\mcq[\thequestion]}}{}{, }}
+        }\\[-8mm]
+    }
+}
+
+\usepackage{etoolbox}
+\ifprintanswers
+\AfterEndEnvironment{oneparchoices}{\\\printscheme}
+\AfterEndEnvironment{noparchoices}{\\\printscheme}
+\fi

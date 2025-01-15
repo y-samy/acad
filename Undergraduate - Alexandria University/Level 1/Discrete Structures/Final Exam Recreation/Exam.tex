@@ -77,10 +77,10 @@ top=20mm,bottom=20mm}
 
 % Solution box formatting
 \unframedsolutions
-\AtBeginEnvironment{solution}{\color{blue}}
+
 \renewcommand{\solutiontitle}{}
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{230, 230, 230}
+\shadedsolutions
+\definecolor{SolutionColor}{RGB}{230, 230, 230}
 
 % Document-specific commands
 %% Thanks https://tex.stackexchange.com/a/691776
@@ -138,8 +138,8 @@ top=20mm,bottom=20mm}
 \hrule
 \begin{questions}
     \question Prove by induction $\sum \limits_{k = 1}^{n} (k \cdot k!) = (n + 1)! - 1$\\ Note: $n \ge 1$
-    \begin{shaded}
-        \begin{solutionorbox}
+    
+        \begin{solutionorbox}[19cm]
             Let $P(n): \sum \limits_{k = 1}^{n} (k \cdot k!) = (n + 1)! - 1$\\[+.7em]
             Prove $P(n) ~ \forall n \ge 1 $\\
             1. \textbf{Base Case}, let $n = 1$ and prove that $P(1)$ is true.
@@ -163,9 +163,9 @@ top=20mm,bottom=20mm}
                                                                  & = \text{R.H.S} \tag{Proven}
             \end{align*}
         \end{solutionorbox}
-    \end{shaded}
+    
     \question Is the function $f : \mathbb{Z} \longrightarrow \mathbb{Z}, f(x) = 4 - 3x$, onto? prove your answer.
-    \begin{shaded}
+    
         \begin{solutionorbox}
             \textbf{NO}\\
             (Counter-example)\\
@@ -178,9 +178,9 @@ top=20mm,bottom=20mm}
             \end{align}
             $x = \frac{4}{3} \notin \mathbb{Z}$, hence $f$ is NOT onto.
         \end{solutionorbox}
-    \end{shaded}
+    
     \question Prove that the function $f : \mathbb{R} - \{ 2 \} \longrightarrow \mathbb{R} - \{ 5 \}, f(x) = \dfrac{5x + 1}{x - 2}$, is one-to-one.
-    \begin{shaded}
+    
         \begin{solutionorbox}
             Definition of a one-to-one function: $f(n) = f(m)$ if, and only if, $n = m$.\\
             (Direct Proof)\\
@@ -196,9 +196,9 @@ top=20mm,bottom=20mm}
                 m                                         & = n \tag{Proven}
             \end{align*}
         \end{solutionorbox}
-    \end{shaded}
+    
     \question Draw diagrams of all bijections $f: X \longrightarrow X, X = \{ 1, 2, 3 \}$
-    \begin{shaded}
+    
         \begin{solutionorbox}
             \bijections{a1/b1, a2/b2, a3/b3}
             \bijections{a1/b1, a2/b3, a3/b2}
@@ -207,21 +207,21 @@ top=20mm,bottom=20mm}
             \bijections{a1/b3, a2/b1, a3/b2}
             \bijections{a1/b3, a2/b2, a3/b1}
         \end{solutionorbox}
-    \end{shaded}
+    \pagebreak
     \question How many ways to arrange the word \textbf{TENNESSEE}?
-    \begin{shaded}
+    
         \begin{solutionorbox}
             (9 Letters: 1 T, 2 N, 2 S, 4 E) Number of ways: $\comb{9}{4} \times \comb{5}{2} \times \comb{3}{2} \times \comb{1}{1}$
         \end{solutionorbox}
-    \end{shaded}
+    
     \question How many ways to distribute 8 identical balls among 4 people?
-    \begin{shaded}
+    
         \begin{solutionorbox}
             $\binom{8 + 4 - 1}{8} = \comb{11}{8}$
         \end{solutionorbox}
-    \end{shaded}
+    
     \question There are 9 players, among them are 3 good front row players. How many teams of five players can you form if at least one good front row player must be included?
-    \begin{shaded}
+    
         \begin{solutionorbox}
             Let $F = $ good front row players, $N = $ normal (other) players.\\[+1em]
             \begin{forest}
@@ -234,58 +234,58 @@ top=20mm,bottom=20mm}
             \end{forest}
             $\qquad \text{Total} = \comb{3}{3} \times \comb{6}{2} + \comb{3}{2} \times \comb{6}{3} + \comb{3}{1} \times \comb{6}{4} = \comb{9}{5} - \comb{6}{5}$
         \end{solutionorbox}
-    \end{shaded}
+    
     \question You are going to use the 7 characters $a, b, c, d, e, f, g$ to make an ordered list of characters.
     \begin{parts}
         \part How many lists can you make if no repetition is allowed?
-        \begin{shaded}
+        
             \begin{solutionorbox}
                 $7!$
             \end{solutionorbox}
-        \end{shaded}
+        
         \part How many lists can you make if repetitions are allowed?
-        \begin{shaded}
+        
             \begin{solutionorbox}
                 $7^7$
             \end{solutionorbox}
-        \end{shaded}
+        
         \part How many lists can you make if at least one character should be repeated?
-        \begin{shaded}
+        
             \begin{solutionorbox}
                 $7^7 - 7!$
             \end{solutionorbox}
-        \end{shaded}
+        
     \end{parts}
     \pagebreak
     \question You are going to build a binary string of length $8$.
     \begin{parts}
         \part How many strings end with a $1$?
-        \begin{shaded}
+        
             \begin{solutionorbox}
                 $2^7$
             \end{solutionorbox}
-        \end{shaded}
+        
         \part How many strings have exactly four ones?
-        \begin{shaded}
+        
             \begin{solutionorbox}
                 $\comb{8}{4}$
             \end{solutionorbox}
-        \end{shaded}
+        
         \part How many strings end with $1$ or have exactly four ones?
-        \begin{shaded}
+        
             \begin{solutionorbox}
                 $2^7 + \comb{8}{4} - \comb{7}{3}$
             \end{solutionorbox}
-        \end{shaded}
+        
     \end{parts}
     \question If 10 contestants are ranked without ties, how many ways are there for first, second, third places?
-    \begin{shaded}
+    
         \begin{solutionorbox}
             $\perm{10}{3}$
         \end{solutionorbox}
-    \end{shaded}
+    
     \question Find the coefficient of $x^8 \cdot y^5$ in $(4x^2 - 7y)^9$
-    \begin{shaded}
+    
         \begin{solutionorbox}
             \textbf{Binomial theorem}
             \begin{align*}
@@ -298,10 +298,10 @@ top=20mm,bottom=20mm}
                 \comb{9}{4} \cdot 4^4 \cdot (\sz7^5) \tag{Isolate Coefficient}
             \end{align*}
         \end{solutionorbox}
-    \end{shaded}
+    
     \pagebreak
     \question In a certain population, insurance policy holders are either accident prone or non-accident prone. The probability for an accident prone to have an accident within this year is $0.4$. The probability for a non-accident prone to have an accident within this year is $0.2$. If $30\%$ of the population is accident prone:
-    \begin{shaded}
+    
         \begin{solutionorbox}
             Let $p =$ is accident prone, $p^c =$ is non-accident prone, $a =$ will have an accident this year, $a^c =$ will not have an accident this year.\\
             \begin{forest}
@@ -318,21 +318,21 @@ top=20mm,bottom=20mm}
                 ]
             \end{forest}
         \end{solutionorbox}
-    \end{shaded}
+    
     \begin{parts}
         \part What is the probability of a policy holder to get into an accident within this year?
-        \begin{shaded}
+        
             \begin{solutionorbox}
                 $\text{P}(a) = 0.3 \times 0.4 + 0.7 \times 0.2
                     = 0.26$
             \end{solutionorbox}
-        \end{shaded}
+        
         \part What is the probability of a policy holder to be accident prone if he had an accident within this year?
-        \begin{shaded}
+        
             \begin{solutionorbox}
                 $\text{P}(p | a) = \frac{\text{P}(p \cap a)}{\text{P}(a)} = \frac{0.3 \times 0.4}{0.26} = \frac{6}{13} \approx 0.46$
             \end{solutionorbox}
-        \end{shaded}
+        
     \end{parts}
 \end{questions}
 

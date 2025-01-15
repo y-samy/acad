@@ -1,0 +1,734 @@
+\documentclass[12pt, answers]{exam}
+\RequirePackage{amssymb, amsfonts, amsmath, latexsym, verbatim, xspace, setspace, mathpazo, multicol, xcolor}
+
+
+% Multicols
+\usepackage{multicol}
+
+% Color
+\usepackage{xcolor}
+
+
+% Font
+\usepackage{anyfontsize}
+%\usepackage[default,regular,black]{sourceserifpro}
+%\usepackage{tgpagella,eulervm}
+\usepackage[T1]{fontenc}
+
+\usepackage{tabto}
+
+\usepackage{ifthen}
+\usepackage{mathtools}
+
+\makeatletter
+\newenvironment{noparchoices}%
+  {%
+    \setcounter{choice}{0}%
+    \def\choice{%
+      \refstepcounter{choice}%
+      \choicelabel\ 
+      % No need to put the following into a token string; we just put
+      % the choicelabel onto the page, so we're at the spot whose page
+      % number we want to record:
+      \questionobject@pluspagecheck
+    }% choice
+    \def\CorrectChoice{%
+      \refstepcounter{choice}%
+      \choicelabel\
+      % No need to put the following into a token string; we just put
+      % the choicelabel onto the page, so we're at the spot whose page
+      % number we want to record:
+      \questionobject@pluspagecheck
+      \ifprintanswers
+      \CorrectChoice@Emphasis
+        \fi
+    }% CorrectChoice
+    \let\correctchoice\CorrectChoice
+    % If we're continuing the paragraph containing the question,
+    % then leave a bit of space before the first choice:
+    \ignorespaces
+  }%
+\makeatother
+
+
+\usepackage{geometry}
+\geometry{left=0.38in,right=0.38in,%
+bindingoffset=0mm, top=1em,bottom=4em}
+\usepackage[none]{hyphenat}
+
+
+\newcommand{\ibmatrix}[1]{\begin{bmatrix}#1\end{bmatrix}} % inline bmatrix
+
+\newcommand{\separator}{\noindent{\rule[1ex]{0.45\textwidth}{.1pt}}}
+\newcommand{\newquestion}[3][x 1 mark(s)]{
+    {\fontsize{12}{14}\selectfont
+    \uplevel{\separator \\[-2mm] [Qu.]
+    \fontsize{14}{16}\selectfont
+    \ifthenelse{\equal{#2}{}}{[1 mark(s)]}{[#2 #1]}
+    \ifthenelse{\equal{#3}{}}{\ \\[-7mm]}{\\#3\\[-1em]}}
+    }}
+\renewcommand{\choicelabel}{(\alph{choice})}
+
+\newcommand{\model}{Version 9}
+\newcommand{\examnum}{SSP Linear Algebra Final Exam}
+\newcommand{\examdate}{Fall 2024}
+
+
+\renewcommand{\questionshook}{
+    \setlength{\leftmargin}{2em}
+    \setlength{\linewidth}{.45\textwidth}
+}
+\renewcommand{\questionlabel}{{\fontsize{12}{14}\selectfont\thequestion.}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+
+\newcommand{\nextcol}{\vfill\mbox{}\columnbreak}
+
+\input{solutions.tex}
+
+
+\begin{document}
+
+
+\footrule
+\firstpagefooter{\model ~~~~~~~~ \examnum~- \examdate}{}{Page \thepage~of \numpages}
+\runningfooter{\model ~~~~~~~~ \examnum~- \examdate}{}{Page \thepage~of \numpages}
+
+\setlength{\columnseprule}{.1pt}
+\def\columnseprulecolor{\color{black}}
+
+\pointformat{}
+\pointsinmargin
+
+\begin{multicols*}{2}
+	\noindent
+	\textbf{Final SSP Exam - Linear Algebra - \examdate} \\
+	RE-CREATED\\
+	\textbf{No. of Questions : \numquestions}\\[-8mm]
+	\begin{questions}
+		\fontsize{14}{16}\selectfont
+		\addpoints
+		\begingradingrange{exam}
+		\newquestion{}{}
+        
+		\question[1] If matrix $\mathbf{A}$ and $\mathbf{B}$ are similar matrices, and $\mathbf{A}$ is diagonalizable, then so is matrix $\mathbf{B}$
+
+		\begin{oneparchoices}
+			\choice True \quad \choice False
+		\end{oneparchoices}
+
+		\newquestion{}{}
+
+		\question[1] If $H$ is the set of all polynomials of the form\\
+		$(a-2b) + (2a-4b)t + (2b-a)t^2$ where $a,b \in \mathbb{R}$,\\
+		then $\mathrm{dim}H$ is equal to \dots
+
+		\begin{oneparchoices}
+			\choice $2$ \quad \choice $3$\\
+			\choice $1$ \quad \choice not a subspace
+		\end{oneparchoices}
+
+		\newquestion{}{}
+
+		\question[1] Consider the following\\
+		$T : \mathbb{R}^2 \rightarrow \mathbb{R}^2$ such that\\
+		$T(2,2) = (8,-5), T(4,4) = (3,-2)$.\\
+		Then
+
+		\ifprintanswers
+		\def\tempsize{+3mm}
+		\else
+		\def\tempsize{+1em}
+		\fi
+		\begin{oneparchoices}
+			\choice $T$ is a linear transformation and one to one.	\\[\tempsize]
+			\choice $T$ is a linear transformation and isomorphic.	\\[\tempsize]
+			\choice $T$ is not a linear transformation.				\\[\tempsize]
+			\choice $T$ is a linear transformation and onto.		
+		\end{oneparchoices}
+
+		\newquestion{}{}
+
+		\question[1] Let $T : U \rightarrow V$ be a linear transformation. If $range(T) = span \lbrace (1,1,1),(2,2,2),(1,0,0) \rbrace$, and nullity of $T$ is $1$, then $dim(U) = \dots$
+
+		\begin{noparchoices}
+			\choice $0$ ~~ \choice $1$ ~~ \choice $5$ ~~ \choice $4$ ~~ \choice $2$ ~~ \choice $3$
+		\end{noparchoices}
+		
+
+		\nextcol
+
+		\newquestion{4}{
+			Consider the following matrix $A =\\ \ibmatrix{
+					2 & 2 & 1\\
+					1 & 3 & 1\\
+					1 & 2 & 2
+				}$
+		}
+
+		\question[1] Which of the following is an eigenvalue of $A$
+
+		\begin{noparchoices}
+			\begin{tabular}{cccccc}
+				\choice & $0$  & \choice & $-3$ & \choice & $2$ \\
+				\choice & $-1$ & \choice & $-2$ & \choice & $1$
+			\end{tabular}
+		\end{noparchoices}
+
+		\question[1] Which of the following is \linebreak an eigenvector of the largest \linebreak eigenvalue of $A$
+
+		\begin{noparchoices}
+			{
+				\def\arraystretch{1.1}
+				\begin{tabular}{c l c l c l}
+					\choice & $\ibmatrix{-3 \\-1\\2}$ & \choice &  $\ibmatrix{-2\\-1\\-2}$ & \choice & $\ibmatrix{-1\\0\\-1}$\\
+					\choice & $\ibmatrix{0  \\-1\\1}$ & \choice & $\ibmatrix{-2\\-1\\-1}$ &  \choice & $\ibmatrix{1\\1\\1}$
+				\end{tabular}
+			}
+		\end{noparchoices}
+
+		\question[1] Which of the following is an eigenvector of the smallest eigenvalue of $A$
+
+		\begin{noparchoices}
+			{
+				\def\arraystretch{1.1}
+				\begin{tabular}{c l c l c l}
+					\choice & $\ibmatrix{-3 \\0\\0}$ & \choice & $\ibmatrix{-3\\1\\1}$ & \choice & $\ibmatrix{-3\\1\\2}$ \\
+					\choice & $\ibmatrix{-2 \\1\\1}$ & \choice & $\ibmatrix{2\\1\\-1}$ & \choice & $\ibmatrix{0\\1\\1}$
+				\end{tabular}
+			}
+		\end{noparchoices}
+
+		\question[1] Using the Cayley-Hamilton \linebreak theorem, $A^{-1} = $
+
+		\ifprintanswers
+		\def\tempsize{+3mm}
+		\else
+		\def\tempsize{+1em}
+		\fi
+		
+		\begin{oneparchoices}
+			\choice $\frac{1}{5}A^2+\frac{11}{5}I$               \\[\tempsize]
+			\choice $\frac{1}{5}A^2-\frac{7}{5}A-\frac{11}{5}I$  \\[\tempsize]
+			\choice $\frac{1}{5}A^2-\frac{7}{5}A$                \\[\tempsize]
+			\choice $\frac{1}{5}A^2-\frac{7}{5}A+\frac{11}{5}I$  \\[\tempsize]
+			\choice $\frac{1}{5}A^2+\frac{7}{5}A+\frac{11}{5}I$  \\[\tempsize]
+			\choice $\frac{1}{5}A^2+\frac{7}{5}A-\frac{11}{5}I$
+		\end{oneparchoices}
+
+        \newpage
+
+        \newquestion{}{}
+
+        \question[1] If an $n \times n$ matrix has one eigenvalue with multiplicity $n$ (repeated $n$ times), then it is \textbf{NOT} diagonalizable.
+
+		\begin{oneparchoices}
+			\choice True \quad \choice False
+		\end{oneparchoices}
+
+		\newquestion{}{}
+		
+		\question[1] Let $T : U \rightarrow V$ be a linear transformation. Which of the following statements is \textbf{\underline{not possible}}?
+
+		\begin{oneparchoices}
+			\choice $dim(range(T)) < dim(V).$ \\[+3mm]
+			\choice $dim(range(T)) > dim(V).$ \\[+3mm]
+			\choice $dim(range(T)) = dim(V).$
+		\end{oneparchoices}
+
+		\newquestion{4}{Given the matrix $\mathbf{B} = \ibmatrix{2&1&2\\0&1&2\\0&0&1}$}
+
+		\question[1] How many \textbf{\underline{different}} eigenvalues does matrix $\mathbf{B}$ have?
+
+		\begin{noparchoices}
+			\choice 0 ~~\choice 3 ~~\choice 1 ~~ \choice 2
+		\end{noparchoices}
+		
+		\question[1] The basis of the eigenspace of the \textbf{\underline{largest}} eigenvalue of $\mathbf{B}$ is $\lbrace....\rbrace$
+
+		\begin{noparchoices}
+			{
+				\def\arraystretch{1.1}
+				\begin{tabular}{c l c l c l}
+					\choice & $\ibmatrix{1\\1\\1}$ & \choice & $\ibmatrix{1\\-1\\0}$ \\\\
+					\choice & $\ibmatrix{1\\-1\\0},\ibmatrix{1\\1\\0}$ & \choice & $\ibmatrix{1\\-1\\0},\ibmatrix{1\\0\\0}$ \\\\
+					\choice & $\ibmatrix{1\\0\\0}$ & \choice & $\ibmatrix{1\\1\\0}$
+				\end{tabular}
+			}
+		\end{noparchoices}
+
+		\nextcol
+
+		\question[1] The basis of the eigenspace of the \textbf{\underline{largest}} eigenvalue of $\mathbf{B}$ is $\lbrace....\rbrace$
+
+		\begin{noparchoices}
+			{
+				\def\arraystretch{1.1}
+				\begin{tabular}{c l c l c l}
+					\choice & $\ibmatrix{1\\-1\\0},\ibmatrix{1\\1\\0}$ & \choice & $\ibmatrix{1\\1\\0}$ \\\\
+					\choice & $\ibmatrix{1\\-1\\0}$ & \choice & $\ibmatrix{1\\-1\\0}$ \\\\
+					\choice & $\ibmatrix{1\\1\\1}$ & \choice & $\ibmatrix{1\\0\\0},\ibmatrix{1\\0\\0}$
+				\end{tabular}
+			}
+		\end{noparchoices}
+
+		\question[1] Is matrix $\mathbf{B}$ diagonalizable?
+
+		\begin{oneparchoices}
+			\choice Yes \quad \choice No
+		\end{oneparchoices}
+
+		\newquestion{}{}
+
+		\question[1] Given the set of vectors $S = \linebreak \lbrace 1, t + 5, t^3 + t^2 + 4, t^3 + t^2 + t \rbrace. \linebreak$ Dimension of the space spanned by the set of vectors $S$ is \dots
+
+		\begin{noparchoices}
+			\choice 1~~\choice4~~\choice0~~\choice2~~\choice3~~\choice5
+		\end{noparchoices}
+
+		\newquestion{2}{Consider the following matrix\\$A = \ibmatrix{1&4\\2&3}$.}
+
+		\question[1] Then, the corresponding\\characteristic equation is\\
+		\begin{noparchoices}
+			\begin{tabular}{ l r}
+				\choice & $\lambda^2 + 4 \lambda + 5 = 0$\\
+				\choice & $\lambda^2 + 4 \lambda - 5 = 0$\\
+				\choice & $\lambda^2 - 4 \lambda - 8 = 0$\\
+				\choice & $\lambda^2 + 4 \lambda + 8 = 0$\\
+				\choice & $\lambda^2 - 4 \lambda - 5 = 0$\\
+				\choice & $\lambda^2 + 4 \lambda - 8 = 0$
+			\end{tabular}
+		\end{noparchoices}
+
+		\question[1] For this matrix, using Cayley-Hamilton theorem $A^4$ is equal to\\
+		\begin{noparchoices}
+			\begin{tabular}{l l l}
+				\choice $64A-95I$ & \choice $-64A+95I$ \\
+				\choice $104A + 105I$ & \choice $-151A+120I$ \\
+				\choice $151A-120I$ & \choice $256A+425I$ \\
+			\end{tabular}
+		\end{noparchoices}
+		\newpage
+
+		\newquestion{}{}
+
+		\question[1] Let $T : \mathbb{R}^3 \rightarrow \mathbb{R}^3$ be a linear transformation defined by $T(x,y,z) = (x,x+y,z)$, then \dots
+		
+		\begin{oneparchoices}
+			\choice $T$ is 1-to-1 but not onto.\\\\
+			\choice $T$ is neither 1-to-1 nor onto.\\\\
+			\choice $T$ is onto but not 1-to-1.\\\\
+			\choice $T$ is isomorphic.\\\\
+			\choice $T$ is not a linear transformation.
+		\end{oneparchoices}
+
+		\newquestion{}{}
+		
+		\question[1] if $\ibmatrix{4/3\\1}$ is an eigenvector of $\ibmatrix{2&4\\3&1}$, then the associated eigenvalue is\\
+		\begin{noparchoices}
+			\begin{tabular}{c l c l c l}
+				\choice & 7 & \choice & 2 & \choice & $4/3$\\
+				\choice & 1 & \choice & 5 & \choice & $-2$\\
+			\end{tabular}
+		\end{noparchoices}
+
+		\newquestion{}{}
+		\question[1] The set $\begin{Bmatrix}
+			\ibmatrix{2\\1\\0\\6}, \ibmatrix{-3\\7\\6\\-18}, \ibmatrix{1\\-5\\-2\\12}
+		\end{Bmatrix}$ \linebreak is not a basis for $\mathbb{R}^4$\\
+		\begin{oneparchoices}
+			\choice True \quad \choice False
+		\end{oneparchoices}
+
+		\newquestion{}{}
+		\question[1] Let $T : \mathbb{R}^2 \rightarrow \mathbb{R}^2$ be a \linebreak linear transformation where \linebreak $T(x,y) = (x,0)$. The null space \linebreak of $T$ is \dots
+
+		\begin{oneparchoices}
+			\choice $(0,1)$\\\\
+			\choice $(0,y), y$ is real.\\\\
+			\choice $1$\\\\
+			\choice $(x,0), x$ is real.
+		\end{oneparchoices}
+
+		\nextcol
+
+		\newquestion{4}{Given the following system of linear differential equations:\\$
+		x^\prime = 4x + y - 2z\\
+		y^\prime = 2x + 2y - z\\
+		z^\prime = 2x + y\\
+		$ Knowing that the eigenvalues of the coefficient matrix are 1, 2 and 3, answer the following:}
+		\question[1] An eigenvector of $\lambda = 1$ is ......
+		\begin{oneparchoices}
+			\choice $\ibmatrix{1 & 0 & 0}^T$ \quad \choice $\ibmatrix{1 & 2 & 2}^T$ \\
+			\choice $\ibmatrix{1 & 1 & 1}^T$ \quad \choice $\ibmatrix{1 & -1 & ?}^T$ \\
+			\choice $\ibmatrix{2 & 1 & 1}^T$ \quad \choice $\ibmatrix{1 & -1 & 1}^T$
+		\end{oneparchoices}
+		\question[1] An eigenvector of $\lambda = 3$ is ......
+		\begin{oneparchoices}
+			\choice $\ibmatrix{1 & 0 & 0}^T$ \quad \choice $\ibmatrix{1 & 1 & ?}^T$ \\
+			\choice $\ibmatrix{1 & -1 & -1}^T$ \quad \choice $\ibmatrix{1 & ? & ?}^T$ \\
+			\choice $\ibmatrix{2 & 1 & 1}^T$ \quad \choice $\ibmatrix{1 & 2 & 2}^T$
+		\end{oneparchoices}
+		\newpage
+		\question[1] ?
+		\question[1] ?
+		\newpage
+
+		\newquestion{2}{If $A = \ibmatrix{-1&2&1\\1&-1&0\\2&3&1}$}
+
+		\question[1] The LU decomposition of $A$ is
+
+		\begin{oneparchoices}
+			{
+				\def\arraystretch{1.7}
+				\choice $\ibmatrix{1&0&0\\-1&1&0\\-2&7&1} \ibmatrix{1&-2&-1\\0&1&1\\0&0&1}$ \\[+1em]
+				\choice $\ibmatrix{-1&2&1\\0&1&1\\0&0&-4} \ibmatrix{1&0&0\\-1&1&0\\-2&7&1}$ \\[+1em]
+				\choice $\ibmatrix{1&0&0\\1&1&0\\2&-7&1} \ibmatrix{-1&2&1\\0&1&1\\0&0&-4}$ \\[+1em]
+				\choice $\ibmatrix{1&0&0\\1&1&0\\2&-7&1} \ibmatrix{1&-2&-1\\0&1&1\\0&0&1}$ \\[+1em]
+				\choice $\ibmatrix{1&0&0\\-1&1&0\\-2&7&1} \ibmatrix{-1&2&1\\0&1&1\\0&0&-4}$ \\
+			}
+		\end{oneparchoices}
+		\question[1] The columns of $A$ span $\mathbb{R}^3$
+
+		\begin{oneparchoices}
+			\choice True \quad \choice False
+		\end{oneparchoices}
+		\nextcol
+
+		\newquestion{}{}
+		\question[1] For the matrix $A = \ibmatrix{2 & 3\\c&d}$, if the eigenvalues of $A$ are 4 and 8, then $c$ and $d$ are respectively equal
+
+		\begin{noparchoices}
+			\begin{tabular}{c l c l c l}
+				\choice & 4 and $-10$ & \choice & 5 and 8 \\
+				\choice & 3 and $-9$ & \choice & $-3$ and 9 \\
+				\choice & 7 and 5 & \choice & $-4$ and 10
+			\end{tabular}
+		\end{noparchoices}
+
+		\newquestion{}{}
+		\question[1] Let $T : \mathbb{R}^5 \rightarrow \mathbb{R}^3$ be the linear transformation defined  by $T(x_1,x_2,x_3,x_4,x_5) =\\ (x_1+x_2, x_2 + x_3 + x_4, x_4 + x_3)$. \linebreak The nullity of the transformation matrix of $T$ is
+
+		\begin{noparchoices}
+			\choice 3~~\choice5~~\choice1~~\choice4~~\choice2~~\choice0
+		\end{noparchoices}
+
+		\newquestion{}{Consider the augmented matrix of a system of equations given by\\
+		$\text{Aug}(A) = \left \lbrack\begin{matrix}
+			1 & 2 & 4\\
+			0 & 3 & 2\\
+			0 & 0 & 1\\
+			0 & 0 & -1\\
+		\end{matrix} \right \rvert \left . \begin{matrix}
+			0 \\ 3 \\ 2 \\1
+		\end{matrix} \right \rbrack$
+		}
+
+		\question[1] The system has
+
+		\begin{oneparchoices}
+			\choice infinite no. of solutions\\
+			\choice unique solution\\
+			\choice no solution\\
+			\choice cannot be determined
+		\end{oneparchoices}
+		\newpage
+
+		\newquestion{5}{Given the matrices\\
+			$\mathbf{M}_1 = \ibmatrix{1 & 1\\2 & 4}, \mathbf{M}_2 = \ibmatrix{0 & 1 \\ 1 & 1},\\[+1mm]
+			\mathbf{M}_3 = \ibmatrix{1 & 1\\2 & -1}, \mathbf{M}_4 = \ibmatrix{1 & 2\\3&5}$\\[+1mm]
+			If you know that :\\
+			{
+				\def\arraystretch{1.2}
+				$\ibmatrix{
+					1 & 0 & 1 & 1\\
+					1 & 1 & 1 & 2\\
+					2 & 1 & 2 & 3\\
+					4 & 1 & -1 & 5
+				} \xrightarrow{\text{EF}}
+				\ibmatrix{
+					1 & 0 & 1 & 1\\
+					0 & 1 & 0 & 1\\
+					0 & 0 & -5 & 0\\
+					0 & 0 & 0 & 0 
+				}$
+		 	}
+		}
+
+		\question[1] The set $\lbrace \mathbf{M}_1,\mathbf{M}_2,\mathbf{M}_3,\mathbf{M}_4 \rbrace$ is
+
+		\begin{oneparchoices}
+			\choice dependent \quad \choice independent
+		\end{oneparchoices}
+
+		\question[1] Which matrix can be written as a linear combination of $\mathbf{M}_1$ and $\mathbf{M}_2$?
+
+		\begin{oneparchoices}
+			\choice Neither $\mathbf{M}_3$ nor $\mathbf{M}_4$ \\\\
+			\choice $\mathbf{M}_4$ \\\\
+			\choice $\mathbf{M}_3$ \\\\
+			\choice Both $\mathbf{M}_3$ and $\mathbf{M}_4$
+		\end{oneparchoices}
+
+
+		\question[1] The set $\lbrace\mathbf{M}_1,\mathbf{M}_2,\mathbf{M}_3,\mathbf{M}_4\rbrace$ is a spanning set for the vector space $\mathbb{M}_{2\times2}$
+
+		\begin{oneparchoices}
+			\choice True \quad \choice False
+		\end{oneparchoices}
+
+		\question[1] The set $\lbrace\mathbf{M}_1,\mathbf{M}_2,\mathbf{M}_3\rbrace$ is a basis for \dots
+
+		\begin{oneparchoices}
+			\choice a subspace of $\mathbf{M}_{2\times2}$\\
+			\choice the vector space $\mathbf{M}_{2\times2}$\\
+			\choice cannot be a basis
+		\end{oneparchoices}
+
+		\question[1] How many different \textbf{independent} sets of TWO matrices (i.e. $\lbrace \mathbf{M}_i, \mathbf{M}_f \rbrace$) can be formed using the four given matrices?
+
+		\begin{noparchoices}
+			\choice 6~~\choice$4!$~~\choice1~~\choice3~~\choice2~~\choice$3!$	
+		\end{noparchoices}
+		\nextcol
+		
+		\newquestion{3}{Consider the following matrix\\
+		$A = \ibmatrix{1&0&2&1\\0&2&1&1\\0&0&1&1\\0&0&0&4}$
+		}
+		\question[1] The eigenvalues of $(A^{-1})^T$ are
+
+		\begin{oneparchoices}
+			\choice $0.25, 0.5, 1$\\
+			\choice $0.2, 0.25, 0.5$\\
+			\choice $1,2,4$\\
+			\choice $1,4,16$\\
+			\choice $0,1,2,4$\\
+			\choice $A$ is non-invertible
+		\end{oneparchoices}
+
+		\question[1] The eigenvalues of $(A^T)^3$ are
+
+		\begin{oneparchoices}
+			\choice $1, 2, 4$\\
+			\choice $1, 8, 64$\\
+			\choice $0, 0.2, 0.25, 1$\\
+			\choice $0.15625, 0.125, 1$\\
+			\choice $0.2, 0.25, 0.5$\\
+			\choice $0, 1, 2, 4$
+		\end{oneparchoices}
+
+		\question[1] An eigenvector of $A$ corresponding to $\lambda = 4$ is
+
+		\begin{noparchoices}
+			\begin{tabular}{c l c l c l}
+				\choice & $\ibmatrix{1\\2\\1\\2}$ & \choice & $\ibmatrix{1\\1\\1}$ & \choice & $\ibmatrix{2\\2\\2\\2}$\\
+				\choice & $\ibmatrix{0\\1\\2\\3}$ & \choice & $\ibmatrix{2\\1\\0}$ & \choice & $\ibmatrix{1\\0\\1\\2}$
+			\end{tabular}\\
+		\end{noparchoices}
+		\newpage
+		
+		\newquestion[mark(s)]{2}{}
+		\question[2] Let $T : U \rightarrow V$ be a linear transformation. If $T(x,y) =\\(x+y, x - y, y)$ then $range(T) =$\linebreak
+
+		\begin{oneparchoices}
+			\choice $span\lbrace (0,1,0), (1,-1,1) \rbrace$\\
+			\choice $span\lbrace (1,1,0), (0,0,1) \rbrace$\\
+			\choice $\lbrace (1,1,0), (0,0,1) \rbrace$\\
+			\choice $\lbrace (1,1,0), (1,-1,1) \rbrace$\\
+			\choice $\lbrace (0,1,0), (1,-1,1) \rbrace$\\
+			\choice $span\lbrace (1,1,0), (1,-1,1) \rbrace$
+		\end{oneparchoices}
+
+		\newquestion{}{}
+		\question[1] Which of the following is a subspace of $\mathbb{R}^2$?
+
+		\begin{tabular}{|l|l|}
+			\hline
+			\@Roman{1} & $\lbrace (x,y) : xy \le 0 \rbrace$\\
+			\hline
+			\@Roman{2} & $\lbrace (x,y) : x+y = 2 \rbrace$\\
+			\hline
+			\@Roman{3} & $\lbrace (x,y) : x+y \ge 0 \rbrace$\\
+			\hline
+			\@Roman{4} & $\lbrace (x,y) : x+y = 0 \rbrace$\\
+			\hline
+		\end{tabular}
+
+		\begin{noparchoices}
+			\begin{tabular}{l l}
+				\choice all but \@Roman{2} & \choice Only \@Roman{3}\\
+				\choice all but \@Roman{1} & \choice Only \@Roman{4}\\
+				\choice only \@Roman{1} \& \@Roman{4} & \choice none\\
+			\end{tabular}
+		\end{noparchoices}
+
+		\newquestion{}{}
+		\question[1] Consider the matrix $A = \ibmatrix{a&b\\c&d}$ that has an eigenvalue 1 with associated eigenvector $x = \ibmatrix{2\\3}$. \linebreak
+		The value of $A^{20}x$ is \dots
+
+		\begin{noparchoices}
+			{\def\arraystretch{1.2}
+				\begin{tabular}{l l l l}
+					\choice & $\ibmatrix{2\\3}$ & \choice & $\ibmatrix{a^{20}&b^{20}\\c^{20}&d^{20}}$ \\
+					\\
+					\choice & $\ibmatrix{2^{20}\\3^{20}}$ & \choice & $\ibmatrix{2\\3}^{20}$ \\
+					\\
+					\choice & $\ibmatrix{a&b\\c&d}$ & \choice & $\ibmatrix{a&b\\c&d}^{20}$\\
+					\\
+				\end{tabular}
+			}
+		\end{noparchoices}
+
+		\nextcol
+		
+		\newquestion[mark(s)]{2}{}
+		\question[2] If $T : \mathbb{R}^2 \rightarrow \mathbb{R}^3$ is a linear transformation where\\
+		$T(1,0) = (2,3,1),\\
+		T(1,1) = (3,0,2).$\\
+		Which of the following statements is \textbf{\underline{correct}}?
+
+		\begin{oneparchoices}
+			\choice $T(x,y) = (2x - y, 3x + 3y, x - y)$\\
+			\choice $T(x,y) = (x-y, 2x-y, 3x+3y)$\\
+			\choice $T(x,y) = (2x+y, 3x-3y, x+y)$\\
+			\choice $T(x,y) = (x+y, 2x+y, 3x-3y)$
+		\end{oneparchoices}
+
+		\newquestion{}{}
+		\question[1] Which of the following is \textbf{\underline{not}} a linear transformation?
+
+		\begin{oneparchoices}
+			\choice $T : \mathbb{R} \rightarrow \mathbb{R}^2$ such that\\$T(x)=(2x,3x)$.\\
+			\choice $T : \mathbb{R}^3 \rightarrow \mathbb{R}^2$ such that\\$T(x,y,z)=(z, x+y)$.\\
+			\choice $T : \mathbb{R}^3 \rightarrow \mathbb{R}^2$ such that\\$T(x,y,z)=(x+1,y+z)$.\\
+			\choice $T : \mathbb{R}^2 \rightarrow \mathbb{R}^2$ such that\\$T(x,y)=(2x-y,x)$.
+		\end{oneparchoices}
+
+		\newquestion[mark(s)]{2}{Consider a square matrix $A$.}
+		\question[2] For a homogenous system $Ax = O$, then $|A| = 0$ means that the system\linebreak\\
+		\begin{oneparchoices}
+			\choice has only the zero solution\\\\
+			\choice has non-zero solutions\\\\
+			\choice has no solution\\\\
+			\choice either has no solution or infinite number of solutions\\
+		\end{oneparchoices}
+
+		\newpage
+
+		\question[1] For a system $Ax = B$, then $|A| = 0$ means that the system
+
+		\begin{oneparchoices}
+			\choice has infinite solutions\\
+			\choice has no solution\\
+			\choice has a unique solution\\
+			\choice either has no solution or infinite solutions
+		\end{oneparchoices}
+
+		\newquestion{}{}
+		\question[1] If matrix $\mathbf{A}$ and $\mathbf{B}$ are similar matrices, and $\mathbf{A}$ is invertible, then so is matrix $\mathbf{B}$.
+
+		\begin{oneparchoices}
+			\choice True \quad \choice False
+		\end{oneparchoices}
+
+		\newquestion[mark(s)]{2}{}
+		\question[2] Consider the basis $S = \lbrace V_1, V_2, V_3 \rbrace$ for $\mathbb{R}^3$ where $V_1 = (1,1,1) \linebreak V_2 = (1,1,0)$ and $V_3 = (1,0,0)$.\linebreak
+		Let $T : \mathbb{R}^3 \rightarrow \mathbb{R}^2$ be a linear transformation such that \linebreak
+		$T(V_1) = (1,0), T(V_2) = (2,-1)$,\linebreak
+		and $T(V_3) = (4,3).$ Then $T(2,-3,5)$ is \dots
+
+		\begin{noparchoices}
+			\begin{tabular}{l l l l}
+				\choice & $(9,0)$ & \choice & $(0,0)$\\
+				\\
+				\choice & $(-1,5)$ & \choice & $(1,20)$\\
+				\\
+				\choice & $(9,23)$ & \choice & $(3,4)$\\
+			\end{tabular}
+		\end{noparchoices}
+
+		\newquestion{}{}
+		\question[1] The two matrices\\
+		$\ibmatrix{1&0\\1&-1}$ and $\ibmatrix{0&1\\1&0}$\\
+		are similar and diagonalizable.
+	
+		\begin{oneparchoices}
+			\choice True \quad \choice False
+		\end{oneparchoices}
+
+		\nextcol
+
+		\newquestion{}{}
+		\question Let $T : x \rightarrow Ax$ be a linear transformation, where $A$ is a $3\times4$ matrix, then the vector $(1,2,3,4)$
+
+		\begin{oneparchoices}
+			\choice may belong to $range(T)$.\\\\
+			\choice must belong to $range(T)$.\\\\
+			\choice may belong to $kern(T)$.\\\\
+			\choice must belong to $kern(T)$.\\\\
+			\choice $\notin$ the domain of $T$.\\\\
+			\choice $\in$ the co-domain $T$.\\
+		\end{oneparchoices}
+
+		\newpage
+		\newquestion{}{}
+		\question[1] For a system of linear equations whose augmented matrix in RREF is\\
+		\begin{equation}
+			\left \lbrack \begin{matrix}
+				1 & 3 & 0 & 0 & 1\\
+				0 & 0 & 1 & 0 & 2\\
+				0 & 0 & 0 & 1 & 4
+			\end{matrix} \right \vert
+			\left . \begin{matrix}
+				2 \\ 5 \\ -1
+			\end{matrix} \right \rbrack \notag
+		\end{equation}
+		which of the following is the solution of the system? $(t,r \in \mathbb{R})$ \linebreak
+
+		\begin{oneparchoices}
+			{
+				\def\arraystretch{1.1}
+				\choice $\ibmatrix{2\\0\\5\\-1\\0} - t \ibmatrix{3\\1\\0\\0\\0} - r \ibmatrix{1\\0\\2\\4\\1}$\\[+1em]
+				\choice $\ibmatrix{2\\0\\5\\-1} - t \ibmatrix{3\\1\\0\\0} - r \ibmatrix{1\\0\\2\\4}$\\[+1em]
+				\choice $\ibmatrix{2\\0\\5\\-1} - t \ibmatrix{3\\-1\\0\\0} - r \ibmatrix{1\\0\\2\\4}$\\[+1em]
+				\choice $\ibmatrix{2\\5\\-1}$\\[+1em]
+				\choice $\ibmatrix{2\\0\\5\\-1\\0} - t \ibmatrix{3\\-1\\0\\0\\0} - r \ibmatrix{1\\0\\2\\4\\-1c}$\\[+1em]
+				\choice $\ibmatrix{2\\5\\-1} - t \ibmatrix{3\\0\\0} - r \ibmatrix{1\\2\\4}$\\
+			}
+		\end{oneparchoices}
+
+		\nextcol
+		\newquestion{}{}
+		\question[1] Let $A : \mathbb{R}^6 \rightarrow \mathbb{R}^5$ and $B : \mathbb{R}^5 \rightarrow \mathbb{R}^7$ be two linear transformations. Then, which of the following \textbf{\underline{can be true}}?
+
+		\begin{oneparchoices}
+			\choice $A$ and $B$ are 1-to-1.\\\\
+			\choice $A$ is 1-to-1 and $B$ is not 1-to-1.\\\\
+			\choice $A$ and $B$ are onto. \\\\
+			\choice $A$ is 1-to-1 and $B$ is onto. \\\\
+			\choice $A$ is onto and $B$ is 1-to-1. \\\\
+			\choice $A$ and $B$ are isomorphic. \\
+		\end{oneparchoices}
+
+		\newquestion{}{}
+		\question[1] The dimension of the standard \linebreak vector space $\mathbb{P}_3$ is \dots
+
+		\begin{noparchoices}
+			\choice 5~~\choice0~~\choice1~~\choice4~~\choice3~~\choice2 \linebreak
+		\end{noparchoices}
+
+		\endgradingrange{exam}
+
+		\uplevel{\separator
+		\fontsize{12}{14}
+		Examiners' committee:
+		\begin{itemize}
+			\item Dr. Islam Abdul Maksoud
+			\item Dr. Sara Hassan
+			\item Dr. Ahmed Tayel
+			\item Dr. Ahmed Yahia
+		\end{itemize}
+		Total marks $= \pointsinrange{exam}$
+		}
+	\end{questions}
+\end{multicols*}
+\end{document}

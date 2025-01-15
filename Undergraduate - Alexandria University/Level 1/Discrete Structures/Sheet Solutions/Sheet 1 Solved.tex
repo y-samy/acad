@@ -1,0 +1,187 @@
+\documentclass[a4paper,12pt]{article}
+
+% Margins
+\usepackage{geometry}
+\geometry{left=25mm,right=25mm,%
+bindingoffset=0mm, top=20mm,bottom=20mm}
+
+% Therefore and because
+\usepackage{amssymb}
+
+% Underlines
+\usepackage{soul}
+
+% Font
+\usepackage{anyfontsize}
+\usepackage[default,regular,black]{sourceserifpro}
+\usepackage[T1]{fontenc}
+
+% For tables
+\usepackage[table]{xcolor}
+\usepackage{array}
+
+% Title
+\newcommand{\linia}{\rule{\linewidth}{0.5pt}}
+\makeatletter
+\renewcommand{\maketitle}{
+\begin{center}
+\vspace{2ex}
+{\huge \textbf{\@title}}
+\vspace{1ex}
+\\
+\linia\\
+\textsf{\@date \hfill
+\@author}
+\vspace{4ex}
+\end{center}
+}
+\makeatother
+
+% Tilde logical not symbol
+\newcommand*{\ltnot}{\mathord{\sim}}
+
+\begin{document}
+\title{Discrete Structures --- Sheet 1 Solution}
+\author{Youssef Samy}
+\maketitle
+% Setting the fontsize
+\fontsize{14}{16}\selectfont
+
+
+\noindent \textbf{Q.~1} \ul{Indicate which of the following sentences are statements:}
+\begin{itemize}
+    \item[(a)] She is a mathematics major.
+    \item[(b)] $ 128 = 2^6 $.
+    \item[(c)] $ x = 2^6 $.
+\end{itemize}
+
+\noindent \textbf{Solution}\\
+A statement is a sentence which can be proven either true or false without waiting for further clarification regarding its contents. So, a statement must not contain free variables.
+\begin{itemize}
+    \item[(a)] \textbf{NOT} a statement. Contains pronoun "She" which must be specified first before deciding if true or false.
+    \item[(b)] \textbf{IS} a statement. Has no free variables, truth or falsity can be evaluated directly.
+    \item[(c)] \textbf{NOT} a statement. Has free variable $x$ which must be specified for verification to be possible.
+\end{itemize}
+
+\begin{center}
+    \rule{6cm}{0.4pt}
+\end{center}
+
+\noindent \textbf{Q.~2} \ul{Write the statements in symbolic form using the symbols $\sim$, $\land$ and $\lor$ and the indicated letters to represent component statements.}\\
+
+\textbf{2.~1} ~Let $s =$ ``stocks are increasing'' and $i =$ ``interest rates are steady''.
+\begin{center}
+    {\rowcolors{2}{white!90!gray!70}{white!70!gray!70}
+        \begin{tabular}{m{20em}|l}
+            \textbf{STATEMENT}                                           & \textbf{SOLUTION}           \\
+            (a) Stocks are increasing but interest rates are steady.     & $s \land i$                 \\
+            (b) Neither are stocks increasing nor interest rates steady. & $ \ltnot s \land \ltnot i $
+        \end{tabular}}
+\end{center}
+
+
+\textbf{2.~2} ~Let $h =$ ``John is healthy'', $w =$ ``John is wealthy'' and $s =$ ``John is wise''.
+\begin{center}
+    {\rowcolors{2}{white!90!gray!70}{white!70!gray!70}
+        \begin{tabular}{m{20em}|l}
+            \textbf{STATEMENT}                                  & \textbf{SOLUTION}                          \\
+            (a) John is healthy and wealthy but not wise.       & $h \land w \land \ltnot s $                \\
+            (b) John is not wealthy but he is healthy and wise. & $ \ltnot w \land h \land s $               \\
+            (c) John is neither healthy, wealthy, nor wise.     & $ \ltnot h \land \ltnot w \land \ltnot s $
+        \end{tabular}}
+\end{center}
+
+\begin{center}
+    \rule{6cm}{0.4pt}
+\end{center}
+\newpage
+\noindent \textbf{Q.~3} \ul{Determine which of the pairs of statement forms are logically equivalent. Justify your answer using truth tables.}\\
+\begin{center}
+    \ul{Checking if $p \lor (p \land q) \equiv p$}\\\ \\
+    {\rowcolors{3}{white!90!gray!70}{white!70!gray!70}
+    \begin{tabular}{|c c| c | c | c|}
+        \multicolumn{2}{c}{} & \multicolumn{1}{c}{$A$} & \multicolumn{1}{c}{$B$} & \multicolumn{1}{c}{}                \\
+        \hline
+        $p$                  & $q$                     & $p \land q$             & $p \lor A$           & $B \equiv p$ \\
+        \hline
+        T                    & T                       & T                       & T                    & T            \\
+        T                    & F                       & F                       & T                    & T            \\
+        F                    & T                       & F                       & F                    & T            \\
+        F                    & F                       & F                       & F                    & T            \\
+        \hline
+    \end{tabular}}
+    \ \\\ \\
+    $\because$ The last column is always true\\
+    $\therefore$ The logical equivalence $p \lor (p \land q) \equiv p$ is true\\\ \\
+    \ul{Checking if $\ltnot (p \land q) \equiv \ltnot p \land \ltnot q$}\\\ \\
+    {\rowcolors{3}{white!90!gray!70}{white!70!gray!70}
+    \begin{tabular}{|c c| c | c | c|}
+        \multicolumn{2}{c}{} & \multicolumn{1}{c}{$A$} & \multicolumn{1}{c}{$B$} & \multicolumn{1}{c}{}                     \\
+        \hline
+        $p$                  & $q$                     & $\ltnot (p \land q)$    & $\ltnot p \land \ltnot q$ & $A \equiv B$ \\
+        \hline
+        T                    & T                       & F                       & F                         & T            \\
+        T                    & F                       & T                       & F                         & F            \\
+        F                    & T                       & T                       & F                         & F            \\
+        F                    & F                       & T                       & T                         & T            \\
+        \hline
+    \end{tabular}}
+    \ \\\ \\
+    $\because$ The last column is \textbf{NOT} always true\\
+    $\therefore$ The statements $\ltnot (p \land q)$ and $\ltnot p \land \ltnot q$ are not logically equivalent\\\ \\
+    \ul{Checking if $(p \lor q) \lor (p \land r) \equiv (p \lor q) \land r$}\\\ \\
+    {\rowcolors{3}{white!90!gray!70}{white!70!gray!70}
+    \begin{tabular}{|c c c|c|c|c|c|c|}
+        \multicolumn{3}{c}{} & \multicolumn{1}{c}{$A$} & \multicolumn{1}{c}{$B$} & \multicolumn{1}{c}{$C$} & \multicolumn{1}{c}{$D$} & \multicolumn{1}{c}{}                              \\
+        \hline
+        $p$                  & $q$                     & $r$                     & $p \lor q$              & $p \land r$             & $A \lor B$           & $A \land r$ & $C \equiv D$ \\
+        \hline
+        T                    & T                       & T                       & T                       & T                       & T                    & T           & T            \\
+        \hline
+        T                    & T                       & F                       & T                       & F                       & T                    & F           & F            \\
+        \hline
+        T                    & F                       & T                       & T                       & T                       & T                    & T           & T            \\
+        \hline
+        T                    & F                       & F                       & T                       & F                       & T                    & F           & F            \\
+        \hline
+        F                    & T                       & T                       & T                       & F                       & T                    & T           & T            \\
+        \hline
+        F                    & T                       & F                       & T                       & F                       & T                    & F           & F            \\
+        \hline
+        F                    & F                       & T                       & F                       & F                       & F                    & F           & T            \\
+        \hline
+        F                    & F                       & F                       & F                       & F                       & F                    & F           & T            \\
+        \hline
+    \end{tabular}}
+    \ \\\ \\
+    $\because$ The last column is \textbf{NOT} always true\\
+    $\therefore$ The statements $(p \lor q) \lor (p \land r)$ and $(p \lor q) \land r$ are not logically equivalent
+    \newpage
+    \ul{Checking if $(r \lor p) \land ((\ltnot r \lor (p \land q)) \land (r \lor q)) \equiv p \land q$}\\\ \\
+    {\rowcolors{3}{white!90!gray!70}{white!70!gray!70}
+    \begin{tabular}{|c c c|c|c|c|c|c|c|c|}
+        \multicolumn{3}{c}{} & \multicolumn{1}{c}{$A$} & \multicolumn{1}{c}{$B$} & \multicolumn{1}{c}{$C$} & \multicolumn{1}{c}{$D$} & \multicolumn{1}{c}{$E$} & \multicolumn{1}{c}{$F$}                                            \\
+        \hline
+        $p$                  & $q$                     & $r$                     & $r \lor p$              & $p \land q$             & $\ltnot r \lor B$       & $r \lor q$              & $C \land D$ & $A \land E$ & $F \equiv B$ \\
+        \hline
+        T                    & T                       & T                       & T                       & T                       & T                       & T                       & T           & f           & F            \\
+        \hline
+        T                    & T                       & F                       & T                       & T                       & T                       & F                       & F           & f           & F            \\
+        \hline
+        T                    & F                       & T                       & T                       & F                       & T                       & T                       & T           & f           & F            \\
+        \hline
+        T                    & F                       & F                       & T                       & F                       & T                       & F                       & F           & f           & F            \\
+        \hline
+        F                    & T                       & T                       & T                       & F                       & F                       & T                       & T           & f           & F            \\
+        \hline
+        F                    & T                       & F                       & F                       & F                       & T                       & F                       & F           & f           & F            \\
+        \hline
+        F                    & F                       & T                       & T                       & F                       & F                       & F                       & T           & f           & F            \\
+        \hline
+        F                    & F                       & F                       & F                       & F                       & T                       & F                       & T           & f           & F            \\
+        \hline
+    \end{tabular}}
+    \ \\\ \\
+\end{center}
+
+\end{document}

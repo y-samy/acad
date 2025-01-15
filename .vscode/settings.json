@@ -1,0 +1,4 @@
+{
+    "latex-workshop.formatting.latex": "latexindent",
+    "latex-workshop.latex.outDir": "%DIR%/tex-out"
+}
