@@ -1,18 +1,91 @@
-\documentclass[12pt]{article}
+\documentclass[12pt, answers]{exam}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{array}
 \usepackage{geometry}
 \usepackage{xcolor}
-\usepackage[default,regular,black]{sourceserifpro}
 \usepackage{tabularx}
-\usepackage{tcolorbox}
 \usepackage{listings}
-
-\usepackage{anyfontsize}
-\usepackage[T1]{fontenc}
+\usepackage{adjustbox}
 \usepackage[none]{hyphenat}
+\usepackage{soul}
+
+\usepackage{calc}
 
 \geometry{a4paper, top=25mm, left=25mm, right=25mm, bottom=25mm}
+
+% Font Settings
+\usepackage{palatino}
+\usepackage{anyfontsize}
+\usepackage[T1]{fontenc}
+
+\newcommand{\qtable}[1]{
+    {
+        \ifprintanswers
+            \setlength{\linewidth}{\linewidth+4cm}
+            \noindent
+            \hskip-2cm
+            \begin{tabularx}{\linewidth}{!{\vrule width 1.5pt}>{\hsize=1\hsize}X!{\vrule width 1.5pt}c!{\vrule width 1.5pt}>{\hsize=1\hsize}X!{\vrule width 1.5pt}c!{\vrule width 1.5pt}}
+                #1
+            \end{tabularx}
+        \else
+            \setlength{\linewidth}{\linewidth+2cm}
+            \noindent
+            \hskip-1cm
+            \begin{tabularx}{\linewidth}{!{\vrule width 1.5pt}>{\hsize=1\hsize}X!{\vrule width 1.5pt}>{\hsize=1\hsize}X!{\vrule width 1.5pt}}
+                #1
+            \end{tabularx}
+        \fi
+    }
+}
+
+\newcommand{\choicesetter}[1]{
+    & #1
+}
+
+\newcommand{\setchoice}[1]{
+    \ifprintanswers
+        \choicesetter{#1}
+    \fi
+}
+
+\newcommand{\hsep}[1]{\noalign{\hrule height #1pt}}
+
+
+
+\renewcommand{\questionshook}{%
+    \setlength{\leftmargin}{0pt}%
+    \setlength{\labelwidth}{-\labelsep}%
+    \setlength{\itemsep}{0em}
+    \setlength{\topsep}{0em}
+}
+
+
+
+
+\renewcommand{\questionlabel}{{\normalfont \thequestion.~~}}
+\renewcommand{\choicelabel}{\alph{choice})}
+
+
+\newcommand{\ctab}{\phantom{~~~~}}
+\newcommand{\bs}{\textbackslash }
+\newcommand{\n}{\newline}
+\newcommand{\snippet}[1]{
+    {
+        \fontsize{10}{13}\selectfont
+        \bfseries
+        \ttfamily
+        #1
+    }
+}
+\newcommand{\mchoices}[1]{
+    {
+        \normalfont
+        \begin{oneparchoices}
+            #1
+        \end{oneparchoices}
+    }
+}
 
 \begin{document}
 
@@ -22,14 +95,16 @@
     \def\arraystretch{2}
     \noindent
     \begin{tabularx}{\linewidth}{!{\vrule width 1pt}>{\hsize=1.4\hsize}X!{\vrule width 1pt}>{\hsize=.6\hsize}X!{\vrule width 1pt}}
-        \noalign{\hrule height 1pt}
-        \textbf{Name:} & \textbf{ID:}\\
-        \noalign{\hrule height 1pt}
+        \hsep{1}
+        \textbf{Name:} Youssef Samy & \textbf{ID:} {\ifprintanswers Solutions \fi} \\
+        \hsep{1}
     \end{tabularx}
 }
 
 
-{\begin{center}
+{
+\fontsize{11}{14}\selectfont
+\begin{center}
     \bfseries
     \vspace{0.5cm}
     Alexandria University \hfill Faculty of Engineering\\
@@ -39,9 +114,15 @@
     Subject Name: Programming 1 \hfill Fall 2024 \\
     \vspace{0.25cm}
     Time Allowed: 2 Hour \hfill Final Exam (Re-created)\\
-    \vspace{0.5cm}
-    \normalfont
-    \begin{tabular}{|c|c|c|c|}
+    \rule[0pt]{\linewidth}{3pt}
+\end{center}
+}
+
+{
+\fontsize{13}{14}\selectfont
+\def\arraystretch{2}
+\begin{center}
+    \begin{tabular}{|W{c}{1.2cm}|W{c}{1.2cm}|W{c}{1.2cm}|W{c}{1.2cm}|}
         \hline
         Q1 & Q2 & Q3 & Total \\
         \hline
@@ -51,22 +132,75 @@
 \end{center}
 }
 
+\bfseries
+{
+    \fontsize{12}{14}\selectfont
+    \ul{Answer the Following Questions:} 3 Question, 8 Pages
 
-\vspace{1cm}
+    Question 1: Choose the correct answers from a, b, c and d (25 questions,
+    
+    25 marks).
+}
 
-\underline{Answer the Following Questions:} 3 Question, 8 Pages
-Question 1:Choose the correct answers from a, b, c and d (25 questions, 25 marks).\\
+\fontsize{11}{13}\selectfont
+\noindent
+\begin{questions}
+    \qtable{
+        \hsep{1.5}
+        {
+            \question What will be the output? \n\n
+            \snippet{
+                \#include <stdio.h>\n
+                int main()~\{\n
+                \ctab int arr[] = \{1,2,3,4,5\};\n
+                \ctab int *ptr = arr + 2;\n
+                \ctab printf("\%d\bs n", *ptr);\n
+                \ctab return 0;
+                \n\}
+            }\n
+            \mchoices{
+                \choice 1 \qquad\qquad \choice 2\n
+                \choice 3 \qquad\qquad \choice 4\n
+            }
+        } \setchoice{C} & 
+        {
+            \question A statement that reads a record from the file "trans.dat". The record consists of the integer accountNum and floating-point dollarAmount.\n\n
+            \mchoices{
+                \choice \snippet{nfPtr = fopen("newmast.dat", "w");}\n
+                \choice \snippet{fscanf(ofPtr, "\%d\%s\%f", accountNum,\n name, \&currentBalance);}\n
+                \choice \snippet{fscanf(tfPtr, "\%d\%f", \&accountNum,\n \&dollarAmount);}\n
+                \choice \snippet{fprintf(nfPtr, "\%d \%s \%.2f",\n accountNum, name, currentBalance);}\n
+            }
+        } \setchoice{C} \\
+        \hsep{1.5}
+        {
+            \question What will be the outputof the following code snippet? \n
+            \snippet{
+                char str[] = "abcdef";\n
+                char *ptr = str + 2;\n
+                printf("\%c\bs n", *ptr);\n
+                ptr += 3;\n
+                printf("\%c\bs n", *ptr);\n\n
+            }
+            \mchoices{
+                \choice c and e \qquad\qquad\qquad \choice c and f\n
+                \choice c and d \qquad\qquad\qquad \choice c and undefined\n
+            }
+        } \setchoice{B} &  
+        {
+            \question What is the printed value after the following statements\n\n
+            \snippet{
+                int x = 5;\n
+                int y = x++ * ++x;\n
+                printf("\%d", y);\n
+            }\n
+            \mchoices{
+                \choice 25 \choice 30 \choice 35 \choice Undefined behavior \linebreak
+            }
+        } \setchoice{D} \\
+        \hsep{1.5}
+    }
 
-\fontsize{10}{12}\selectfont
-\begin{tabularx}{\linewidth}{!{\vrule width 1pt}X!{\vrule width 1pt}X!{\vrule width 1pt}}
-    \noalign{\hrule height 1pt}
-    1. What will be the output? & 2. A statement that reads a record from the file "trans.dat" The record consists of the integer accountNum and floating-point dollarAmount.\\
-    \begin{lstlisting}
-        end
-    \end{lstlisting} & \\
-    \noalign{\hrule height 1pt}
-\end{tabularx}
-
-
+\end{questions}
 
 \end{document}

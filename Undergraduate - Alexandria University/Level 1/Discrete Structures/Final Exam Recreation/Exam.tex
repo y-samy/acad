@@ -130,11 +130,12 @@ top=20mm,bottom=20mm}
   }
 }
 
+
 \begin{document}
 
 \noindent
 \titlefontsize Discrete Structures for Computing -- SSP -- Final Exam 2024\\
-\normalfontsize Dr. Amin Shoukry, Dr. Yasmine Abouelseoud\\Recreated and solved by a student
+\normalfontsize Dr. Amin Shoukry, Dr. Yasmine Abouelseoud\\Recreated{\ifprintanswers~and solved\fi} by Youssef Samy
 \hrule
 \begin{questions}
     \question Prove by induction $\sum \limits_{k = 1}^{n} (k \cdot k!) = (n + 1)! - 1$\\ Note: $n \ge 1$
@@ -166,7 +167,8 @@ top=20mm,bottom=20mm}
     
     \question Is the function $f : \mathbb{Z} \longrightarrow \mathbb{Z}, f(x) = 4 - 3x$, onto? prove your answer.
     
-        \begin{solutionorbox}
+    
+        \begin{solutionorbox}[7cm]
             \textbf{NO}\\
             (Counter-example)\\
             Find $n \in \mathbb{Z}$ which has no pre-image under $f$ (in range, but not in co-domain).\\
@@ -181,7 +183,7 @@ top=20mm,bottom=20mm}
     
     \question Prove that the function $f : \mathbb{R} - \{ 2 \} \longrightarrow \mathbb{R} - \{ 5 \}, f(x) = \dfrac{5x + 1}{x - 2}$, is one-to-one.
     
-        \begin{solutionorbox}
+        \begin{solutionorbox}[8.5cm]
             Definition of a one-to-one function: $f(n) = f(m)$ if, and only if, $n = m$.\\
             (Direct Proof)\\
             $n = m \rightarrow f(n) = f(m)$ does not need proving.\\
@@ -199,7 +201,7 @@ top=20mm,bottom=20mm}
     
     \question Draw diagrams of all bijections $f: X \longrightarrow X, X = \{ 1, 2, 3 \}$
     
-        \begin{solutionorbox}
+        \begin{solutionorbox}[4cm]
             \bijections{a1/b1, a2/b2, a3/b3}
             \bijections{a1/b1, a2/b3, a3/b2}
             \bijections{a1/b2, a2/b1, a3/b3}
@@ -210,19 +212,19 @@ top=20mm,bottom=20mm}
     \pagebreak
     \question How many ways to arrange the word \textbf{TENNESSEE}?
     
-        \begin{solutionorbox}
+        \begin{solutionorbox}[2cm]
             (9 Letters: 1 T, 2 N, 2 S, 4 E) Number of ways: $\comb{9}{4} \times \comb{5}{2} \times \comb{3}{2} \times \comb{1}{1}$
         \end{solutionorbox}
     
     \question How many ways to distribute 8 identical balls among 4 people?
     
-        \begin{solutionorbox}
+        \begin{solutionorbox}[2cm]
             $\binom{8 + 4 - 1}{8} = \comb{11}{8}$
         \end{solutionorbox}
     
     \question There are 9 players, among them are 3 good front row players. How many teams of five players can you form if at least one good front row player must be included?
     
-        \begin{solutionorbox}
+        \begin{solutionorbox}[6cm]
             Let $F = $ good front row players, $N = $ normal (other) players.\\[+1em]
             \begin{forest}
                 for tree={grow=0,l=1cm,child anchor = west,parent anchor= west,anchor = west,calign=fixed edge angles, s sep+=1em}
@@ -234,24 +236,24 @@ top=20mm,bottom=20mm}
             \end{forest}
             $\qquad \text{Total} = \comb{3}{3} \times \comb{6}{2} + \comb{3}{2} \times \comb{6}{3} + \comb{3}{1} \times \comb{6}{4} = \comb{9}{5} - \comb{6}{5}$
         \end{solutionorbox}
-    
+        
     \question You are going to use the 7 characters $a, b, c, d, e, f, g$ to make an ordered list of characters.
     \begin{parts}
         \part How many lists can you make if no repetition is allowed?
         
-            \begin{solutionorbox}
+            \begin{solutionorbox}[1cm]
                 $7!$
             \end{solutionorbox}
         
         \part How many lists can you make if repetitions are allowed?
         
-            \begin{solutionorbox}
+            \begin{solutionorbox}[1cm]
                 $7^7$
             \end{solutionorbox}
         
         \part How many lists can you make if at least one character should be repeated?
         
-            \begin{solutionorbox}
+            \begin{solutionorbox}[1cm]
                 $7^7 - 7!$
             \end{solutionorbox}
         
@@ -261,32 +263,34 @@ top=20mm,bottom=20mm}
     \begin{parts}
         \part How many strings end with a $1$?
         
-            \begin{solutionorbox}
+            \begin{solutionorbox}[1cm]
                 $2^7$
             \end{solutionorbox}
         
         \part How many strings have exactly four ones?
         
-            \begin{solutionorbox}
+            \begin{solutionorbox}[1cm]
                 $\comb{8}{4}$
             \end{solutionorbox}
         
         \part How many strings end with $1$ or have exactly four ones?
         
-            \begin{solutionorbox}
+            \begin{solutionorbox}[1cm]
                 $2^7 + \comb{8}{4} - \comb{7}{3}$
             \end{solutionorbox}
         
     \end{parts}
+
+
     \question If 10 contestants are ranked without ties, how many ways are there for first, second, third places?
     
-        \begin{solutionorbox}
+        \begin{solutionorbox}[1cm]
             $\perm{10}{3}$
         \end{solutionorbox}
     
     \question Find the coefficient of $x^8 \cdot y^5$ in $(4x^2 - 7y)^9$
     
-        \begin{solutionorbox}
+        \begin{solutionorbox}[8cm]
             \textbf{Binomial theorem}
             \begin{align*}
                 (4x^2 - 7y)^9 & = \sum_{k = 0}^{9} \comb{9}{k} (4x^2)^k \cdot (\sz7y)^{9-k} \tag{General Term} \\
@@ -300,6 +304,7 @@ top=20mm,bottom=20mm}
         \end{solutionorbox}
     
     \pagebreak
+    
     \question In a certain population, insurance policy holders are either accident prone or non-accident prone. The probability for an accident prone to have an accident within this year is $0.4$. The probability for a non-accident prone to have an accident within this year is $0.2$. If $30\%$ of the population is accident prone:
     
         \begin{solutionorbox}
@@ -322,14 +327,14 @@ top=20mm,bottom=20mm}
     \begin{parts}
         \part What is the probability of a policy holder to get into an accident within this year?
         
-            \begin{solutionorbox}
+            \begin{solutionorbox}[8cm]
                 $\text{P}(a) = 0.3 \times 0.4 + 0.7 \times 0.2
                     = 0.26$
             \end{solutionorbox}
         
         \part What is the probability of a policy holder to be accident prone if he had an accident within this year?
         
-            \begin{solutionorbox}
+            \begin{solutionorbox}[4cm]
                 $\text{P}(p | a) = \frac{\text{P}(p \cap a)}{\text{P}(a)} = \frac{0.3 \times 0.4}{0.26} = \frac{6}{13} \approx 0.46$
             \end{solutionorbox}
         
