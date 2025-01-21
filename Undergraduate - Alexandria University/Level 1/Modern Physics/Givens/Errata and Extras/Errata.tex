@@ -1,0 +1,240 @@
+\documentclass[a4paper,12pt]{article}
+
+% Margins
+\usepackage{geometry}
+\geometry{left=10mm,right=10mm,%
+top=5mm,bottom=5mm}
+
+% More Math Symbols
+\usepackage{amssymb}
+
+% Margin notes
+\usepackage{marginnote}
+
+% Dashed rules
+\usepackage{dashrule}
+
+% Trademark Symbols
+\usepackage{textcomp}
+
+% Text in math
+\usepackage{amsmath}
+
+% For Diagrams
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+% Footnote URLs
+\usepackage{hyperref}
+
+% Underlines
+\usepackage{soul}
+
+% Font
+\usepackage{anyfontsize}
+%\usepackage[default,regular,black]{sourceserifpro}
+\usepackage{tgpagella,eulervm}
+\usepackage[T1]{fontenc}
+
+% Mutli-column text
+\usepackage{multicol}
+
+% For tables
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{tablefootnote}
+
+% Color
+\usepackage{xcolor}
+
+% Short negative symbol in math mode (sub-zero mnemonic)
+\newcommand{\sz}{\text{--}}
+
+% Clearer math
+\everymath{\displaystyle}
+
+% Degree
+\usepackage{gensymb}
+
+% Slanted Parallel
+\newcommand{\slparallel}{\mathbin{\!/\mkern-5mu/\!}}
+
+\definecolor{redhl}{RGB}{255,150,150}
+\definecolor{yelhl}{RGB}{255,255,0}
+\definecolor{greenhl}{RGB}{150,255,150}
+\newcommand{\mathhl}[2]{\colorbox{#1}{$#2$}}
+
+% Times ten to the power of ...
+\newcommand{\powten}[1]{10^{#1}}
+\newcommand{\npowten}[1]{10^{\sz#1}}
+\newcommand{\tpowten}[1]{{\scriptstyle \times} 10^{#1}}
+\newcommand{\tnpowten}[1]{{\scriptstyle \times} 10^{\sz#1}}
+
+\title{FINAL EXAM GIVENS PAPER\\CATEGORIZATION \& ERRATA}
+
+\begin{document}
+
+\maketitle
+
+% No page numbering
+\pagenumbering{gobble}
+
+% Setting the fontsize
+\fontsize{12}{14}\selectfont
+
+\section{Galilean Transformation}
+\noindent
+$
+    v \ll 0.1c \quad t^\prime = t \quad u = v_{S^\prime} - v_S \qquad x^\prime = x - ut \quad v^\prime_x = v_x - u \quad a_x^\prime = a_x \qquad y^\prime = y \quad v^\prime_y = v_y \quad a_y^\prime = a_y\\[-8mm]
+$
+
+\section{Lorentz Transformation}
+\noindent
+$
+    \gamma = \frac{1}{\sqrt{1- (\frac{u}{c})^2}} {\scriptstyle [>}1{\scriptstyle]} \quad t^\prime = \gamma (t - \frac{ux}{c^2}) \quad x^\prime = \gamma(x - ut) \quad  y^\prime = y \quad v^\prime_y = \frac{v_y \sqrt{1-(u/c)^2}}{\displaystyle 1- \frac{v_x u}{c^2}} \qquad v_x^\prime = \frac{v_x - u}{1- \displaystyle \frac{v_xu}{c^2}} \\
+    \theta^\prime = \tan^{\sz 1}{\frac{V_y^\prime}{V_x^\prime}} ~~ \rotatebox{-90}{\hskip-1cm\hdashrule{1.8cm}{0.4pt}{4pt}} \\[-1em]
+$
+
+\subsection{Applications: Time Dilation \& Length Contraction}
+
+\noindent
+$
+    \phantom{\theta^\prime = \tan^{\sz 1}{\frac{V_y^\prime}{V_x^\prime}}} ~~ \rotatebox{-90}{\hskip-1cm\hdashrule{1.8cm}{0.4pt}{4pt}} ~~ t_o = \gamma t_p \quad \text{r} = \frac{1}{t} \quad L = \frac{L_p}{\gamma} \quad \theta = \tan^{\sz1}{\frac{L_y}{L_x}} \quad \rotatebox{-90}{\hskip-1cm\hdashrule{1.8cm}{0.4pt}{4pt}}\\[-.8cm]
+$
+
+
+\subsection{Applications: Doppler Shift}
+
+\noindent
+$
+\phantom{\theta^\prime = \tan^{\sz 1}{\frac{V_y^\prime}{V_x^\prime}} ~~ \rotatebox{-90}{\hskip-1cm\hdashrule{1.8cm}{0.4pt}{4pt}} ~~ t_o = \gamma t_p \quad \text{r} = \frac{1}{t} \quad L = \frac{L_p}{\gamma} \quad \theta = \tan^{\sz1}{\frac{L_y}{L_x}}} \quad \rotatebox{-90}{\hskip-1cm\hdashrule{1.8cm}{0.4pt}{4pt}} \quad \beta = \frac{v}{c} \quad \lambda_o = \lambda_s \displaystyle \sqrt{\frac{1\pm \beta}{1\mp \beta}} \quad f_o = f_s \displaystyle \sqrt{\frac{1\mp \beta}{1\pm \beta}}\\[-.8cm]
+$
+
+\section{Special Relativity's Effects on Mass \& Energy}
+\noindent
+$
+    m = m_0 \gamma \qquad E_t = \gamma m_0c^2 = m_0c^2 + K.E = \sqrt{\rho^2 c^2 + E_0^2} \qquad E_0 = m_0 c^2 \qquad K.E = (\gamma - 1) E_0 \\
+    \rho = \gamma m_0v = \frac{1}{c} \sqrt{E_t^2 - E_0^2} \qquad \rho^2c^2 = E_t^2 - E_0^2 \qquad F = \gamma^3 m_0 a \qquad v = \frac{p c^2}{E_t} = c \sqrt{1- (1/\gamma^2)} $\\[-6mm]
+
+
+\section{The Photo-Electric Effect}
+\noindent
+$ c = \lambda f \qquad E = hf = \frac{hc}{\lambda} = W + K.E = W + eV \qquad W = h f_c = \frac{hc}{\lambda_c} \qquad K.E_{\max} = \frac{1}{2} m v^2_{\max} = eV_S \qquad \\
+    \frac{n}{t} = \frac{IA}{hf} = \frac{P}{E} \qquad i = \frac{n}{t} \cdot e = \frac{Q}{t} \qquad I = \frac{P}{A} \qquad E_n = n hf \qquad E_i > W \qquad f_i > f_c \qquad \lambda_i < \lambda_c
+$
+
+
+\section{Blackbody Radiation}
+\noindent
+$P = \sigma AT^4 \qquad \sigma = 5.6 \times 10^{\sz8} \qquad \lambda_{\max} T = 2.898 \times 10^{-3} \text{mK} \qquad \degree \text{K} = 273 + \degree \text{C}$ \\[-7mm]
+
+\section{Wave-Particle Duality}
+\subsection{X-Ray Production}
+\noindent
+$
+    \lambda_{\min} = \frac{hc}{eV} = \frac{1.26\times10^{\sz6}}{V} [\text{V}\cdot\text{m}] \qquad E_{x\text{-ray}} = eV = \frac{hc}{\lambda_{\text{min}}} \quad \rotatebox{-90}{\hskip-.65cm\rule{32pt}{0.4pt}}\\[+1em]
+$
+
+{
+    \fontsize{14}{16}\selectfont
+    \noindent
+    \textbf{\textit{Note}~~~} \mathhl{yelhl}{f_{\max} = \frac{c}{\lambda_{\min}}} \\[+2mm]
+}
+
+\subsection{Pair Production}\label{pairprodref}
+\noindent
+$
+    \phantom{\lambda_{\min} = \frac{hc}{eV} = \frac{1.26\times10^{\sz6}}{V} [\text{V}\cdot\text{m}] \qquad E_{x\text{-ray}} = eV = \frac{hc}{\lambda_{\text{min}}} \quad} \rotatebox{-90}{\hskip-.65cm\rule{32pt}{0.4pt}} \quad E_{\text{ph}} = 2m_ec^2 + K.E_{-} + K.E_{+}\\[-5mm]
+$
+
+\subsection{Compton Scattering}
+\noindent
+$
+    E = \rho c = eV \qquad \rho_\text{ph} = \frac{E_\text{ph}}{c} = \frac{h}{\lambda} \qquad \rho_e = m v \qquad K.E_e = \frac{1}{2} m v^2 = E_{\text{ph}} - E^\prime_{\text{ph}} \qquad E_\text{ph} + m_e c^2 = E_\text{ph}^\prime + E_e\\
+    \lambda_c = \frac{h}{mc} = 2.426 \times 10^{\sz12} \qquad \lambda^\prime - \lambda = \lambda_c (1 - \cos{\theta}) \\
+    x: \rho_i = \rho_s \cos{\theta} + \rho_e \cos{\phi} \qquad y: \rho_s \sin{\theta} = \rho_e \sin{\phi} \qquad \tan{\phi} = \frac{\sin{\theta}}{\lambda_f/\lambda_i - \cos{\theta}} = \frac{\rho^\prime \sin{\theta}}{\rho - \rho^\prime \cos{\theta}}
+$
+
+
+\subsection{De Broglie and The Uncertainty Principle}
+\noindent
+$
+    \lambda_{\text{brog}}=\frac{h}{\rho_\text{ph}}=\frac{h}{mv}=\frac{h}{\sqrt{2mK.E}} \quad$ \mathhl{yelhl}{hf=2\gamma mc^2} $\quad \Delta x\Delta P \geq \frac{\hslash}{2} \quad$ \mathhl{yelhl}{\Delta E\Delta t \geq \frac{\hslash}{2}}$ \quad \Delta \rho = m\Delta v \quad \Delta E = h\Delta f\\[+2mm]
+$
+
+{
+    \fontsize{14}{16}\selectfont
+    \noindent
+    \textbf{\textit{Note}~~} \mathhl{yelhl}{hf = 2 \gamma mc^2} belongs under \ref{pairprodref} Pair Production, not under this part\\[+1em]
+    \textbf{\textit{Note}~~} \mathhl{yelhl}{\Delta E\Delta t \geq \frac{\hslash}{2}} is canceled
+}
+\newpage
+\section{Atomic Structure, Rydeberg \& Correspondence Principle}
+\noindent
+$
+    F_c=\frac{mv^2}{r}=F_e=\frac{1}{4\pi\epsilon_0}\frac{e}{r^2}\quad v = \frac{e}{\sqrt{4\pi\epsilon_0mr}}\quad K.E = \frac{1}{2}mv^2\quad K.E_n = \frac{e^2}{8\pi\epsilon_0r_n}\quad P.E = \frac{-e^2}{4\pi\epsilon_0r_n} \\[+2mm]
+    E = \frac{-e^2}{8\pi\epsilon_0r_n} \quad r_n = a_0n^2=\frac{n^2h^2\epsilon_0}{\pi me^2} \qquad L = n \hslash = \rho r \qquad f_n = \frac{v}{2\pi r} = \frac{e}{2\pi\sqrt{4\pi\epsilon_0mr^3}} = \frac{-E_1}{h}(\frac{2}{n^3})\\[+2mm]
+    E_n = \frac{-13.6}{n^2} [e\text{V}] \quad$ \mathhl{redhl}{E_\text{ph} = hf = E_i - E_f = \sz 13.6 (\frac{1}{n_f^2} - \frac{1}{n_i^2})} $\quad \frac{1}{\lambda} = R_\infty(\frac{1}{n_f^2}-\frac{1}{n_i^2}) \quad$ \mathhl{redhl}{v_n = \frac{1.28\tpowten{6}}{n}}$ \\[+2mm]
+    $\mathhl{yelhl}{N = f\Delta t}$ \quad f = \frac{-E_1}{h}(\frac{1}{n_f^2}-\frac{1}{n_i^2}) \quad f_L = \frac{-E_1}{h}(\frac{2\rho}{n^3}) \quad E = K.E + P.E \quad n\lambda = 2\pi r_n\\[+2mm]
+$
+
+{
+    \fontsize{14}{18}\selectfont
+    \noindent
+    \textbf{\textit{To Know}~~~} \mathhl{yelhl}{\text{Number of revolutions} = f_n\Delta t} \qquad \textbf{\textit{To Know}~~~} \mathhl{yelhl}{E_\text{ionization} = \sz E_n} \\[+2mm]
+    \textbf{\textit{To Know}~~~} \mathhl{yelhl}{\epsilon_0 = 8.85 \tnpowten{12}} \qquad \textit{on calculator: } \textbf{CONST 32}\\[+2mm]
+    \textbf{\textit{Incorrect}~~} \mathhl{redhl}{v_n = \frac{1.28\tpowten{6}}{n}} \qquad \qquad \textbf{\textit{Correct}~~} \mathhl{greenhl}{v_n = \frac{2.18\tpowten{6}}{n}}\\[+1em]
+    \textbf{\textit{Incorrect}~~} \mathhl{redhl}{E_\text{ph} = hf = E_i - E_f = \sz 13.6 (\frac{1}{n_f^2} - \frac{1}{n_i^2})}\\
+    \textbf{\textit{Correct}~~~~} \mathhl{greenhl}{E_\text{ph} = hf = E_f - E_i = \sz 13.6 (\frac{1}{n_f^2} - \frac{1}{n_i^2})} \quad \ul{in case of excitation}\\
+    \textbf{\textit{Correct}~~~~} \mathhl{greenhl}{E_\text{ph} = hf = E_i - E_f = 13.6 (\frac{1}{n_f^2} - \frac{1}{n_i^2})} \quad \ul{in case of radiation/ relaxation}\\[+2em]
+    \textbf{\underline{Case where $Z \ne 1$ (Multi-electron/ Atom isn't Hydrogen : $Z =$ no. of electrons)}}\\[+1em]
+    $
+        E_n = \frac{-13.6}{n^2}~Z^2\\[+2mm]
+        r_n = a_0 \frac{n^2}{Z}\\[+2mm]
+        v_n = \frac{2.18\tpowten{6}}{n}~Z\\[+2mm]
+        \frac{1}{\lambda} = Z^2~R_\infty(\frac{1}{n_f^2}-\frac{1}{n_i^2})\\[+2em]
+    $
+    Also study $Z_{\text{effective}}$ and multi-electron questions from revision notes.
+
+}
+
+\newpage
+\section{Quantum Mechanics, Zeeman Effect}
+\noindent
+$
+    K.E = \frac{\rho^2}{2m} \quad  \mu = -(\frac{e}{2m})L\quad P.E_m = \sz \mu B\cos{\theta} \quad U_m = m_l (\frac{e\hslash}{2m}) B \quad  \\[+2mm]
+    L_z = m_l\hslash = L\cos{\theta} \quad\cos{\theta} = \frac{m_l}{\sqrt{l(l+1)}}\quad S_z = \pm\frac{1}{2}\hslash \quad \mu_s = \frac{-e}{m}S \quad \mu_{sz} = \pm\frac{e\hslash}{2m}=\pm\mu_B l = n-1 \\[+2mm]
+    n = 1,2,3,4\dots\quad l = 0,1,\dots,n-1\quad -l\leq m_l\leq l\quad m_s = \pm 0.5 \quad  L = \sqrt{l(l+1)}\hslash \quad S = 0.5 \sqrt{3}\hslash \\[+2mm]
+    J = L+S \quad N_{\text{max}} = 2n^2\quad L_{\text{max}} = 2(2l+1)\qquad \Delta l=\pm1\quad \Delta m_l=0,\pm1 \\[+2mm]
+    f_1 = f_0 - \mu_B \frac{B}{h} \qquad f_2 = f_0 \qquad f_3 = f_0 + \mu_B \frac{B}{h} \qquad \Delta\lambda = \frac{eB\lambda^2}{4\pi mc} \qquad \Delta f = \frac{eB}{4\pi m}$
+
+\subsection{Electron Configuration}
+\noindent
+$
+    1s^2 \quad 2s^2 \quad 2p^6 \quad 3s^2 \quad 3p^6 \quad 4s^2 \quad 3d^{10} \quad 4p^6 \quad 5s^2 \quad 4d^{10} \quad 5p^6 \quad 6s^2 \quad 4f^{14} \quad 5d^{10} \quad 6p^6 \quad 7s^2 \quad$ \mathhl{redhl}{6d^{10} \quad 5f^{14}}
+
+{
+    \fontsize{14}{16}\selectfont
+    \noindent
+    \textbf{\textit{Incorrect}~~} \mathhl{redhl}{6d^{10} \quad 5f^{14}} \quad \textit{might be incorrect, is written like this in lecture slides}\\
+    \textbf{\textit{Correct}~~~~} \mathhl{greenhl}{5f^{14} \quad 6d^{10}} \quad \textit{the more universally accepted ordering}
+}
+
+
+\section{Constants \& Conversions}
+\noindent
+$
+    c = 3 \times 10^8 \text{ m}/\text{s} \qquad \text{Mach} = 343 \text{ m}/\text{s} \qquad 1.6\times 10^{\sz 19}\text{ J} = 1 \ e\text{V} \qquad e = 1.6 \tnpowten{19} \text{ C} \quad h = 6.626 \tnpowten{34} \text{ J} \cdot \text{s}\\[+3mm]
+    m_{e} = 9.11 \tnpowten{31} \text{ kg} \quad m_{\text{p}} = 1.67 \tnpowten{27} \text{ kg} \qquad \text{M}e\text{V}/c^2 = 1.79 \tnpowten{30} \text{ kg} \qquad \text{M}e\text{V}/c = 5.36 \tnpowten{22} \text{ kg}\cdot\text{m}/\text{s} \\[+3mm]
+    m_e c^2 = 0.511 \text{ M}e\text{V} \qquad m_\text{p}c^2 = 938 \text{ M}e\text{V} \qquad m_\text{n}c^2 = 939 \text{ M}e\text{V} \qquad \mu_B = 9.274 \tnpowten{24} \text{J}/\text{T} = 5.788 \tnpowten{5} e\text{V}/ \text{T} \\[+1mm]
+    \frac{h}{m_e c} = 0.024 \tnpowten{10} \text{ m} \qquad \underline{\hslash = 1.054 \tnpowten{34} \text{ J} \cdot \text{s}} \qquad a_0 = 0.529 \tnpowten{10} \text{ m} \qquad R = 1.097\tpowten{7} \text{ m}^{\sz1} \\[+1mm]
+    1 \text{ L.Y} \approx 9.46 \tpowten{15} \text{ m} \qquad \mu\text{m}: \npowten{6} \qquad \text{nm} : \npowten{9} \qquad \text{pm} : \npowten{12} \qquad \text{fm} : \npowten{15} \qquad \text{\AA} = 10^{\sz10} \text{ m}\\
+$
+
+{
+    \fontsize{14}{16}\selectfont
+    \noindent
+    \textbf{\textit{Derived}~~~~} $\underline{\hslash = 1.054 \tnpowten{34} \text{ J} \cdot \text{s}}$ \qquad \textbf{\textit{Originally}~~~~} $\hslash = \frac{h}{2\pi}$
+}
+
+\end{document}
