@@ -3,12 +3,18 @@
 #include <stdbool.h>
 #include <string.h>
 #include <errno.h>
+#include <stdint.h>
 
-typedef enum {INT, CHAR, FLOAT, STRING} collection_type_t;
+typedef enum {INT, CHAR, FLOAT, STRING, UINT64, BIGINT} datatype_t;
 typedef char* str_t;
 
+typedef struct bigint_s {
+    str_t num;
+    bool negative;
+} bigint_t;
+
 typedef struct stack_s {
-    collection_type_t type;
+    datatype_t type;
     void* collection;
     size_t size;
     size_t top_index;
@@ -22,7 +28,7 @@ struct stack_pool_s {
 
 struct stack_pool_s stack_pool = {NULL, 0};
 
-stack_p new_stack(const collection_type_t type, const size_t upper_bound, const bool is_dynamic)
+stack_p new_stack(const datatype_t type, const size_t upper_bound, const bool is_dynamic)
 {
     stack_p s = NULL;
     s = malloc(sizeof(stack_t));
@@ -42,6 +48,9 @@ stack_p new_stack(const collection_type_t type, const size_t upper_bound, const 
     switch (type) {
         case INT:
             s->collection = malloc(sizeof(int) * (upper_bound+1));
+            break;
+        case UINT64:
+            s->collection = malloc(sizeof(uint64_t) * (upper_bound+1));
             break;
         case CHAR:
             s->collection = malloc(sizeof(float) * (upper_bound+1));
@@ -95,6 +104,9 @@ void stack_push(stack_p s, void* elem)
             case INT:
                 new_collection = realloc(s->collection, sizeof(int) * (s->size + 50));
                 break;
+            case UINT64:
+                new_collection = realloc(s->collection, sizeof(uint64_t) * (s->size + 50));
+                break;
             case CHAR:
                 new_collection = realloc(s->collection, sizeof(char) * (s->size + 50));
                 break;
@@ -116,6 +128,9 @@ void stack_push(stack_p s, void* elem)
     switch (s->type) {
         case INT:
             *((int*) s->collection + s->top_index) = *(int*)elem;
+            break;
+        case UINT64:
+            *((uint64_t*) s->collection + s->top_index) = *(uint64_t*)elem;
             break;
         case CHAR:
             *((char*) s->collection + s->top_index) = *(char*)elem;
@@ -150,6 +165,8 @@ void* stack_peek(stack_p s, size_t index)
     switch (s->type) {
         case INT:
             return (int*) s->collection + index;
+        case UINT64:
+            return (uint64_t*) s->collection + index;
         case CHAR:
             return (char*) s->collection + index;
         case STRING:
@@ -171,6 +188,9 @@ void* stack_pop(stack_p s)
     switch (s->type) {
         case INT:
             item = (int*) s->collection + s->top_index;
+            break;
+        case UINT64:
+            item = (uint64_t*) s->collection + s->top_index;
             break;
         case CHAR:
             item = (char*) s->collection + s->top_index;
@@ -211,19 +231,25 @@ void free_stack_pool(void)
     free(stack_pool.stacks);
 }
 
-char *ibgets(const char delim) {
+str_t bgets(const char delim, datatype_t type) {
     char *buffer = NULL, *newbuffer = NULL, c;
-    size_t buffer_size = 500, len = 0;
+    size_t buffer_size = 21, len = 0;
     buffer = (char *) malloc(buffer_size * sizeof(char));
     if (!buffer) {
         errno = ENOMEM;
         return NULL;
     }
     while ((c = getchar()) != delim && c != EOF) {
+        if (type == INT)
+            if (c == '-' && len != 0) continue;
+        if (type == INT || type == UINT64) {
+            if (c < '0' || c > '9') continue;
+            if (c == '0' && (len == 0 || buffer[0] == '-')) continue;
+        }
         *(buffer + len++) = c;
-        if (c < '0' || c > '9') continue;
+        if (len == 20 && type == UINT64) break;
         if (len == buffer_size) {
-            buffer_size += 250;
+            buffer_size += 50;
             newbuffer = (char *) realloc(buffer, buffer_size * sizeof(char));
             if (!newbuffer) {
                 errno = ENOMEM;
@@ -236,44 +262,46 @@ char *ibgets(const char delim) {
     return buffer;
 }
 
+bool is_prime(const uint64_t n)
+{
+    uint64_t factor = 3;
+    if (n < 2) return false;
+    if (!(n%2) && n != 2) return false;
+    if (n == 2) return true;
+    while (n%factor && factor*factor < n) factor += 2;
+    return n%factor || n == factor;
+}
+
+/* Assignment-specific functions */
+
+void reverse_string(str_t str)
+{
+    size_t i = 0;
+    stack_p temp = new_stack(CHAR, strlen(str), false);
+    while (str[i])
+        stack_push(temp, str + i++);
+    i = 0;
+    while (!stack_is_empty(temp))
+        str[i++] = *(char*)stack_pop(temp);
+}
+
 void question_1(void)
 {
     /* Reversing a string using stack operations */
     printf("Enter first string: ");
-    stack_p original = new_stack(CHAR, 100, true);
-    while (true) {
-        char c = getchar();
-        if (c == '\n' || c == '\r' || c == EOF) break;
-        stack_push(original, &c);
-    }
-    str_t reversed = malloc((stack_size(original)+1) * sizeof(char));
-    size_t i = 0;
-    while (!stack_is_empty(original)) {
-        reversed[i++] = *(char*)stack_pop(original);
-    }
-    reversed[i] = '\0';
-    printf("Reversed string: %s", reversed);
-    free(reversed);
+    str_t str = bgets('\n', STRING);
+    reverse_string(str);
+    printf("Reversed string: %s", str);
+    free(str);
 }
 
-void question_2(void)
+bool is_stack_sorted(stack_p s)
 {
-    printf("Enter a list of numbers forming a stack [input rules: bottom to top, bigint supported, negative supported, integral only]:\n");
-    stack_p stk = new_stack(STRING, 100, true);
-    str_t str = NULL;
-    while ((str = ibgets('\n')) != NULL) {
-        if (!strlen(str)) {
-            free(str);
-            break;
-        }
-        stack_push(stk, str);
-        free(str);
-    }
     bool sorted = true;
-    if (!stack_is_empty(stk) || stack_size(stk) != 1) {
-        str_t str_1 = *(str_t*)stack_pop(stk);
-        while (!stack_is_empty(stk)) {
-            str_t str_2 = *(str_t*)stack_pop(stk);
+    if (!stack_is_empty(s) || stack_size(s) != 1) {
+        str_t str_1 = *(str_t*)stack_pop(s);
+        while (!stack_is_empty(s)) {
+            str_t str_2 = *(str_t*)stack_pop(s);
             if (strcmp(str_1, str_2) > 0) {
                 sorted = false;
                 break;
@@ -281,7 +309,42 @@ void question_2(void)
             str_1 = str_2;
         }
     }
-    printf("The stack is %s", sorted?"sorted":"not sorted.");
+    return sorted;
+}
+
+void question_2(void)
+{
+    printf("Enter a list of numbers forming a stack [input rules: bottom to top, bigint supported, negative supported, integral only]:\n");
+    stack_p stk = new_stack(STRING, 100, true);
+    str_t str = NULL;
+    while ((str = bgets('\n', BIGINT)) != NULL) {
+        if (!strlen(str)) {
+            free(str);
+            break;
+        }
+        stack_push(stk, str);
+        free(str);
+    }
+    printf("The stack is %s", is_stack_sorted(stk)?"sorted":"not sorted.");
+}
+
+void question_3(void)
+{
+    printf("Enter a list of numbers forming a stack [input rules: bottom to top, uint_64]:\n");
+    stack_p input = new_stack(UINT64, 100, true);
+    str_t str = NULL;
+    uint64_t buffer = 0;
+    while ((str = bgets('\n', UINT64)) != NULL) {
+        if (!strlen(str)) {
+            free(str);
+            break;
+        }
+        buffer = atoll(str);
+        if (!is_prime(buffer)) stack_push(input, &buffer);
+        free(str);
+    }
+    while (!stack_is_empty(input))
+        printf("%lld\n", *(uint64_t*)stack_pop(input));
 }
 
 void question_4(void)
@@ -292,7 +355,7 @@ void question_4(void)
     stack_p stk_3 = new_stack(STRING, 100, true);
     stack_p stk_final = new_stack(STRING, 100, true);
     str_t str = NULL;
-    while ((str = ibgets('\n')) != NULL) {
+    while ((str = bgets('\n', BIGINT)) != NULL) {
         if (!strlen(str)) {
             free(str);
             break;
@@ -301,7 +364,7 @@ void question_4(void)
         free(str);
     }
     printf("Enter second list of numbers forming a stack [input rules: bottom to top, bigint supported, negative supported, integral only]:\n");
-    while ((str = ibgets('\n')) != NULL) {
+    while ((str = bgets('\n', BIGINT)) != NULL) {
         if (!strlen(str)) {
             free(str);
             break;
@@ -336,9 +399,55 @@ void question_4(void)
 
 }
 
+bool check_balanced_parentheses(stack_p s)
+{
+    size_t num_open = 0;
+    char c;
+    while (!stack_is_empty(s)) {
+        if ((c= *(char*) stack_pop(s)) == ')') num_open++;
+        else if (c == '(')
+            if (!num_open) return false;
+            else num_open--;
+    }
+    if (num_open) return false;
+    return true;
+}
+
+void question_5(void)
+{
+    printf("Enter string to check for paranthesis balance:\n");
+    stack_p stk = new_stack(CHAR, 100, true);
+    char c;
+    while ((c = getchar()) != '\n' && c != EOF)
+        stack_push(stk, &c);
+    printf("%s", check_balanced_parentheses(stk)?"\nBalanced":"\nUnbalanced");
+}
+
 int main()
 {
     atexit(free_stack_pool);
-    question_4();
+    uint8_t question;
+    do {
+        printf("Choose question (1,2,3,4,5): ");
+        scanf("%d", &question);
+        while (getchar() == ' ');
+        switch (question) {
+            case 1:
+                question_1();
+                break;
+            case 2:
+                question_2();
+                break;
+            case 3:
+                question_3();
+                break;
+            case 4:
+                question_4();
+                break;
+            case 5:
+                question_5();
+            break;
+        }
+    } while (question > 5);
     return 0;
 }
