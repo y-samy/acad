@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 782.47 567.97">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1, .cls-3 {
+        stroke-width: .75px;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-4 {
+        stroke: #000;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-6 {
+        letter-spacing: 0em;
+      }
+
+      .cls-7 {
+        fill: #fff;
+      }
+
+      .cls-8 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        stroke: red;
+      }
+
+      .cls-9 {
+        font-size: 10px;
+      }
+
+      .cls-9, .cls-10, .cls-11, .cls-12 {
+        font-family: MicrosoftSansSerif, 'Microsoft Sans Serif';
+      }
+
+      .cls-10 {
+        font-size: 14px;
+      }
+
+      .cls-11 {
+        font-size: 12px;
+      }
+
+      .cls-4 {
+        stroke-width: .06px;
+      }
+
+      .cls-12 {
+        font-size: 8px;
+      }
+
+      .cls-13 {
+        letter-spacing: 0em;
+      }
+
+      .cls-14 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-15 {
+        letter-spacing: 0em;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-2" x="34.2" y="28.98" width="747.9" height="492"/>
+    </clipPath>
+  </defs>
+  <polyline class="cls-7" points="580.92 0 738.66 0 738.66 7.92 580.92 7.92"/>
+  <line class="cls-3" x1="17.22" y1="567.6" x2="48" y2="567.6"/>
+  <rect class="cls-7" x="16.86" y="556.62" width="30.96" height="9.12"/>
+  <rect class="cls-7" x="358.68" y="7.86" width="66.84" height="18.12"/>
+  <text class="cls-12" transform="translate(16.86 564)"><tspan x="0" y="0"> </tspan></text>
+  <text class="cls-12" transform="translate(16.86 564)"><tspan class="cls-15" x="0" y="0">V(+)-V(-</tspan><tspan x="28.28" y="0">)</tspan></text>
+  <rect class="cls-7" x="385.74" y="541.32" width="43.92" height="13.56"/>
+  <rect class="cls-7" x="33.3" y="526.98" width="11.22" height="11.34"/>
+  <text class="cls-11" transform="translate(385.74 552.36)"><tspan x="0" y="0">T</tspan><tspan class="cls-8" x="7.33" y="0">i</tspan><tspan x="9.97" y="0">me (s)</tspan></text>
+  <text class="cls-9" transform="translate(33.3 536.22)"><tspan class="cls-13" x="0" y="0">0</tspan><tspan x="5.57" y="0">µ</tspan></text>
+  <rect class="cls-7" x="765.36" y="526.98" width="16.8" height="11.34"/>
+  <text class="cls-9" transform="translate(765.36 536.22)"><tspan class="cls-13" x="0" y="0">60</tspan><tspan x="11.14" y="0">µ</tspan></text>
+  <rect class="cls-7" x="149.76" y="526.98" width="16.8" height="11.34"/>
+  <text class="cls-9" transform="translate(149.76 536.22)"><tspan class="cls-13" x="0" y="0">10</tspan><tspan x="11.14" y="0">µ</tspan></text>
+  <rect class="cls-7" x="648.96" y="526.98" width="16.8" height="11.34"/>
+  <text class="cls-9" transform="translate(648.96 536.22)"><tspan class="cls-13" x="0" y="0">50</tspan><tspan x="11.14" y="0">µ</tspan></text>
+  <rect class="cls-7" x="274.56" y="526.98" width="16.8" height="11.34"/>
+  <text class="cls-9" transform="translate(274.56 536.22)"><tspan class="cls-13" x="0" y="0">20</tspan><tspan x="11.14" y="0">µ</tspan></text>
+  <rect class="cls-7" x="524.16" y="526.98" width="16.8" height="11.34"/>
+  <text class="cls-9" transform="translate(524.16 536.22)"><tspan class="cls-13" x="0" y="0">40</tspan><tspan x="11.14" y="0">µ</tspan></text>
+  <rect class="cls-7" x="399.36" y="526.98" width="16.8" height="11.34"/>
+  <text class="cls-9" transform="translate(399.36 536.22)"><tspan class="cls-13" x="0" y="0">30</tspan><tspan x="11.14" y="0">µ</tspan></text>
+  <line class="cls-1" x1="33.3" y1="520.98" x2="782.1" y2="520.98"/>
+  <line class="cls-1" x1="33.3" y1="520.98" x2="33.3" y2="523.98"/>
+  <line class="cls-1" x1="158.1" y1="520.98" x2="158.1" y2="523.98"/>
+  <line class="cls-1" x1="282.9" y1="520.98" x2="282.9" y2="523.98"/>
+  <line class="cls-1" x1="407.7" y1="520.98" x2="407.7" y2="523.98"/>
+  <line class="cls-1" x1="532.5" y1="520.98" x2="532.5" y2="523.98"/>
+  <line class="cls-1" x1="657.3" y1="520.98" x2="657.3" y2="523.98"/>
+  <line class="cls-1" x1="782.1" y1="520.98" x2="782.1" y2="523.98"/>
+  <rect class="cls-7" y="244.98" width="14.04" height="60"/>
+  <text class="cls-11" transform="translate(11.28 304.92) rotate(-90)"><tspan x="0" y="0">Voltage (V)</tspan></text>
+  <rect class="cls-7" x="22.62" y="509.64" width="5.64" height="11.34"/>
+  <text class="cls-9" transform="translate(22.62 518.88)"><tspan x="0" y="0">0</tspan></text>
+  <rect class="cls-7" x="17.04" y="28.98" width="11.22" height="11.34"/>
+  <text class="cls-9" transform="translate(17.04 38.22)"><tspan class="cls-13" x="0" y="0">1</tspan><tspan x="5.57" y="0">0</tspan></text>
+  <rect class="cls-7" x="22.62" y="466.14" width="5.64" height="11.34"/>
+  <text class="cls-9" transform="translate(22.62 475.38)"><tspan x="0" y="0">1</tspan></text>
+  <rect class="cls-7" x="22.62" y="72.54" width="5.64" height="11.34"/>
+  <text class="cls-9" transform="translate(22.62 81.78)"><tspan x="0" y="0">9</tspan></text>
+  <rect class="cls-7" x="22.62" y="416.94" width="5.64" height="11.34"/>
+  <text class="cls-9" transform="translate(22.62 426.18)"><tspan x="0" y="0">2</tspan></text>
+  <rect class="cls-7" x="22.62" y="121.74" width="5.64" height="11.34"/>
+  <text class="cls-9" transform="translate(22.62 130.98)"><tspan x="0" y="0">8</tspan></text>
+  <rect class="cls-7" x="22.62" y="367.74" width="5.64" height="11.34"/>
+  <text class="cls-9" transform="translate(22.62 376.98)"><tspan x="0" y="0">3</tspan></text>
+  <rect class="cls-7" x="22.62" y="170.94" width="5.64" height="11.34"/>
+  <text class="cls-9" transform="translate(22.62 180.18)"><tspan x="0" y="0">7</tspan></text>
+  <rect class="cls-7" x="22.62" y="318.54" width="5.64" height="11.34"/>
+  <text class="cls-9" transform="translate(22.62 327.78)"><tspan x="0" y="0">4</tspan></text>
+  <rect class="cls-7" x="22.62" y="220.14" width="5.64" height="11.34"/>
+  <text class="cls-9" transform="translate(22.62 229.38)"><tspan x="0" y="0">6</tspan></text>
+  <rect class="cls-7" x="22.62" y="269.34" width="5.64" height="11.34"/>
+  <text class="cls-9" transform="translate(22.62 278.58)"><tspan x="0" y="0">5</tspan></text>
+  <line class="cls-1" x1="34.2" y1="520.98" x2="34.2" y2="28.98"/>
+  <line class="cls-1" x1="34.2" y1="520.98" x2="31.2" y2="520.98"/>
+  <line class="cls-1" x1="34.2" y1="471.78" x2="31.2" y2="471.78"/>
+  <line class="cls-1" x1="34.2" y1="422.58" x2="31.2" y2="422.58"/>
+  <line class="cls-1" x1="34.2" y1="373.38" x2="31.2" y2="373.38"/>
+  <line class="cls-1" x1="34.2" y1="324.18" x2="31.2" y2="324.18"/>
+  <line class="cls-1" x1="34.2" y1="274.98" x2="31.2" y2="274.98"/>
+  <line class="cls-1" x1="34.2" y1="225.78" x2="31.2" y2="225.78"/>
+  <line class="cls-1" x1="34.2" y1="176.58" x2="31.2" y2="176.58"/>
+  <line class="cls-1" x1="34.2" y1="127.38" x2="31.2" y2="127.38"/>
+  <line class="cls-1" x1="34.2" y1="78.18" x2="31.2" y2="78.18"/>
+  <line class="cls-1" x1="34.2" y1="28.98" x2="31.2" y2="28.98"/>
+  <g class="cls-14">
+    <path class="cls-3" d="M34.2,520.98v-.06c1.29-14.16,3.03-28.32,4.38-42.48l4.38-38.88,8.82-68.04,14.94-91.32,14.94-67.02,15-49.14,14.94-36,14.94-26.4,14.94-19.38,15-14.22,14.94-10.38,15-7.68,14.94-5.58,14.94-4.14,14.94-3,14.94-2.22c29.79-3.68,59.79-4.46,89.76-5.16l14.94-.24,15-.18c34.9-.35,69.8-.39,104.7-.42l15-.06h296.46"/>
+  </g>
+  <polyline class="cls-4" points="82.62 207.72 84.18 208.44 84.84 210 84.18 211.56 82.62 212.22 81.06 211.56 80.34 210 81.06 208.44 82.62 207.72"/>
+  <line class="cls-4" x1="82.62" y1="210" x2="97.32" y2="72.42"/>
+  <text class="cls-10" transform="translate(47.77 60.13)"><tspan x="0" y="0">(3.8887µ, 6.3210)</tspan></text>
+  <polyline class="cls-4" points="277.56 30 279.12 30.66 279.78 32.22 279.12 33.78 277.56 34.5 276 33.78 275.28 32.22 276 30.66 277.56 30"/>
+  <line class="cls-4" x1="277.56" y1="32.22" x2="291.3" y2="83.94"/>
+  <text class="cls-10" transform="translate(249 96.34)"><tspan x="0" y="0">(19</tspan><tspan class="cls-5" x="20.23" y="0">.</tspan><tspan x="24.14" y="0">5243µ</tspan><tspan class="cls-6" x="63.07" y="0">,</tspan><tspan x="66.97" y="0" xml:space="preserve"> 9</tspan><tspan class="cls-5" x="78.48" y="0">.</tspan><tspan x="82.38" y="0">9353)</tspan></text>
+</svg>
