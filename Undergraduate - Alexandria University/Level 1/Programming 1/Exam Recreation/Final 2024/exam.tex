@@ -12,7 +12,7 @@
 
 \usepackage{calc}
 
-\geometry{a4paper, top=25mm, left=25mm, right=25mm, bottom=25mm}
+\geometry{a4paper, top=20mm, left=20mm, right=20mm, bottom=20mm}
 
 % Font Settings
 \usepackage{palatino}
@@ -24,7 +24,7 @@
         \ifprintanswers
             \setlength{\linewidth}{\linewidth+4cm}
             \noindent
-            \hskip-2cm
+            \hskip-1.7cm
             \begin{tabularx}{\linewidth}{!{\vrule width 1.5pt}>{\hsize=1\hsize}X!{\vrule width 1.5pt}c!{\vrule width 1.5pt}>{\hsize=1\hsize}X!{\vrule width 1.5pt}c!{\vrule width 1.5pt}}
                 #1
             \end{tabularx}
@@ -67,7 +67,8 @@
 \renewcommand{\choicelabel}{\alph{choice})}
 
 
-\newcommand{\ctab}{\phantom{~~~~}}
+\newcommand{\ftab}{\phantom{~~~~}}
+\newcommand{\ttab}{\phantom{~~}}
 \newcommand{\bs}{\textbackslash }
 \newcommand{\n}{\newline}
 \newcommand{\snippet}[1]{
@@ -152,10 +153,10 @@
             \snippet{
                 \#include <stdio.h>\n
                 int main()~\{\n
-                \ctab int arr[] = \{1,2,3,4,5\};\n
-                \ctab int *ptr = arr + 2;\n
-                \ctab printf("\%d\bs n", *ptr);\n
-                \ctab return 0;
+                \ftab int arr[] = \{1,2,3,4,5\};\n
+                \ftab int *ptr = arr + 2;\n
+                \ftab printf("\%d\bs n", *ptr);\n
+                \ftab return 0;
                 \n\}
             }\n
             \mchoices{
@@ -174,7 +175,7 @@
         } \setchoice{C} \\
         \hsep{1.5}
         {
-            \question What will be the outputof the following code snippet? \n
+            \question What will be the output of the following code snippet? \n
             \snippet{
                 char str[] = "abcdef";\n
                 char *ptr = str + 2;\n
@@ -199,6 +200,43 @@
             }
         } \setchoice{D} \\
         \hsep{1.5}
+    }
+    
+    \newpage
+
+    \qtable{
+        \hsep{1.5}
+        {
+            \question What will be the output of the following code if malloc fails to allocate memory?\n
+            \snippet{
+                \ttab int* ptr = malloc(10 * sizeof(int));\n
+                \ttab if (ptr == NULL) \{\n
+                \ftab printf("Memory allocation failed\verb|\n|");\n
+                \ttab \}\n
+            }\n
+            \mchoices{
+                \choice~~ The program will crash.\n
+                \choice~~ "Memory allocation failed"\n
+                \choice~~ Nothing will be printed.\n
+                \choice~~ The behavior is undefined.
+            }
+        } \setchoice{B}
+        &
+        {
+            \question check the following struct definition\n
+            \snippet{
+                struct Employee \{\n
+                \ttab int age;\n
+                \ttab char[20] name;\n
+                \ttab struct Employee * manager;\n
+                \};\n
+                int main() \{\n
+                struct Employee e ;\n
+                struct Employee e2 = \{29, "mohamed", \&e\};\n
+                printf("\%d", ++e2.age);\n
+                \}\n
+            }
+        } \setchoice{}
     }
 
 \end{questions}

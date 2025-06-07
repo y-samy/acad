@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488.96 132.69">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke-width: 8px;
+      }
+
+      .cls-3 {
+        stroke-width: 2px;
+      }
+
+      .cls-4 {
+        stroke-width: 3px;
+      }
+
+      .cls-5 {
+        font-family: CambriaMath, 'Cambria Math';
+        font-size: 18px;
+      }
+    </style>
+  </defs>
+  <rect class="cls-4" x="153.63" y="1.5" width="178.74" height="54.02"/>
+  <line class="cls-2" x1="153.63" y1="28.51" x2="22.02" y2="28.51"/>
+  <line class="cls-2" x1="463.98" y1="28.51" x2="332.37" y2="28.51"/>
+  <line class="cls-1" x1="22.02" y1="11.12" x2="22.02" y2="45.9"/>
+  <line class="cls-1" x1="463.98" y1="11.12" x2="463.98" y2="45.9"/>
+  <line class="cls-3" x1="208.23" y1="1.5" x2="208.23" y2="56.67"/>
+  <text class="cls-5" transform="translate(.5 87.84)"><tspan x="0" y="0">–8.025</tspan></text>
+  <text class="cls-5" transform="translate(145.53 87.84)"><tspan x="0" y="0">0.3</tspan></text>
+  <text class="cls-5" transform="translate(201.82 87.84)"><tspan x="0" y="0">2.1</tspan></text>
+  <text class="cls-5" transform="translate(320.31 87.84)"><tspan x="0" y="0">5.85</tspan></text>
+  <text class="cls-5" transform="translate(434.94 87.84)"><tspan x="0" y="0">14.175</tspan></text>
+</svg>
