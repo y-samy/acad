@@ -1,0 +1,14 @@
+ frequency = [0, 1000, 2000, 3000, 4000, 5000, 6000, 7000];
+ratio = [1, 0.768, 0.516, 0.38, 0.304, 0.252, 0.216, 0.188];
+
+% Plot magnitude in dB
+dB_ratio = 20 * log10(ratio);
+
+% Handle frequency of zero.
+frequency(1) = 1; % or a very small number.
+
+semilogx(frequency, dB_ratio, '-o');
+title('Magnitude Response (dB)');
+xlabel('Frequency (Hz)');
+ylabel('Magnitude (dB)');
+grid on;

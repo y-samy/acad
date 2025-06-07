@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 237 152.48">
+  <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
+  <defs>
+    <style>
+      .st0 {
+        stroke-width: .75px;
+      }
+
+      .st0, .st1 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .st2 {
+        letter-spacing: 0em;
+      }
+
+      .st3 {
+        letter-spacing: .01em;
+      }
+
+      .st4 {
+        letter-spacing: 0em;
+      }
+
+      .st5 {
+        letter-spacing: .11em;
+      }
+
+      .st6, .st7, .st8, .st9 {
+        font-size: 9.78px;
+      }
+
+      .st10 {
+        letter-spacing: .02em;
+      }
+
+      .st11 {
+        letter-spacing: .03em;
+      }
+
+      .st7, .st12 {
+        letter-spacing: 0em;
+      }
+
+      .st13 {
+        letter-spacing: 0em;
+      }
+
+      .st14 {
+        letter-spacing: .02em;
+      }
+
+      .st15 {
+        letter-spacing: .01em;
+      }
+
+      .st8 {
+        letter-spacing: .07em;
+      }
+
+      .st16 {
+        font-size: 6px;
+        letter-spacing: 0em;
+      }
+
+      .st1 {
+        stroke-width: 1.5px;
+      }
+
+      .st9, .st17 {
+        font-family: Arial-BoldMT, Arial;
+        font-weight: 700;
+      }
+
+      .st18 {
+        letter-spacing: .03em;
+      }
+    </style>
+  </defs>
+  <text class="st9" transform="translate(39.63 49.95)"><tspan class="st14" x="0" y="0">V</tspan><tspan x="6.72" y="0">s</tspan></text>
+  <text class="st17" transform="translate(39.63 63.45)"><tspan class="st7" x="0" y="0">0V</tspan><tspan class="st16" x="11.98" y="0">1</tspan><tspan class="st8" x="15.33" y="0"> </tspan><tspan class="st7" x="18.75" y="0">10V</tspan><tspan class="st16" x="36.18" y="0">2</tspan><tspan class="st6" x="39.53" y="0"> </tspan></text>
+  <line class="st0" x1="24.62" y1="53.19" x2="24.62" y2="57.69"/>
+  <line class="st0" x1="22.34" y1="55.41" x2="26.84" y2="55.41"/>
+  <text class="st9" transform="translate(39.62 74.67)"><tspan class="st12"><tspan x="0" y="0" xml:space="preserve">Pw   Per</tspan></tspan><tspan class="st12" x="0" y="11.74">1</tspan><tspan class="st2" x="5.45" y="11.74">m</tspan><tspan class="st12" x="14.1" y="11.74">s</tspan><tspan class="st5" x="19.54" y="11.74"> </tspan><tspan class="st13" x="23.32" y="11.74">2ms</tspan><tspan x="42.92" y="11.74"> </tspan></text>
+  <path class="st0" d="M38.06,64.35c0-7.44-6.06-13.44-13.5-13.44s-13.44,6-13.44,13.44,6,13.5,13.44,13.5,13.5-6.06,13.5-13.5Z"/>
+  <polyline class="st0" points="13.34 68.91 15.62 68.91 15.62 64.41 17.84 64.41 17.84 68.91 20.12 68.91 20.12 64.41 22.34 64.41 22.34 68.91 24.62 68.91 24.62 64.41 26.84 64.41 26.84 68.91 29.12 68.91 29.12 64.41 31.34 64.41 31.34 68.91 33.62 68.91 33.62 64.41 35.84 64.41"/>
+  <rect x="24.62" y="44.19" width=".06" height=".06"/>
+  <line class="st0" x1="24.62" y1="50.91" x2="24.62" y2="44.19"/>
+  <rect x="24.62" y="84.69" width=".06" height=".06"/>
+  <line class="st0" x1="24.62" y1="77.91" x2="24.62" y2="84.69"/>
+  <polygon class="st0" points="17.84 131.91 31.34 131.91 24.62 138.69 17.84 131.91"/>
+  <rect x="24.62" y="125.19" width=".06" height=".06"/>
+  <line class="st0" x1="24.62" y1="131.91" x2="24.62" y2="125.19"/>
+  <polygon class="st0" points="186.62 131.91 200.12 131.91 193.34 138.69 186.62 131.91"/>
+  <rect x="193.34" y="125.19" width=".06" height=".06"/>
+  <line class="st0" x1="193.34" y1="131.91" x2="193.34" y2="125.19"/>
+  <text class="st9" transform="translate(202.34 58.23)"><tspan class="st18" x="0" y="0">C</tspan><tspan class="st4" x="7.32" y="0">1</tspan></text>
+  <line class="st1" x1="186.62" y1="65.91" x2="200.12" y2="65.91"/>
+  <text class="st9" transform="translate(202.34 70.23)"><tspan class="st14" x="0" y="0">10</tspan><tspan class="st3" x="11.27" y="0">0</tspan><tspan class="st15" x="16.85" y="0">n</tspan><tspan x="22.97" y="0">F</tspan></text>
+  <line class="st1" x1="186.62" y1="69.69" x2="200.12" y2="69.69"/>
+  <line class="st0" x1="193.34" y1="70.41" x2="193.34" y2="77.91"/>
+  <line class="st0" x1="193.34" y1="57.69" x2="193.34" y2="65.19"/>
+  <rect x="193.34" y="84.69" width=".06" height=".06"/>
+  <line class="st0" x1="193.34" y1="77.91" x2="193.34" y2="84.69"/>
+  <rect x="193.34" y="50.91" width=".06" height=".06"/>
+  <line class="st0" x1="193.34" y1="57.69" x2="193.34" y2="50.91"/>
+  <text class="st9" transform="translate(102.26 8.74)"><tspan class="st10" x="0" y="0">R</tspan><tspan class="st4" x="7.26" y="0">1</tspan></text>
+  <text class="st9" transform="translate(98.97 30.46)"><tspan class="st11" x="0" y="0">1</tspan><tspan class="st4" x="5.69" y="0">k</tspan></text>
+  <text class="st9" transform="translate(110.3 30.46)"><tspan x="0" y="0">Ω</tspan></text>
+  <polyline class="st0" points="98.84 17.19 101.12 13.41 104.12 20.19 107.84 13.41 110.84 20.19 114.62 13.41 117.62 20.19 119.12 17.19"/>
+  <rect x="125.84" y="17.19" width=".06" height=".06"/>
+  <line class="st0" x1="119.12" y1="17.19" x2="125.84" y2="17.19"/>
+  <rect x="92.12" y="17.19" width=".06" height=".06"/>
+  <line class="st0" x1="98.84" y1="17.19" x2="92.12" y2="17.19"/>
+  <polyline class="st0" points="24.62 44.19 24.62 17.19 92.12 17.19"/>
+  <line class="st0" x1="24.62" y1="84.69" x2="24.62" y2="125.19"/>
+  <polyline class="st0" points="125.84 17.19 193.34 17.19 193.34 50.91"/>
+  <line class="st0" x1="193.34" y1="84.69" x2="193.34" y2="125.19"/>
+</svg>

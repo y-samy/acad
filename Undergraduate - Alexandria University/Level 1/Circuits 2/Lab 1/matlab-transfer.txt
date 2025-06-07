@@ -1,0 +1,12 @@
+R = 1e3; % Resistance in ohms (example: 1kΩ)
+C = 1e-7; % Capacitance in farads (example: 1μF)
+
+% Define the transfer function H(s) = 1 / (1 + R*C*s)
+s = tf('s'); % Define Laplace variable s
+H = 1 / (1 + R*C*s); % Transfer function
+
+% Plot Bode plot
+figure;
+bode(H);
+grid on;
+title('Bode Plot of H(s) = 1 / (1 + RCs)');

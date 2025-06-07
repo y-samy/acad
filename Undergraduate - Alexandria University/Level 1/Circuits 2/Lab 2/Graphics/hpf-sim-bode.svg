@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 793 578.99">
+  <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
+  <defs>
+    <style>
+      .st0 {
+        clip-path: url(#clippath-51);
+      }
+
+      .st1 {
+        letter-spacing: 0em;
+      }
+
+      .st2 {
+        letter-spacing: 0em;
+      }
+
+      .st3 {
+        clip-path: url(#clippath-34);
+      }
+
+      .st4 {
+        clip-path: url(#clippath-38);
+      }
+
+      .st5 {
+        clip-path: url(#clippath-21);
+      }
+
+      .st6 {
+        clip-path: url(#clippath-6);
+      }
+
+      .st7 {
+        clip-path: url(#clippath-7);
+      }
+
+      .st8 {
+        clip-path: url(#clippath-17);
+      }
+
+      .st9 {
+        clip-path: url(#clippath-31);
+      }
+
+      .st10 {
+        clip-path: url(#clippath-15);
+      }
+
+      .st11 {
+        clip-path: url(#clippath-33);
+      }
+
+      .st12 {
+        clip-path: url(#clippath-61);
+      }
+
+      .st13 {
+        clip-path: url(#clippath-18);
+      }
+
+      .st14 {
+        clip-path: url(#clippath-47);
+      }
+
+      .st15 {
+        clip-path: url(#clippath-4);
+      }
+
+      .st16 {
+        stroke: #aaa;
+      }
+
+      .st16, .st17, .st18, .st19, .st20 {
+        fill: none;
+      }
+
+      .st16, .st17, .st19 {
+        stroke-width: .75px;
+      }
+
+      .st16, .st17, .st19, .st20 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .st21 {
+        clip-path: url(#clippath-22);
+      }
+
+      .st22 {
+        clip-path: url(#clippath-23);
+      }
+
+      .st17, .st20 {
+        stroke: #000;
+      }
+
+      .st23 {
+        clip-path: url(#clippath-54);
+      }
+
+      .st24 {
+        clip-path: url(#clippath-9);
+      }
+
+      .st25 {
+        clip-path: url(#clippath-10);
+      }
+
+      .st26 {
+        clip-path: url(#clippath-42);
+      }
+
+      .st27 {
+        clip-path: url(#clippath-59);
+      }
+
+      .st28 {
+        fill: #fff;
+      }
+
+      .st29 {
+        clip-path: url(#clippath-43);
+      }
+
+      .st30 {
+        clip-path: url(#clippath-64);
+      }
+
+      .st31 {
+        clip-path: url(#clippath-25);
+      }
+
+      .st32 {
+        clip-path: url(#clippath-27);
+      }
+
+      .st33 {
+        letter-spacing: 0em;
+      }
+
+      .st34 {
+        clip-path: url(#clippath-60);
+      }
+
+      .st35 {
+        clip-path: url(#clippath-11);
+      }
+
+      .st36 {
+        clip-path: url(#clippath-57);
+      }
+
+      .st37 {
+        clip-path: url(#clippath-36);
+      }
+
+      .st38 {
+        clip-path: url(#clippath-35);
+      }
+
+      .st39 {
+        clip-path: url(#clippath-48);
+      }
+
+      .st40 {
+        clip-path: url(#clippath-28);
+      }
+
+      .st41 {
+        letter-spacing: 0em;
+      }
+
+      .st42 {
+        clip-path: url(#clippath-1);
+      }
+
+      .st43 {
+        clip-path: url(#clippath-56);
+      }
+
+      .st44 {
+        clip-path: url(#clippath-45);
+      }
+
+      .st45 {
+        clip-path: url(#clippath-46);
+      }
+
+      .st46 {
+        clip-path: url(#clippath-40);
+      }
+
+      .st47 {
+        letter-spacing: 0em;
+      }
+
+      .st48 {
+        clip-path: url(#clippath-5);
+      }
+
+      .st49 {
+        clip-path: url(#clippath-20);
+      }
+
+      .st50 {
+        clip-path: url(#clippath-8);
+      }
+
+      .st51 {
+        clip-path: url(#clippath-52);
+      }
+
+      .st52 {
+        clip-path: url(#clippath-41);
+      }
+
+      .st19 {
+        stroke: red;
+      }
+
+      .st53 {
+        letter-spacing: 0em;
+      }
+
+      .st54 {
+        clip-path: url(#clippath-3);
+      }
+
+      .st55 {
+        clip-path: url(#clippath-26);
+      }
+
+      .st56 {
+        clip-path: url(#clippath-12);
+      }
+
+      .st57 {
+        clip-path: url(#clippath-50);
+      }
+
+      .st58 {
+        clip-path: url(#clippath-14);
+      }
+
+      .st59 {
+        font-size: 14px;
+      }
+
+      .st59, .st60, .st61, .st62 {
+        font-family: MicrosoftSansSerif, 'Microsoft Sans Serif';
+      }
+
+      .st63 {
+        clip-path: url(#clippath-30);
+      }
+
+      .st64 {
+        clip-path: url(#clippath-19);
+      }
+
+      .st60 {
+        font-size: 10px;
+      }
+
+      .st65 {
+        letter-spacing: 0em;
+      }
+
+      .st66 {
+        clip-path: url(#clippath-32);
+      }
+
+      .st67 {
+        clip-path: url(#clippath-55);
+      }
+
+      .st68 {
+        letter-spacing: 0em;
+      }
+
+      .st69 {
+        clip-path: url(#clippath-53);
+      }
+
+      .st70 {
+        clip-path: url(#clippath-39);
+      }
+
+      .st61 {
+        font-size: 12px;
+      }
+
+      .st71 {
+        clip-path: url(#clippath-16);
+      }
+
+      .st72 {
+        clip-path: url(#clippath-2);
+      }
+
+      .st20 {
+        stroke-width: .06px;
+      }
+
+      .st62 {
+        font-size: 8px;
+      }
+
+      .st73 {
+        clip-path: url(#clippath-29);
+      }
+
+      .st74 {
+        clip-path: url(#clippath-49);
+      }
+
+      .st75 {
+        clip-path: url(#clippath-37);
+      }
+
+      .st76 {
+        clip-path: url(#clippath-58);
+      }
+
+      .st77 {
+        clip-path: url(#clippath-13);
+      }
+
+      .st78 {
+        clip-path: url(#clippath-63);
+      }
+
+      .st79 {
+        clip-path: url(#clippath-24);
+      }
+
+      .st80 {
+        letter-spacing: 0em;
+      }
+
+      .st81 {
+        clip-path: url(#clippath);
+      }
+
+      .st82 {
+        clip-path: url(#clippath-65);
+      }
+
+      .st83 {
+        clip-path: url(#clippath-44);
+      }
+
+      .st84 {
+        clip-path: url(#clippath-62);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="st18" x="71.82" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="st18" x="93.6" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <rect class="st18" x="109.02" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-3">
+      <rect class="st18" x="120.96" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-4">
+      <rect class="st18" x="130.8" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-5">
+      <rect class="st18" x="139.08" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-6">
+      <rect class="st18" x="146.22" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-7">
+      <rect class="st18" x="152.52" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-8">
+      <rect class="st18" x="158.22" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-9">
+      <rect class="st18" x="195.42" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-10">
+      <rect class="st18" x="217.2" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-11">
+      <rect class="st18" x="232.62" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-12">
+      <rect class="st18" x="244.56" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-13">
+      <rect class="st18" x="254.4" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-14">
+      <rect class="st18" x="262.68" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-15">
+      <rect class="st18" x="269.82" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-16">
+      <rect class="st18" x="276.12" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-17">
+      <rect class="st18" x="281.82" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-18">
+      <rect class="st18" x="319.02" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-19">
+      <rect class="st18" x="340.8" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-20">
+      <rect class="st18" x="356.22" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-21">
+      <rect class="st18" x="368.16" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-22">
+      <rect class="st18" x="378" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-23">
+      <rect class="st18" x="386.28" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-24">
+      <rect class="st18" x="393.42" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-25">
+      <rect class="st18" x="399.72" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-26">
+      <rect class="st18" x="405.42" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-27">
+      <rect class="st18" x="442.62" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-28">
+      <rect class="st18" x="464.4" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-29">
+      <rect class="st18" x="479.82" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-30">
+      <rect class="st18" x="491.76" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-31">
+      <rect class="st18" x="501.6" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-32">
+      <rect class="st18" x="509.88" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-33">
+      <rect class="st18" x="517.02" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-34">
+      <rect class="st18" x="523.32" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-35">
+      <rect class="st18" x="529.02" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-36">
+      <rect class="st18" x="566.22" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-37">
+      <rect class="st18" x="588" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-38">
+      <rect class="st18" x="603.42" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-39">
+      <rect class="st18" x="615.36" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-40">
+      <rect class="st18" x="625.2" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-41">
+      <rect class="st18" x="633.48" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-42">
+      <rect class="st18" x="640.62" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-43">
+      <rect class="st18" x="646.92" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-44">
+      <rect class="st18" x="652.62" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-45">
+      <rect class="st18" x="689.82" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-46">
+      <rect class="st18" x="711.6" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-47">
+      <rect class="st18" x="727.02" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-48">
+      <rect class="st18" x="738.96" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-49">
+      <rect class="st18" x="748.8" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-50">
+      <rect class="st18" x="757.08" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-51">
+      <rect class="st18" x="764.22" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-52">
+      <rect class="st18" x="770.52" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-53">
+      <rect class="st18" x="776.22" y="27.47" width="1.02" height="492.48"/>
+    </clipPath>
+    <clipPath id="clippath-54">
+      <rect class="st18" x="35.1" y="474.77" width="742.14" height="1.02"/>
+    </clipPath>
+    <clipPath id="clippath-55">
+      <rect class="st18" x="35.1" y="430.01" width="742.14" height="1.02"/>
+    </clipPath>
+    <clipPath id="clippath-56">
+      <rect class="st18" x="35.1" y="385.31" width="742.14" height="1.02"/>
+    </clipPath>
+    <clipPath id="clippath-57">
+      <rect class="st18" x="35.1" y="340.55" width="742.14" height="1.02"/>
+    </clipPath>
+    <clipPath id="clippath-58">
+      <rect class="st18" x="35.1" y="295.85" width="742.14" height="1.02"/>
+    </clipPath>
+    <clipPath id="clippath-59">
+      <rect class="st18" x="35.1" y="251.15" width="742.14" height="1.02"/>
+    </clipPath>
+    <clipPath id="clippath-60">
+      <rect class="st18" x="35.1" y="206.45" width="742.14" height="1.02"/>
+    </clipPath>
+    <clipPath id="clippath-61">
+      <rect class="st18" x="35.1" y="161.69" width="742.14" height="1.02"/>
+    </clipPath>
+    <clipPath id="clippath-62">
+      <rect class="st18" x="35.1" y="116.99" width="742.14" height="1.02"/>
+    </clipPath>
+    <clipPath id="clippath-63">
+      <rect class="st18" x="35.1" y="72.23" width="742.14" height="1.02"/>
+    </clipPath>
+    <clipPath id="clippath-64">
+      <rect class="st18" x="35.1" y="27.47" width="742.14" height="1.02"/>
+    </clipPath>
+    <clipPath id="clippath-65">
+      <rect class="st18" x="35.1" y="105.59" width="529.62" height="380.04"/>
+    </clipPath>
+  </defs>
+  <rect class="st28" x="576.24" y="-1.03" width="157.02" height="7.92"/>
+  <line class="st19" x1="11.82" y1="566.57" x2="42.6" y2="566.57"/>
+  <rect class="st28" x="11.46" y="555.59" width="48.48" height="9.12"/>
+  <rect class="st28" x="349.02" y="6.83" width="75.48" height="18.12"/>
+  <rect class="st28" x="364.68" y="540.29" width="82.56" height="13.56"/>
+  <text class="st61" transform="translate(364.68 551.33)"><tspan x="0" y="0">Frequency (Hz)</tspan></text>
+  <rect class="st28" x="35.1" y="525.95" width="5.64" height="11.34"/>
+  <text class="st62" transform="translate(11.46 562.97)"><tspan x="0" y="0"> </tspan></text>
+  <text class="st62" transform="translate(11.46 562.97)"><tspan class="st1" x="0" y="0">V(v</tspan><tspan class="st65" x="11.83" y="0">o</tspan><tspan class="st53" x="16.27" y="0">u</tspan><tspan x="20.67" y="0">t</tspan><tspan class="st1" x="22.89" y="0">)</tspan><tspan x="25.5" y="0">/</tspan><tspan class="st53" x="27.72" y="0">V(</tspan><tspan class="st2" x="35.61" y="0">v</tspan><tspan class="st68" x="39.62" y="0">i</tspan><tspan class="st53" x="41.42" y="0">n</tspan><tspan x="45.82" y="0">)</tspan></text>
+  <text class="st60" transform="translate(35.1 535.19)"><tspan x="0" y="0">1</tspan></text>
+  <rect class="st28" x="762.78" y="525.95" width="13.98" height="11.34"/>
+  <text class="st60" transform="translate(762.78 535.19)"><tspan class="st80" x="0" y="0">1</tspan><tspan x="5.57" y="0">M</tspan></text>
+  <rect class="st28" x="153.12" y="525.95" width="11.22" height="11.34"/>
+  <text class="st60" transform="translate(153.12 535.19)"><tspan class="st80" x="0" y="0">1</tspan><tspan x="5.57" y="0">0</tspan></text>
+  <rect class="st28" x="642.24" y="525.95" width="21.84" height="11.34"/>
+  <text class="st60" transform="translate(642.24 535.19)"><tspan class="st80" x="0" y="0">100</tspan><tspan x="16.71" y="0">k</tspan></text>
+  <rect class="st28" x="273.96" y="525.95" width="16.8" height="11.34"/>
+  <text class="st60" transform="translate(273.96 535.19)"><tspan class="st80" x="0" y="0">10</tspan><tspan x="11.14" y="0">0</tspan></text>
+  <rect class="st28" x="521.4" y="525.95" width="16.26" height="11.34"/>
+  <text class="st60" transform="translate(521.4 535.19)"><tspan class="st80" x="0" y="0">10</tspan><tspan x="11.14" y="0">k</tspan></text>
+  <rect class="st28" x="400.62" y="525.95" width="10.68" height="11.34"/>
+  <text class="st60" transform="translate(400.62 535.19)"><tspan class="st80" x="0" y="0">1</tspan><tspan x="5.57" y="0">k</tspan></text>
+  <line class="st17" x1="35.1" y1="519.95" x2="776.7" y2="519.95"/>
+  <line class="st17" x1="35.1" y1="519.95" x2="35.1" y2="522.95"/>
+  <line class="st17" x1="72.3" y1="519.95" x2="72.3" y2="521.45"/>
+  <line class="st17" x1="94.08" y1="519.95" x2="94.08" y2="521.45"/>
+  <line class="st17" x1="109.5" y1="519.95" x2="109.5" y2="521.45"/>
+  <line class="st17" x1="121.44" y1="519.95" x2="121.44" y2="521.45"/>
+  <line class="st17" x1="131.28" y1="519.95" x2="131.28" y2="521.45"/>
+  <line class="st17" x1="139.56" y1="519.95" x2="139.56" y2="521.45"/>
+  <line class="st17" x1="146.7" y1="519.95" x2="146.7" y2="521.45"/>
+  <line class="st17" x1="153" y1="519.95" x2="153" y2="521.45"/>
+  <line class="st17" x1="158.7" y1="519.95" x2="158.7" y2="522.95"/>
+  <line class="st17" x1="195.9" y1="519.95" x2="195.9" y2="521.45"/>
+  <line class="st17" x1="217.68" y1="519.95" x2="217.68" y2="521.45"/>
+  <line class="st17" x1="233.1" y1="519.95" x2="233.1" y2="521.45"/>
+  <line class="st17" x1="245.04" y1="519.95" x2="245.04" y2="521.45"/>
+  <line class="st17" x1="254.88" y1="519.95" x2="254.88" y2="521.45"/>
+  <line class="st17" x1="263.16" y1="519.95" x2="263.16" y2="521.45"/>
+  <line class="st17" x1="270.3" y1="519.95" x2="270.3" y2="521.45"/>
+  <line class="st17" x1="276.6" y1="519.95" x2="276.6" y2="521.45"/>
+  <line class="st17" x1="282.3" y1="519.95" x2="282.3" y2="522.95"/>
+  <line class="st17" x1="319.5" y1="519.95" x2="319.5" y2="521.45"/>
+  <line class="st17" x1="341.28" y1="519.95" x2="341.28" y2="521.45"/>
+  <line class="st17" x1="356.7" y1="519.95" x2="356.7" y2="521.45"/>
+  <line class="st17" x1="368.64" y1="519.95" x2="368.64" y2="521.45"/>
+  <line class="st17" x1="378.48" y1="519.95" x2="378.48" y2="521.45"/>
+  <line class="st17" x1="386.76" y1="519.95" x2="386.76" y2="521.45"/>
+  <line class="st17" x1="393.9" y1="519.95" x2="393.9" y2="521.45"/>
+  <line class="st17" x1="400.2" y1="519.95" x2="400.2" y2="521.45"/>
+  <line class="st17" x1="405.9" y1="519.95" x2="405.9" y2="522.95"/>
+  <line class="st17" x1="443.1" y1="519.95" x2="443.1" y2="521.45"/>
+  <line class="st17" x1="464.88" y1="519.95" x2="464.88" y2="521.45"/>
+  <line class="st17" x1="480.3" y1="519.95" x2="480.3" y2="521.45"/>
+  <line class="st17" x1="492.24" y1="519.95" x2="492.24" y2="521.45"/>
+  <line class="st17" x1="502.08" y1="519.95" x2="502.08" y2="521.45"/>
+  <line class="st17" x1="510.36" y1="519.95" x2="510.36" y2="521.45"/>
+  <line class="st17" x1="517.5" y1="519.95" x2="517.5" y2="521.45"/>
+  <line class="st17" x1="523.8" y1="519.95" x2="523.8" y2="521.45"/>
+  <line class="st17" x1="529.5" y1="519.95" x2="529.5" y2="522.95"/>
+  <line class="st17" x1="566.7" y1="519.95" x2="566.7" y2="521.45"/>
+  <line class="st17" x1="588.48" y1="519.95" x2="588.48" y2="521.45"/>
+  <line class="st17" x1="603.9" y1="519.95" x2="603.9" y2="521.45"/>
+  <line class="st17" x1="615.84" y1="519.95" x2="615.84" y2="521.45"/>
+  <line class="st17" x1="625.68" y1="519.95" x2="625.68" y2="521.45"/>
+  <line class="st17" x1="633.96" y1="519.95" x2="633.96" y2="521.45"/>
+  <line class="st17" x1="641.1" y1="519.95" x2="641.1" y2="521.45"/>
+  <line class="st17" x1="647.4" y1="519.95" x2="647.4" y2="521.45"/>
+  <line class="st17" x1="653.1" y1="519.95" x2="653.1" y2="522.95"/>
+  <line class="st17" x1="690.3" y1="519.95" x2="690.3" y2="521.45"/>
+  <line class="st17" x1="712.08" y1="519.95" x2="712.08" y2="521.45"/>
+  <line class="st17" x1="727.5" y1="519.95" x2="727.5" y2="521.45"/>
+  <line class="st17" x1="739.44" y1="519.95" x2="739.44" y2="521.45"/>
+  <line class="st17" x1="749.28" y1="519.95" x2="749.28" y2="521.45"/>
+  <line class="st17" x1="757.56" y1="519.95" x2="757.56" y2="521.45"/>
+  <line class="st17" x1="764.7" y1="519.95" x2="764.7" y2="521.45"/>
+  <line class="st17" x1="771" y1="519.95" x2="771" y2="521.45"/>
+  <line class="st17" x1="776.7" y1="519.95" x2="776.7" y2="522.95"/>
+  <rect class="st28" x="-5.4" y="245.93" width="14.04" height="56.16"/>
+  <text class="st61" transform="translate(5.88 302.03) rotate(-90)"><tspan x="0" y="0">Magnitude</tspan></text>
+  <rect class="st28" x="12" y="508.61" width="20.16" height="11.34"/>
+  <rect class="st28" x="20.94" y="27.95" width="11.22" height="11.34"/>
+  <text class="st60" transform="translate(12 517.85)"><tspan class="st41" x="0" y="0">-10</tspan><tspan x="14.51" y="0">0</tspan></text>
+  <text class="st60" transform="translate(20.94 37.19)"><tspan class="st80" x="0" y="0">1</tspan><tspan x="5.57" y="0">0</tspan></text>
+  <rect class="st28" x="17.58" y="469.61" width="14.58" height="11.34"/>
+  <rect class="st28" x="26.52" y="67.07" width="5.64" height="11.34"/>
+  <text class="st60" transform="translate(17.58 478.85)"><tspan class="st41" x="0" y="0">-9</tspan><tspan x="8.93" y="0">0</tspan></text>
+  <text class="st60" transform="translate(26.52 76.31)"><tspan x="0" y="0">0</tspan></text>
+  <rect class="st28" x="17.58" y="424.85" width="14.58" height="11.34"/>
+  <text class="st60" transform="translate(17.58 434.09)"><tspan class="st41" x="0" y="0">-8</tspan><tspan x="8.93" y="0">0</tspan></text>
+  <rect class="st28" x="17.58" y="111.83" width="14.58" height="11.34"/>
+  <rect class="st28" x="17.58" y="380.15" width="14.58" height="11.34"/>
+  <text class="st60" transform="translate(17.58 121.07)"><tspan class="st47" x="0" y="0">-1</tspan><tspan class="st33" x="8.93" y="0">0</tspan></text>
+  <rect class="st28" x="17.58" y="156.53" width="14.58" height="11.34"/>
+  <text class="st60" transform="translate(17.58 389.39)"><tspan class="st41" x="0" y="0">-7</tspan><tspan x="8.93" y="0">0</tspan></text>
+  <rect class="st28" x="17.58" y="335.39" width="14.58" height="11.34"/>
+  <text class="st60" transform="translate(17.58 165.77)"><tspan class="st47" x="0" y="0">-2</tspan><tspan class="st33" x="8.93" y="0">0</tspan></text>
+  <rect class="st28" x="17.58" y="201.23" width="14.58" height="11.34"/>
+  <text class="st60" transform="translate(17.58 344.63)"><tspan class="st41" x="0" y="0">-6</tspan><tspan x="8.93" y="0">0</tspan></text>
+  <rect class="st28" x="17.58" y="290.69" width="14.58" height="11.34"/>
+  <text class="st60" transform="translate(17.58 210.47)"><tspan class="st47" x="0" y="0">-3</tspan><tspan class="st33" x="8.93" y="0">0</tspan></text>
+  <rect class="st28" x="17.58" y="245.93" width="14.58" height="11.34"/>
+  <text class="st60" transform="translate(17.58 299.93)"><tspan class="st41" x="0" y="0">-5</tspan><tspan x="8.93" y="0">0</tspan></text>
+  <text class="st60" transform="translate(17.58 255.17)"><tspan class="st47" x="0" y="0">-4</tspan><tspan class="st33" x="8.93" y="0">0</tspan></text>
+  <line class="st17" x1="35.1" y1="519.95" x2="35.1" y2="27.95"/>
+  <line class="st17" x1="35.1" y1="519.95" x2="32.1" y2="519.95"/>
+  <line class="st17" x1="35.1" y1="475.25" x2="32.1" y2="475.25"/>
+  <line class="st17" x1="35.1" y1="430.49" x2="32.1" y2="430.49"/>
+  <line class="st17" x1="35.1" y1="385.79" x2="32.1" y2="385.79"/>
+  <line class="st17" x1="35.1" y1="341.03" x2="32.1" y2="341.03"/>
+  <line class="st17" x1="35.1" y1="296.33" x2="32.1" y2="296.33"/>
+  <line class="st17" x1="35.1" y1="251.63" x2="32.1" y2="251.63"/>
+  <line class="st17" x1="35.1" y1="206.93" x2="32.1" y2="206.93"/>
+  <line class="st17" x1="35.1" y1="162.17" x2="32.1" y2="162.17"/>
+  <line class="st17" x1="35.1" y1="117.47" x2="32.1" y2="117.47"/>
+  <line class="st17" x1="35.1" y1="72.71" x2="32.1" y2="72.71"/>
+  <line class="st17" x1="35.1" y1="27.95" x2="32.1" y2="27.95"/>
+  <g class="st81">
+    <line class="st16" x1="72.3" y1="519.95" x2="72.3" y2="27.95"/>
+  </g>
+  <g class="st42">
+    <line class="st16" x1="94.08" y1="519.95" x2="94.08" y2="27.95"/>
+  </g>
+  <g class="st72">
+    <line class="st16" x1="109.5" y1="519.95" x2="109.5" y2="27.95"/>
+  </g>
+  <g class="st54">
+    <line class="st16" x1="121.44" y1="519.95" x2="121.44" y2="27.95"/>
+  </g>
+  <g class="st15">
+    <line class="st16" x1="131.28" y1="519.95" x2="131.28" y2="27.95"/>
+  </g>
+  <g class="st48">
+    <line class="st16" x1="139.56" y1="519.95" x2="139.56" y2="27.95"/>
+  </g>
+  <g class="st6">
+    <line class="st16" x1="146.7" y1="519.95" x2="146.7" y2="27.95"/>
+  </g>
+  <g class="st7">
+    <line class="st16" x1="153" y1="519.95" x2="153" y2="27.95"/>
+  </g>
+  <g class="st50">
+    <line class="st16" x1="158.7" y1="519.95" x2="158.7" y2="27.95"/>
+  </g>
+  <g class="st24">
+    <line class="st16" x1="195.9" y1="519.95" x2="195.9" y2="27.95"/>
+  </g>
+  <g class="st25">
+    <line class="st16" x1="217.68" y1="519.95" x2="217.68" y2="27.95"/>
+  </g>
+  <g class="st35">
+    <line class="st16" x1="233.1" y1="519.95" x2="233.1" y2="27.95"/>
+  </g>
+  <g class="st56">
+    <line class="st16" x1="245.04" y1="519.95" x2="245.04" y2="27.95"/>
+  </g>
+  <g class="st77">
+    <line class="st16" x1="254.88" y1="519.95" x2="254.88" y2="27.95"/>
+  </g>
+  <g class="st58">
+    <line class="st16" x1="263.16" y1="519.95" x2="263.16" y2="27.95"/>
+  </g>
+  <g class="st10">
+    <line class="st16" x1="270.3" y1="519.95" x2="270.3" y2="27.95"/>
+  </g>
+  <g class="st71">
+    <line class="st16" x1="276.6" y1="519.95" x2="276.6" y2="27.95"/>
+  </g>
+  <g class="st8">
+    <line class="st16" x1="282.3" y1="519.95" x2="282.3" y2="27.95"/>
+  </g>
+  <g class="st13">
+    <line class="st16" x1="319.5" y1="519.95" x2="319.5" y2="27.95"/>
+  </g>
+  <g class="st64">
+    <line class="st16" x1="341.28" y1="519.95" x2="341.28" y2="27.95"/>
+  </g>
+  <g class="st49">
+    <line class="st16" x1="356.7" y1="519.95" x2="356.7" y2="27.95"/>
+  </g>
+  <g class="st5">
+    <line class="st16" x1="368.64" y1="519.95" x2="368.64" y2="27.95"/>
+  </g>
+  <g class="st21">
+    <line class="st16" x1="378.48" y1="519.95" x2="378.48" y2="27.95"/>
+  </g>
+  <g class="st22">
+    <line class="st16" x1="386.76" y1="519.95" x2="386.76" y2="27.95"/>
+  </g>
+  <g class="st79">
+    <line class="st16" x1="393.9" y1="519.95" x2="393.9" y2="27.95"/>
+  </g>
+  <g class="st31">
+    <line class="st16" x1="400.2" y1="519.95" x2="400.2" y2="27.95"/>
+  </g>
+  <g class="st55">
+    <line class="st16" x1="405.9" y1="519.95" x2="405.9" y2="27.95"/>
+  </g>
+  <g class="st32">
+    <line class="st16" x1="443.1" y1="519.95" x2="443.1" y2="27.95"/>
+  </g>
+  <g class="st40">
+    <line class="st16" x1="464.88" y1="519.95" x2="464.88" y2="27.95"/>
+  </g>
+  <g class="st73">
+    <line class="st16" x1="480.3" y1="519.95" x2="480.3" y2="27.95"/>
+  </g>
+  <g class="st63">
+    <line class="st16" x1="492.24" y1="519.95" x2="492.24" y2="27.95"/>
+  </g>
+  <g class="st9">
+    <line class="st16" x1="502.08" y1="519.95" x2="502.08" y2="27.95"/>
+  </g>
+  <g class="st66">
+    <line class="st16" x1="510.36" y1="519.95" x2="510.36" y2="27.95"/>
+  </g>
+  <g class="st11">
+    <line class="st16" x1="517.5" y1="519.95" x2="517.5" y2="27.95"/>
+  </g>
+  <g class="st3">
+    <line class="st16" x1="523.8" y1="519.95" x2="523.8" y2="27.95"/>
+  </g>
+  <g class="st38">
+    <line class="st16" x1="529.5" y1="519.95" x2="529.5" y2="27.95"/>
+  </g>
+  <g class="st37">
+    <line class="st16" x1="566.7" y1="519.95" x2="566.7" y2="27.95"/>
+  </g>
+  <g class="st75">
+    <line class="st16" x1="588.48" y1="519.95" x2="588.48" y2="27.95"/>
+  </g>
+  <g class="st4">
+    <line class="st16" x1="603.9" y1="519.95" x2="603.9" y2="27.95"/>
+  </g>
+  <g class="st70">
+    <line class="st16" x1="615.84" y1="519.95" x2="615.84" y2="27.95"/>
+  </g>
+  <g class="st46">
+    <line class="st16" x1="625.68" y1="519.95" x2="625.68" y2="27.95"/>
+  </g>
+  <g class="st52">
+    <line class="st16" x1="633.96" y1="519.95" x2="633.96" y2="27.95"/>
+  </g>
+  <g class="st26">
+    <line class="st16" x1="641.1" y1="519.95" x2="641.1" y2="27.95"/>
+  </g>
+  <g class="st29">
+    <line class="st16" x1="647.4" y1="519.95" x2="647.4" y2="27.95"/>
+  </g>
+  <g class="st83">
+    <line class="st16" x1="653.1" y1="519.95" x2="653.1" y2="27.95"/>
+  </g>
+  <g class="st44">
+    <line class="st16" x1="690.3" y1="519.95" x2="690.3" y2="27.95"/>
+  </g>
+  <g class="st45">
+    <line class="st16" x1="712.08" y1="519.95" x2="712.08" y2="27.95"/>
+  </g>
+  <g class="st14">
+    <line class="st16" x1="727.5" y1="519.95" x2="727.5" y2="27.95"/>
+  </g>
+  <g class="st39">
+    <line class="st16" x1="739.44" y1="519.95" x2="739.44" y2="27.95"/>
+  </g>
+  <g class="st74">
+    <line class="st16" x1="749.28" y1="519.95" x2="749.28" y2="27.95"/>
+  </g>
+  <g class="st57">
+    <line class="st16" x1="757.56" y1="519.95" x2="757.56" y2="27.95"/>
+  </g>
+  <g class="st0">
+    <line class="st16" x1="764.7" y1="519.95" x2="764.7" y2="27.95"/>
+  </g>
+  <g class="st51">
+    <line class="st16" x1="771" y1="519.95" x2="771" y2="27.95"/>
+  </g>
+  <g class="st69">
+    <line class="st16" x1="776.7" y1="519.95" x2="776.7" y2="27.95"/>
+  </g>
+  <g class="st23">
+    <line class="st16" x1="35.1" y1="475.25" x2="776.7" y2="475.25"/>
+  </g>
+  <g class="st67">
+    <line class="st16" x1="35.1" y1="430.49" x2="776.7" y2="430.49"/>
+  </g>
+  <g class="st43">
+    <line class="st16" x1="35.1" y1="385.79" x2="776.7" y2="385.79"/>
+  </g>
+  <g class="st36">
+    <line class="st16" x1="35.1" y1="341.03" x2="776.7" y2="341.03"/>
+  </g>
+  <g class="st76">
+    <line class="st16" x1="35.1" y1="296.33" x2="776.7" y2="296.33"/>
+  </g>
+  <g class="st27">
+    <line class="st16" x1="35.1" y1="251.63" x2="776.7" y2="251.63"/>
+  </g>
+  <g class="st34">
+    <line class="st16" x1="35.1" y1="206.93" x2="776.7" y2="206.93"/>
+  </g>
+  <g class="st12">
+    <line class="st16" x1="35.1" y1="162.17" x2="776.7" y2="162.17"/>
+  </g>
+  <g class="st84">
+    <line class="st16" x1="35.1" y1="117.47" x2="776.7" y2="117.47"/>
+  </g>
+  <g class="st78">
+    <line class="st16" x1="35.1" y1="72.71" x2="776.7" y2="72.71"/>
+  </g>
+  <g class="st30">
+    <line class="st16" x1="35.1" y1="27.95" x2="776.7" y2="27.95"/>
+  </g>
+  <g class="st82">
+    <path class="st19" d="M35.1,485.09l269.34-194.94,37.08-26.82c61.36-43.99,122.18-89.16,184.14-132.3l.84-.6.84-.54c11.79-8.07,23.69-16,35.94-23.34l.42-.24.48-.24"/>
+  </g>
+  <path class="st19" d="M564.18,106.07l.36-.24.42-.3c6.74-3.95,13.54-7.69,20.52-11.1l.3-.12.3-.18c4.85-2.34,9.82-4.52,14.82-6.48l.18-.12h.3l.36-.24.24-.06.18-.06c.77-.29,1.69-.67,2.46-.9l.18-.12.18-.06.24-.06.18-.06.18-.06.24-.12.18-.06h.18l.18-.12.18-.06.24-.06.18-.06.18-.06.18-.06.18-.12.18-.06h.24l.18-.12c.72-.25,1.45-.47,2.16-.72l.18-.06h.18l.18-.12.54-.18h.18l.18-.06.36-.12.12-.12h.18l.18-.06.36-.12.18-.06.18-.06h.12l.18-.06c1.5-.49,3.05-.92,4.56-1.32l.12-.06.18-.06h.3l.12-.06.18-.06.12-.06.18-.06.12-.06h.3l.18-.06.12-.06.18-.06h.12l.18-.06.12-.06h.3l.18-.06.12-.06.18-.06h.06l.18-.06c.27-.18.28.08.72-.18h.18l.24-.12h.18l.12-.06h.18l.12-.06h.12l.12-.06.18-.06h.12l.24-.12h.42l.18-.06.12-.06h.18l.06-.06.18-.06h.12l.12-.06c.5.05,1.11-.35,1.62-.3l.12-.06h.18l.06-.06h.18l.06-.06h.18l.12-.06.12-.06h.42l.06-.06h.18l.12-.06h.12l.12-.06h.12l.12-.06c.6-.08.9-.1,1.5-.3h.12l.12-.06h.36l.12-.06h.12l.12-.06h.12l.12-.06h.12l.12-.06h.18l.18-.06h.36l.06-.06h.3l.06-.06h.18l.06-.06h.12l.12-.06h.24l.12-.06h.3l.12-.06h.24l.12-.06h.12l.12-.06h.18l.12-.06h.24l.12-.06h.42l.12-.06h.18l.18-.06h.12l.06-.06h.24l.06-.06h.24l.12-.06c.71.04,1.32-.27,2.1-.3h.3l.12-.06h.18l.12-.06c.99-.15,1.99-.27,3-.42l.06-.06h.3c1.18-.13,2.29-.33,3.48-.42l.12-.06h.3v-.06h.36l.12-.06h.78l.12-.06h.36l.06-.06h.3l.12-.06h.36l.06-.06c.77-.04,1.46-.11,2.22-.18l.12-.06h.42v-.06h.42l.12-.06h.96v-.06h.42l.12-.06c.92-.04,1.66-.23,2.64-.18l.06-.06h.48l.12-.06h.48l.06-.06h.6l.06-.06h.48l.06-.06h1.2l.12-.06h.6v-.06h.6v-.06h.6l.12-.06c1.5-.03,2.9-.18,4.38-.24l.06-.06h.72l.06-.06h1.56l.12-.06h.78l.06-.06h.84l.06-.06h.9l.06-.06h.9l.06-.06h.72"/>
+  <text class="st59" transform="translate(437.22 79.91)"><tspan x="0" y="0">(40.9061k, -3.0000dB)</tspan></text>
+  <polyline class="st20" points="605.1 83.93 606.66 84.59 607.38 86.15 606.66 87.71 605.1 88.43 603.54 87.71 602.88 86.15 603.54 84.59 605.1 83.93"/>
+  <line class="st20" x1="605.1" y1="86.15" x2="576.6" y2="82.85"/>
+</svg>
